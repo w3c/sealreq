@@ -14,7 +14,7 @@ To follow the work, you can 'Watch' this repository using the control above, or 
 
 All contributors should read and agree with [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Task force _members_ are expert contributors who participate actively in producing the work of the group, regularly contributing text and advice to create the outputs, and participating in meetings. For more information about becoming a task force member contact [Richard Ishida](mailto:ishida@w3.org). We welcome participation requests.
+Task force _members_ are expert contributors who provide advice on requirements and gaps for the script they are familiar with. Some of them also participate actively in producing the work of the group, regularly contributing text and advice to create the outputs, and participating in meetings. For more information about becoming a task force member contact [Richard Ishida](mailto:ishida@w3.org). We welcome participation requests.
 
 Editors should be familiar with and use the following:
 
