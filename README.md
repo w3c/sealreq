@@ -8,10 +8,10 @@ Some experts may go a step further, and contribute to a gap-analysis or requirem
 - tbd
 
 ### Feedback
-Please use the [GitHub issue list](https://github.com/w3c/iip/issues) for discussions and to report issues.
+Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) for discussions and to report issues.
 
 ### Following
-To follow the work, you can 'Watch' this repository using the control above, or subscribe to the [public-i18n-sea](https://lists.w3.org/Archives/Public/public-i18n-sea/) mailing list, which is notified once a day about changes to the repo. Please use github issues rather than the mailing list to send feedback.
+To just follow the work, you can 'Watch' this repository using the control above, or subscribe to the [public-i18n-sea](https://lists.w3.org/Archives/Public/public-i18n-sea/) mailing list, which is notified once a day about changes to the repo. Please use github issues rather than the mailing list to send feedback.
 
 ### Contributing
 
@@ -34,6 +34,6 @@ The following templates are available:
 ### Links
 - [Task Force Home Page](https://w3c.github.io/sealreq/homepage/)
 - Charter (tbd)
-- [Action tracker](https://www.w3.org/International/groups/sea-layout/track/actions/open)
+- Action tracker (tbd)
 - [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html)
 - Meeting info (tbd)
