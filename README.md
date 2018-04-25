@@ -2,6 +2,8 @@
 
 This group exists to allow a network of experts to share information about gaps and requirements for support of Southeast Asian scripts on the Web and in eBooks. 
 
+The main problem we seem to face at the moment is that experts don't know how to tell the W3C what problems exist for support of their script on the Web, and the W3C doesn't know how to contact people who can help when questions arise. This network of experts should help to significantly reduce that problem. 
+
 Some experts may go a step further, and contribute to a gap-analysis or requirements document for a given script.
 
 ### Documents
