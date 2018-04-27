@@ -13,16 +13,16 @@ Some experts may go a step further, and contribute to a gap-analysis or requirem
 Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) for discussions and to report issues.
 
 ### Following
-To just follow the work, you can 'Watch' this repository using the control above, or subscribe to the [public-i18n-sea](https://lists.w3.org/Archives/Public/public-i18n-sea/) mailing list, which is notified once a day about changes to the repo. Please use github issues rather than the mailing list to send feedback.
+To follow the work, rather than just 'Watch' this repository, subscribe to the [public-i18n-sea](https://lists.w3.org/Archives/Public/public-i18n-sea/) mailing list. That list is notified once a day about changes to this repository, but also about W3C Working Group issues related to Southeast Asian writing systems. (Please use github issues rather than the mailing list to send feedback.)
+
+You can find a list of open issues, including those from Working Groups, on the [Layout Tracker](http://w3c.github.io/i18n-activity/textlayout/?filter=seasia) page. (That link applies a seasia filter.)
 
 ### Contributing
-
 All contributors should read and agree with [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Group _members_ are expert contributors who provide advice on requirements and gaps for the script they are familiar with. Some may also participate actively in producing the work of the group, contributing text and advice to create the outputs, and participating in meetings. For more information about becoming a group member contact [Richard Ishida](mailto:ishida@w3.org). We welcome participation requests.
 
 ### Links for editors
-
 If you end up creating a document, you should be familiar with and use the following:
 
 - [Github guidelines for working with i18n documents](http://w3c.github.io/i18n-activity/guidelines/github)
