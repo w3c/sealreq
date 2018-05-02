@@ -178,18 +178,23 @@
 
 
 
-<section id="quotations" class="tbd">
+<section id="quotations" class="advanced">
     <h3>Quotations</h3>
     <p class="status_prompt">Are there any issues when dealing with quotations marks, especially when nested? Should block quotes be indented or handled specially? <a href="http://w3c.github.io/typography/index#quotations">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aquotations%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
-    <p></p>
+    <p>HTML sets no default quotation marks for the <code class="kw" translate="no">q</code> element in a Javanese page (see <a href="https://www.w3.org/TR/html5/rendering.html#quotes">the list of defaults</a>), because quotation marks are not listed in CLDR. There's <a href="https://github.com/w3c/sealreq/issues/8">an issue</a> asking for expert advice on whether the fallback quotes are ok for Javanese, or whether ꧊ [U+A9CA JAVANESE PADA ADEG] or ꧌ [U+A9CC JAVANESE PADA PISELEH] and ꧍ [U+A9CD JAVANESE TURNED PADA PISELEH] would be a better choice?</p>
+<p>Firefox currently doesn't set default quotes at all based on the language of the content.</p>
+<p>Neither are the default quotation marks for the <code class="kw" translate="no">q</code> element  set to the appropriate characters by the browser  when the element appears inside a Javanese section within a page. This is currently per the HTML specification (both W3C and WhatWG).</p>
+<p>Javanese quotes embedded in text in another language can also be problematic if the outer language uses different quotation marks. This is due to the browsers choosing default quotation marks based on the language of the quotation, rather than that of the surrounding text. This is specified in the WhatWG version of the HTML spec, but not in the W3C version. There is <a href="https://github.com/whatwg/html/issues/3636#issuecomment-384340053">an issue</a> raised against the WhatWG version for this to be changed. That issue also addresses the need to change the default inside a section of a page with a different language (which is relevant to both W3C and WhatWG specs.)</p>
+<p>Marking this as advanced, because use of the <code class="kw" translate="no">q</code> element is optional (quote characters can be used instead), and it can be styled using CSS for the general case.</p>
 </section>
 
 
 
+<section id="numbers" class="ok"> </section>
 <section id="numbers" class="ok">
-    <h3>Numbers, dates, etc.</h3>
+<h3>Numbers, dates, etc.</h3>
     <p class="status_prompt">If  the script has its own set of number digits, are there any issues in how they are used? Does the script or language use special format patterns that are problematic (eg. 12,34,000 in India)? What about date/time formats and selection - and are non-Gregorian calendars needed?  Do percent signs and other symbols associated with number work correctly, and do numbers need special decorations, (like in Ethiopic or Syriac)? <a href="http://w3c.github.io/typography/index#numbers">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Anumbers%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
