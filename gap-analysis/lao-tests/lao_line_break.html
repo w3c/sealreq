@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html  lang="en" >
+<head>
+<meta charset="utf-8">
+<title>Lao line break</title>
+<link rel="author" title="r12a" href="mailto:ishida@w3.org">
+<style>
+.test, .ref {
+text-decoration: underline;
+text-decoration-skip:spaces;
+}
+
+/* the CSS below is not part of the test */
+.test, .ref {
+margin: 20px;
+font-size: 2em;
+}
+</style>
+</head>
+<body>
+
+<div id="assertion"><b class="assertion">Assertion:</b> Lines break at word boundaries.</div>
+<div id="instructions">
+Change the width of the browser window and observe break points.<br/>
+<b class="instructions">Test passes if</b> the text breaks at word or syllable boundaries.</div>
+<div class="test" id="test">ບຸກຄົນແຕ່ລະຄົນມີສິດທີ່ຈະຈາກປະເທດໃດປະເທດໜື່ງໄປ ນັບທັງປະເທດຂອງຕົນດ້ວຍ ແລະ ກັບຄືນມາໃນປະເທດຂອງຕົນໄດ້.</div>
+
+
+</body>
+</html>
