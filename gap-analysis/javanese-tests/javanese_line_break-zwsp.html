@@ -2,7 +2,7 @@
 <html  lang="en" >
 <head>
 <meta charset="utf-8">
-<title>Javanese line break</title>
+<title>Javanese line break with ZWSP</title>
 <link rel="author" title="r12a" href="mailto:ishida@w3.org">
 <style>
 .test, .ref {
@@ -23,13 +23,13 @@ border: 1px solid orange;
 </head>
 <body>
 
-<div id="assertion"><b class="assertion">Assertion:</b> Lines break at orthographic syllable boundaries.</div>
+<div id="assertion"><b class="assertion">Assertion:</b> Lines break at ZWSP.</div>
 <div id="advice"><b class="advice">Advice:</b> Use the slider to adjust the width of the box and observe break points.<br/>
 <input id="fontSizeSlider" min="10" max="90" step=".25" value="90" oninput="document.getElementById('sizeIndicator').textContent = this.value; document.getElementById('test').style.width = this.value+'%';" style="width:80%; margin-left: 5%;" type="range"> <span id="sizeIndicator" style="font-size:80%;">90</span>%</div>
-<div><b class="instructions">Test passes if</b> the text breaks at orthographic syllable boundaries.</div>
+<p><b class="instructions">Test passes if</b> the text breaks where ZWSP is inserted between orthographic syllable boundaries.</p>
 
 
-<div class="test" id="test" lang="jv-java">꧋ꦱꦧꦼꦤ꧀ꦲꦸꦮꦺꦴꦁꦏꦭꦲꦶꦫꦏꦺꦏꦤ꧀ꦛꦶꦩꦂꦢꦶꦏꦭꦤ꧀ꦢꦂꦧꦺꦩꦂꦠꦧꦠ꧀ꦭꦤ꧀ꦲꦏ꧀ꦲꦏ꧀ꦏꦁꦥꦝ꧉</div>
+<div class="test" id="test" lang="jv-java">꧋ꦱ​ꦧꦼ​ꦤ꧀ꦲꦸ​ꦮꦺꦴꦁ​ꦏ​ꦭ​ꦲꦶ​ꦫ​ꦏꦺ​ꦏ​ꦤ꧀ꦛꦶ​ꦩꦂ​ꦢꦶ​ꦏ​ꦭ​ꦤ꧀ꦢꦂ​ꦧꦺ​ꦩꦂ​ꦠ​ꦧ​ꦠ꧀ꦭ​ꦤ꧀ꦲ​ꦏ꧀ꦲ​ꦏ꧀ꦏꦁ​ꦥ​ꦝ꧉</div>
 
 
 </body>

@@ -2,26 +2,23 @@
 <html  lang="en" >
 <head>
 <meta charset="utf-8">
-<title>Javanese line break</title>
+<title>Javanese line breaks in textarea</title>
 <link rel="author" title="r12a" href="mailto:ishida@w3.org">
 <style>
 .test, .ref {
 }
 
 /* the CSS below is not part of the test */
-.test, .ref {
-margin: 20px;
-font-size: 2em;
-}
-textarea { width: 90%; height: 8em; margin: auto; }
+textarea { width: 90%; height: 4em; margin: 2em 5%; border: 1px solid orange; font-size: 2.5em; }
+#assertion, #advice { font-style: italic; color: #666; }
 </style>
 </head>
 <body>
 
-<div id="assertion"><b class="assertion">Assertion:</b> Lines break at word boundaries.</div>
-<div id="instructions">
-Change the width of the browser window and observe break points.<br/>
-<b class="instructions">Test passes if</b> the text breaks at word or syllable boundaries.</div>
+<div id="assertion"><b class="assertion">Assertion:</b> Lines break at orthographic syllable boundaries.</div>
+<div id="advice"><b class="advice">Advice:</b> Use the slider to adjust the width of the box and observe break points.<br/>
+<input id="fontSizeSlider" min="10" max="90" step=".25" value="90" oninput="document.getElementById('sizeIndicator').textContent = this.value; document.getElementById('test').style.width = this.value+'%';" style="width:80%; margin-left: 5%;" type="range"> <span id="sizeIndicator" style="font-size:80%;">90</span>%</div>
+<p><b class="instructions">Test passes if</b> the text breaks at word or syllable boundaries.</p>
 <textarea class="test" id="test" lang="jv-java">꧋ꦱꦧꦼꦤ꧀ꦲꦸꦮꦺꦴꦁꦏꦭꦲꦶꦫꦏꦺꦏꦤ꧀ꦛꦶꦩꦂꦢꦶꦏꦭꦤ꧀ꦢꦂꦧꦺꦩꦂꦠꦧꦠ꧀ꦭꦤ꧀ꦲꦏ꧀ꦲꦏ꧀ꦏꦁꦥꦝ꧉</textarea>
 
 
