@@ -9,7 +9,7 @@ Some experts may go a step further, and contribute to a gap-analysis or requirem
 Topics for discussion are suggested by [the gap-analysis template](http://w3c.github.io/i18n-activity/templates/gap-analysis/gap-analysis_template.html). This work supports the development of the [matrix]() indicating hot-spots for language support.
 
 ### Documents
-- tbd
+- [Javanese Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/java-gap.html)
 
 ### Feedback
 Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) for discussions and to report issues.
