@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>XXXX Gap Analysis</title>
+  <title>Khmer Gap Analysis</title>
   <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove" type="text/javascript">
 </script>
   <script class="remove" type="text/javascript">
@@ -16,9 +16,9 @@
       //previousMaturity:  "FPWD",
 
       noRecTrack:           true,
-      shortName:            "xxxx-gap",
+      shortName:            "khmr-gap",
       copyrightStart:       "2018",
-      edDraftURI:           "https://w3c.github.io/xxxx/gap-analysis/",
+      edDraftURI:           "https://w3c.github.io/sealreq/gap-analysis/khmr-gap",
 
       // if this is a LCWD, uncomment and set the end of its review period
       // lcEnd: "2009-08-05",
@@ -32,15 +32,15 @@
 
       wg:           "Internationalization Working Group",
       wgURI:        "https://www.w3.org/International/core/",
-      wgPublicList: "public-i18n-xxxx",
-      bugTracker: { new: "https://github.com/w3c/alreq/issues", open: "https://github.com/w3c/xxxx/issues" } ,
+      wgPublicList: "public-i18n-sea",
+      bugTracker: { new: "https://github.com/w3c/alreq/issues", open: "https://github.com/w3c/sealreq/issues" } ,
       otherLinks: [
         {
           key: "Github",
           data: [
           {
             value: "repository",
-            href: "https://github.com/w3c/xxxx"
+            href: "https://github.com/w3c/sealreq"
           }
           ]
         }
@@ -49,8 +49,8 @@
       
       // langs array lists languages addressed by this document, in order of speaker (highest first)
       // it is used to generate the javascript needed for the matrix
-      langs: ['XXXX'],
-      gapDocPath: 'https://w3c.github.io/XXXX/gap-analysis/',
+      langs: ['Khmer'],
+      gapDocPath: 'https://w3c.github.io/sealreq/gap-analysis/khmr-gap',
 
 
       // URI of the patent status for this WG, for Rec-track documents
@@ -67,12 +67,12 @@
 
 <body>
   <div id="abstract">
-    <p>This document describes and prioritises gaps for the support of Xxxx on the Web and in eBooks. In particular, it is concerned with text layout. It checks that needed features are supported in W3C specifications, in particular HTML and CSS and those relating to digital publications. It also checks whether the features have been implemented in browsers and ereaders. <strong>This is a preliminary analysis.</strong></p>
+    <p>This document describes and prioritises gaps for the support of Khmer on the Web and in eBooks. In particular, it is concerned with text layout. It checks that needed features are supported in W3C specifications, in particular HTML and CSS and those relating to digital publications. It also checks whether the features have been implemented in browsers and ereaders. <strong>This is a preliminary analysis.</strong></p>
   </div>
 
   <div id="sotd">
-    <p>This document describes and prioritises gaps for the support of Xxxx on the Web and in eBooks. In particular, it is concerned with text layout. It checks that needed features are supported in W3C specifications, in particular HTML and CSS and those relating to digital publications. It also checks whether the features have been implemented in browsers and ereaders. This document complements the document <a href="https://w3c.github.io/xxxx/">Xxxx Layout Requirements</a>, which describes the requirements for areas where gaps appear. It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/language-matrix.html">language matrix</a> that tracks Web support for many languages.</p>
-<p>The editor's draft of this document is being developed by the <a href="https://w3c.github.io/xxxx/">Xxxx Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+    <p>This document describes and prioritises gaps for the support of Khmer on the Web and in eBooks. In particular, it is concerned with text layout. It checks that needed features are supported in W3C specifications, in particular HTML and CSS and those relating to digital publications. It also checks whether the features have been implemented in browsers and ereaders. <!--This document complements the document <a href="https://w3c.github.io/xxxx/">Xxxx Layout Requirements</a>, which describes the requirements for areas where gaps appear.--> It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/language-matrix.html">language matrix</a> that tracks Web support for many languages.</p>
+<p>The editor's draft of this document is being developed by the <a href="https://w3c.github.io/sealreq/">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
 
     <div class="note">
     <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
@@ -87,7 +87,7 @@
     <h2>Introduction</h2>
     <p>The W3C needs to make sure that the text layout and typographic needs of scripts and languages around the world are built in to technologies such as HTML, CSS, SVG, etc. so that Web pages and eBooks can look and behave as people expect around the world.</p>
     
-    <p>This page documents issues for languages using the XXXX script, including XXXX, in terms of support by specifications or user agents (browsers, e-readers, etc.). </p>
+    <p>This page documents issues for languages using the Khmer script, including Cambodian, in terms of support by specifications or user agents (browsers, e-readers, etc.). </p>
 
     <p>A summary of this report and others can be found as part of the <a href="https://w3c.github.io/typography/gap-analysis/language-matrix.html" style="font-size: 140%;">language matrix</a>.</p>
     
@@ -97,7 +97,7 @@
 
     <p>Gap analysis work usually starts with a <strong>preliminary analysis</strong>, conducted quickly by one or a small group of experts. Then a more <strong>detailed analysis</strong> is carried out, involving a wider range of experts. The detailed analysis may involve the development of tests, in order to illustrate issues and track results for browsers. The next phase is <strong>ongoing maintenance</strong>. It is expected that the resulting document will not be frozen: as gaps are fixed, this should be noted in the document. It is also possible that new gaps are noticed or arise, and they can be added to this document when that happens.</p>
     
-    <p>As the gap analysis develops, the requirements for features that are problematic should be described in the companion document, <a href="https://w3c.github.io/xxxxlreq/">Xxxx Layout Requirements</a>. Links to the appropriate part of that document should be added to this document as the material is created. Note that the requirements document should not contain any technology-specific information: all of that belongs here.</p>
+    <p>As the gap analysis develops, the requirements for features that are problematic should be described in the companion document, <a href="https://w3c.github.io/sealreq/">Khmer Layout Requirements</a>. Links to the appropriate part of that document should be added to this document as the material is created. Note that the requirements document should not contain any technology-specific information: all of that belongs here.</p>
     </section>
     
     <section id="prioritization">
@@ -130,7 +130,7 @@
     
     
     
-<section id="encoding" class="tbd">
+<section id="encoding" class="ok">
     <h3>Encoding considerations</h3>
     <p class="status_prompt">Are there any character repertoire issues preventing use of this script on the Web? Do variation selectors need attention?</p>
 
@@ -139,7 +139,7 @@
 
 
 
-<section id="fonts" class="tbd">
+<section id="fonts" class="ok">
     <h3>Fonts</h3>
     <p class="status_prompt">Do the standard fallback fonts used in browsers (eg. serif, sans-serif, cursive, etc.) match expectations? Are special font or OpenType features needed for this script that are not available?  <a href="https://w3c.github.io/typography/index#font-style">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Afont-style%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
@@ -169,7 +169,7 @@
 
 
 
-<section id="cursive" class="tbd">
+<section id="cursive" class="na">
     <h3>Cursive text</h3>
     <p class="status_prompt"> If this script is cursive (eg. Arabic, N'Ko, Syriac, etc), are there problems or needed features related to the handling of cursive text? Do cursive links break if parts of a word are marked up or styled? Do Unicode joiner and non-joiner characters behave as expected?   <a href="https://w3c.github.io/typography/index#cursive">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Acursive%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
@@ -179,12 +179,28 @@
 
 
 
-<section id="quotations" class="tbd">
+<section id="quotations" class="advanced">
     <h3>Quotations</h3>
     <p class="status_prompt">Are there any issues when dealing with quotations marks, especially when nested? Should block quotes be indented or handled specially? <a href="https://w3c.github.io/typography/index#quotations">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aquotations%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
-    <p></p>
+<section id="q_defaults">
+<h4><a href="#q_defaults">Default quotation marks for q element</a></h4>
+<p>If the <code class="kw" translate="no">html</code> tag sets the language of a page, the HTML specification says that  the <code class="kw" translate="no">q</code> element should by default produce quotation marks according to the information in CLDR for that language.</p>
+<p>For Khmer, the default quote marks according to CLDR should be, reading right to left, “...”, and embedded quote marks ‘...’. Edge fails to produce any quotation marks, although it does so for other languages. (Firefox, Chrome &amp; Safari are ok.) See a <a href="https://w3c.github.io/i18n-tests/results/the-q-element.html#language">test and results</a>.</p>
+</section>
+
+<section id="q_section">
+<h4><a href="#q_section">Default quotation marks in a new language section</a></h4>
+<p>In addition, the default quotation marks for the <code class="kw" translate="no">q</code> element  are not set to the appropriate characters by the browser  when the element appears inside an Khmer section of a page that has a different overall language. This is currently per the HTML specification (both W3C and WhatWG).  There is <a href="https://github.com/whatwg/html/issues/3636#issuecomment-384340053">an issue</a> raised against the WhatWG version for this to be changed.</p>
+</section>
+
+<section id="q_multilingual">
+<h4><a href="#q_multilingual">Embedded quotations in a different language</a></h4>
+<p>Khmer quotes embedded in text in another language can also be problematic if the outer language uses different quotation marks. This is due to the browsers choosing default quotation marks based on the language of the <em>quotation</em>, rather than that of the surrounding text. See <a href="https://w3c.github.io/i18n-tests/results/the-q-element.html#ml_nesting">a test</a>. This behaviour is specified in the WhatWG version of the HTML spec, but no longer in the W3C version. There is <a href="https://github.com/whatwg/html/issues/3636#issuecomment-384340053">an issue</a> raised against the WhatWG version for this to be changed.</p>
+</section>
+
+<p>Marking all the above as advanced, because use of the <code class="kw" translate="no">q</code> element is optional (quote characters can be used instead), and it can be styled using CSS for the general case.</p>
 </section>
 
 
@@ -218,18 +234,40 @@
 
 
 
-<section id="spacing" class="tbd">
+<section id="spacing" class="advanced">
     <h3>Inter-character spacing</h3>
     <p class="status_prompt">Some scripts create emphasis or other effects by spacing out the letters or syllables in a word. Are there requirements for this script/language that are unsupported? (For justification related spacing, see below.) See <a href="https://w3c.github.io/typography/index#letter_spacing">available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Ainline-spacing%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
-    <p></p>
-    </section>
+    <p>Cambodian text doesn't appear to use inter-letter spacing in running text, however it is sometimes used in signage. (<a href="https://github.com/w3c/sealreq/issues/9#issuecomment-387971659">@mcdurdin)</a> See an <a href="https://www.phnompenhpost.com/post-property/impasse-tbong-khmum-over-who-starts-building-first">example</a>. The rules for where the separations appear are still not clear, however one might expect that it keeps together base + subjoined consonants, and base consonants + vowel signs. The situation is less clear for spacing vowel-signs such as <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17B6;</span> [<span class="uname">U+17B6 KHMER VOWEL SIGN AA​</span>]</span>, which are shown separated in the example linked to above.</p>
+    
+<section id="spacing_letter_spacing">
+<h4>Letter-spacing</h4>
+<p>There is <a href="khmer-tests/khmer_letter_space.html">a test for CSS letter-spacing property</a>.</p>
+<p>Firefox on MacOS keeps all vowel signs and diacritics with base characters. It also keeps together consonant stacks and their vowel signs, such as <span lang="km">ខ្លួ</span>. Also, ligated combinations such as <span lang="km">បា កា</span> are rendered as expected.</p>
+<p>Chrome on MacOS fails to keep vowel signs together with a preceding subjoined consonant.</p>
+<p>Safari separates all characters, combining or not.</p>
+<p>I'm marking this as advanced, even though it's broken on Chrome and Safari, until someone proposes that it really is needed for Web or eBook content. Happy to change.</p>
+</section>
+
+
+<section id="spacing_ic_justify">
+<h4>Justify, inter-character</h4>
+<p>There is <a href="https://w3c.github.io/i18n-tests/misc/justification/khmer_am.html">a test for CSS text-justify property</a> with value set to inter-character.</p>
+<p>Firefox on MacOS keeps all vowel signs and diacritics with base characters. It also keeps together consonant stacks and their vowel signs, such as <span lang="km">ខ្លួ</span>. Also, ligated combinations such as <span lang="km">បា កា</span> are rendered as expected.</p>
+<p>&nbsp;</p>
+<p>Chrome and Safari don't support text-justify: inter-character.</p>
+</section>
+
+
+</section>
 
 
 
-<section id="ruby" class="tbd">
-    <h3>Ruby annotation</h3>
+<section id="ruby" class="na"> </section>
+<section id="ruby" class="na"> </section>
+<section id="ruby" class="na">
+<h3>Ruby annotation</h3>
     <p class="status_prompt">The ruby spec currently specifies an initial subset of requirements for fine-tuning the typography of phonetic and semantic annotations of East Asian text, including furigana, pinyin and zhuyin fuhao systems.  Is is adequate for what it sets out to do?  What other controls will be needed in the future? <a href="https://w3c.github.io/typography/index#ruby_annotation">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aruby%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
@@ -258,7 +296,7 @@
 
 
 
-<section id="bidi" class="tbd">
+<section id="bidi" class="na">
     <h3>Bidirectional text</h3>
     <p class="status_prompt">If this script runs right-to-left, are there any issues when handling that? Is bidirectional text adequately supported? What about numbers and expressions? Do the Unicode bidi controls and HTML markup provide the support needed? Is isolation of directional runs problematic? <a href="https://w3c.github.io/typography/index#bidirectional_text_direction">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Abidi%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
@@ -287,18 +325,55 @@
 <h2>Lines and Paragraphs</h2>
 
  
-<section id="linebreak" class="tbd">
+<section id="linebreak" class="advanced">
     <h3>Line breaking</h3>
     <p class="status_prompt">Does the browser capture the rules about the way text in your script wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)?  What characters should not appear at the end or start of a line, and what should be done to prevent that? <a href="https://w3c.github.io/typography/index#line_breaking">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aline-break%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
-    <p></p>
+<section id="linebreak-requirements">
+<h4>Requirements</h4>
+   <p>Although Khmer doesn't use spaces or dividers between words, the expectation is that line-breaks occur at word boundaries.</p>
+<p>There are three basic types of Khmer word:     </p>
+<ol>
+<li>Single, indivisible words: eg. ជាតិ, វិទ្យាល័យ, កម្ម     </li>
+<li>Words with prefixes and suffixes: eg. អន្តរជាតិ, មហវិទ្យាល័យ     and កម្មករ     </li>
+<li>Compound words (combing 2, 3, or more single words): eg. ជាតិសាសន៍, កម្មផល, សកលវិទ្យាល័យ</li>
+</ol>
+<p>The first two types cannot be broken, but the third type can. For example, |ជាតិ|សាសន៍|, |កម្ម|ផល|, and |សកល|វិទ្យាល័យ. (<a href="https://github.com/w3c/sealreq/issues/4#issuecomment-384981313">Hong</a>)</p>
+<p>Text is not broken at sub-word syllable boundaries. In fact, this is particularly difficult to do algorithmically in Khmer, because syllable-final consonants are indistinguishable from consonants with an inherent vowel that constitute a new syllable. Some kind of morphological analysis is needed.</p>
+</section>
+
+
+<section id="linebreak-gaps">
+<h4>Gaps</h4>
+   <p>&quot;ICU use word boundaries to break but it looks not nice, because it depend on the people who provide wordlist, for example the name of USA (United State of America) in Khmer it is សហរដ្ឋអាមេរិក ICU consider as one word, when it break to new line, it remain the long blank in old line. Normally, we can break it to 2 word សហរដ្ឋ = United State and អាមេរិក.&quot; (<a href="https://github.com/w3c/sealreq/issues/4#issuecomment-384981169">Hong</a>)</p>
+<p>&quot;There is a change going through ICU at the moment, to how Khmer is line broken. The basis of line breaking is still dictionary based and word broken. There is no intent to support syllable breaking. The following changes are made in that change:</p>
+<ol>
+<li>Bad and ambiguous spellings are correctly handled</li>
+<li>Use of ZWSP and WJ are disambiguated with regard to how far they limit linebreaking. In the case of Khmer they have a range of up to 3 small clusters (base+Marks+Coengs) but may collapse to 0 for longer words.&quot; (<a href="https://github.com/w3c/sealreq/issues/4#issuecomment-385132914">@mhosken</a>)</li>
+</ol>
+<p>An issue with the use of dictionary lookup is that browsers don't have dictionary lookup support for minority languages that use the Khmer script. And in fact, regardless of the declared language of the text, browsers tend to apply the Khmer dictionary to text written in the Khmer characters.</p>
+<p>For such languages, it would be helpful if the content author could either:</p>
+<ol>
+<li>disable the dictionary lookup and let the line-breaking depend on ZWSP insertion, or</li>
+<li>invoke a different dictionary – perhaps one that is provided as a browser extension.</li>
+</ol>
+</section>
+
+
+<section id="linebreak-status">
+<h4>Status</h4>
+<p>I mark this as advanced for now for the Cambodian language, although i'm open to arguments that the difficulties produced are worth a status of basic.</p>
+<p>For minority languages, the status is clearly going to be broken, since there's no way to override the use of the Khmer dictionary.</p>
+</section>
 </section>
 
 
 
+<section id="hyphenation" class="tbd"> </section>
+<section id="hyphenation" class="tbd"> </section>
 <section id="hyphenation" class="tbd">
-    <h3>Hyphenation</h3>
+<h3>Hyphenation</h3>
     <p class="status_prompt">Is hyphenation used for your script, or something else? If hyphenation is used, does it work as expected? <a href="https://w3c.github.io/typography/index#hyphenation">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Ahyphenation%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
@@ -317,12 +392,18 @@
 
 
 
-<section id="counters" class="tbd">
+<section id="counters" class="ok">
     <h3>Counters, lists, etc.</h3>
     <p class="status_prompt">The CSS Counter Styles specification describes a limited set of simple and complex styles for counters to be used in list numbering, chapter heading numbering, etc.The rules plus more counter styles (totalling around 120 for over 30 scripts) are listed in the document <a href="https://w3c.github.io/predefined-counter-styles/">Ready-made Counter Styles</a>. Do these cover your needs?  Are the details correct? Are there other aspects related to counters and lists that need to be addressed? <a href="https://w3c.github.io/typography/index#counters">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Acounter-styles%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
-    <p></p>
+<p>Two numeric CSS counter styles are defined for Khmer, using Khmer digits, in the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>: <code class="kw" translate="no">khmer</code> and <code class="kw" translate="no">cambodian</code>.  Both styles are exactly the same, and are listed separately  because both names are supported in some browsers, and it makes it easier to cut and paste if two clean instances are provided.</p>
+<p>In addition, an alphabetic counter style is defined: <code class="kw" translate="no">khmer-consonant</code>.</p>
+<p>The <a href="https://www.w3.org/TR/css-counter-styles-3/#simple-numeric">CSS Counter Styles specification</a> only specifies the  <code class="kw" translate="no">khmer</code> and <code class="kw" translate="no">cambodian</code> styles.</p>
+<p>The <code class="kw" translate="no">khmer</code> and <code class="kw" translate="no">khmer</code> counter styles are supported by Firefox, Chrome and Safari, but not by Edge. </p>
+<p>The <code class="kw" translate="no">khmer-consonant</code> style is not supported by any browser natively, and although the CSS Counter Styles spec allows users to create their own counter styles,  the feature is only implemented by Firefox at the moment, so no support is available for this style.</p>
+<p>See   tests: <a href="https://w3c.github.io/i18n-tests/results/predefined-counter-styles#simplenumeric">Simple numeric</a> • <a href="https://w3c.github.io/i18n-tests/results/custom-counter-styles#khmer-styles">Khmer script</a></p>
+<p>Unless a proposal is made that the <code class="kw" translate="no">khmer-consonant</code> or some other style is important, I will mark the status for this as ok.</p>
 </section>
 
 
@@ -366,7 +447,7 @@
 <section id="h_pages">
 <h2>Layout &amp; pages</h2>
 
-<section id="bidilayout" class="tbd">
+<section id="bidilayout" class="na">
     <h3>Bidirectional layout</h3>
     <p class="status_prompt">When content can flow vertically and to the left or right, how do you specify the location of objects, text, etc. relative to the flow? For example, keywords 'left' and 'right' are likely to need to be reversed for pages written in English and page written in Arabic. <a href="https://w3c.github.io/typography/index#direction_agnostic">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Abidi%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
@@ -376,7 +457,7 @@
 
 
 
-<section id="vertical" class="tbd">
+<section id="vertical" class="na">
     <h3>Vertical text</h3>
     <p class="status_prompt">Are the script requirements for vertically oriented text met?  What about if you mix vertical text with scripts that are normally only horizontal? Do you need a switch to use different characters in vertical vs. horizontal text? Does the browser support short runs of horizontal text in vertical lines (tate-chu-yoko in Japanese) as expected? Is the orientation of characters and the directional ordering of characters supported as needed? <a href="https://w3c.github.io/typography/index#vertical_text">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Avertical-text%20label%3Atype-info-request">check for currently needed data</a>.</p>
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  lang="en" >
+<head>
+<meta charset="utf-8">
+<title>Khmer line break basics</title>
+<link rel="author" title="r12a" href="mailto:ishida@w3.org">
+<style>
+.test, .ref { letter-spacing: 1em;
+}
+
+/* the CSS below is not part of the test */
+.test, .ref {
+margin: 20px;
+font-size: 4em;
+}
+textarea { width: 50%; height: 6em; font-size: 2em; }
+</style>
+</head>
+<body>
+
+<div id="assertion"><b class="assertion">Assertion:</b> Letter-spacing is applied to Khmer text, and doesn't break text units inappropriately.</div>
+<div><b class="instructions">Test passes if</b> the text is spaced out in an appropriate way.</div>
+
+<p id="advice"><b class="advice">Advice:</b> Add whatever text you like to the input box, then press the button.<br/>
+Use the following control to change the font, if desired: <input type="text" onChange="document.getElementById('test').style.fontFamily = this.value;"></p>
+
+<p><textarea id="textarea">មនុស្សគ្រប់រូបមានសិទ្ធិចាកចេញពីប្រទេសណាមួយ រួមទាំងប្រទេសរបស់ខ្លួនផង និងមាន សិទ្ធិវិលត្រឡប់មកប្រទេសរបស់ខ្លួនវិញ។  វើការវិនិច្ឆយបានល្អើការវិនិច្ឆយបានល្អ បា</textarea> <button onClick="document.getElementById('test').textContent = document.getElementById('textarea').value;">Run the test</button></p>
+<div class="test" id="test" lang="km"></div>
+
+
+</body>
+</html>
