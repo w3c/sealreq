@@ -10,6 +10,7 @@ Topics for discussion are suggested by [the gap-analysis template](http://w3c.gi
 
 ### Documents
 - [Javanese Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/java-gap.html)
+- [Lao Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/laoo-gap.html)
 
 ### Feedback
 Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) for discussions and to report issues.
