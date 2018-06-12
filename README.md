@@ -14,10 +14,10 @@ Topics for discussion are suggested by [the gap-analysis template](http://w3c.gi
 - [Lao Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/laoo-gap.html)
 
 ### Feedback
-Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) for discussions and to report issues.
+Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) to report issues for language support, for discussions, and to send feedback about documents.
 
 ### Following
-Rather than just 'Watch' this repository, it is best to subscribe to the [public-i18n-sea](https://lists.w3.org/Archives/Public/public-i18n-sea/) mailing list. That list is notified once a day (in digest form) about changes to this repository, but also about other W3C Working Group issues related to Southeast Asian writing systems. (Please use github issues rather than the mailing list to send feedback.)
+Rather than just 'Watch' this repository, it is best to subscribe to the [public-i18n-sea](https://lists.w3.org/Archives/Public/public-i18n-sea/) mailing list. That list is notified once a day (in digest form) about not only changes to this repository, but also about other W3C Working Group issues related to Southeast Asian writing systems. (Please use github issues rather than the mailing list to send feedback.)
 
 You can find a list of open issues, including those from Working Groups, on the [Layout Tracker](http://w3c.github.io/i18n-activity/textlayout/?filter=seasia) page. (That link applies a seasia filter.)
 
@@ -32,6 +32,7 @@ Group _members_ are expert contributors who provide advice on requirements and g
 - Action tracker (tbd)
 - [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html)
 - Meeting info (tbd)
+- [Mail archive](https://lists.w3.org/Archives/Public/public-i18n-sea/)
 
 
 ### Links to background information
