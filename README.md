@@ -6,7 +6,7 @@ The main problem we seem to face at the moment is that experts don't know how to
 
 Some experts may go a step further, and contribute to a gap-analysis or requirements document for a given script.
 
-Topics for discussion are suggested by [the gap-analysis template](http://w3c.github.io/i18n-activity/templates/gap-analysis/gap-analysis_template.html). This work supports the development of the [matrix]() indicating hot-spots for language support.
+Topics for discussion are suggested by [the gap-analysis template](http://w3c.github.io/i18n-activity/templates/gap-analysis/gap-analysis_template.html). This work supports the development of the [matrix](http://w3c.github.io/typography/gap-analysis/language-matrix.html) indicating hot-spots for language support.
 
 ### Documents
 - [Javanese Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/java-gap.html)
