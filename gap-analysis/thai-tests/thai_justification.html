@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  lang="en" >
+<head>
+<meta charset="utf-8">
+<title>Thai justification</title>
+<link rel="author" title="r12a" href="mailto:ishida@w3.org">
+<style>
+.test, .ref {
+}
+
+/* the CSS below is not part of the test */
+.test, .ref {
+margin: 2em 5%;
+font-size: 2em;
+}
+.test {
+width: 90%;
+font-size: 36px;
+border: 1px solid orange;
+height: 5em;
+overflow: hidden;
+text-align: justify;
+}
+#assertion, #advice { font-style: italic; color: #666; }
+</style>
+</head>
+<body>
+
+<div id="assertion"><b class="assertion">Assertion:</b> Thai text is  fully-justified correctly.</div>
+<div id="advice"><b class="advice">Advice:</b> Use the slider to adjust the width of the box and observe break points.<br/>
+<input id="fontSizeSlider" min="10" max="90" step=".25" value="90" oninput="document.getElementById('sizeIndicator').textContent = this.value; 
+tests = document.querySelectorAll('.test'); for (let i=0;i<tests.length;i++) { tests[i].style.width = this.value+'%';}" style="width:80%; margin-left: 5%;" type="range"> <span id="sizeIndicator" style="font-size:80%;">90</span>%</div>
+<div><b class="instructions">Test passes if</b> the text justifies as you would expect [exploratory test].</div>
+
+
+<div class="test" id="test" lang="lo">2. ทุกคนมีสิทธิที่จะออกจากประเทศใด ๆ ไป รวมทั้งประเทศของตนเองด้วย และที่จะกลับยังประเทศตน</div>
+
+</body>
+</html>
