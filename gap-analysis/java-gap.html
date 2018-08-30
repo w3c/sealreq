@@ -299,7 +299,7 @@
     <p>Wrapping needs to occur at  orthographic syllable boundaries, which are not delimited by punctuation or spaces. Orthographic syllables are different from phonetic syllables, in that consonant clusters using pangkon are not split. </p>
 <p>Unlike Thai, which uses dictionary lookup to wrap word-by-word, the basic break points in Javanese can be calculated using a grammar for syllables. (There are likely to be additional considerations to check related to punctuation, digits, etc.)</p>
 <p>See <a href="https://github.com/w3c/sealreq/issues/2">this discussion</a> for examples.</p>
-<p>In 19th century texts, when a new line begins with ◌ꦺ [U+A9BA JAVANESE VOWEL SIGN TALING], an additional spacing version of that character is placed at the end of the previous line. (See <a href="https://github.com/w3c/sealreq/issues/2">this discussion</a> for examples.) This behaviour is not supported by any browser, and in fact support would require a special algorithm to be defined for line-breaking, however it doesn't appear to be needed in modern Javanese text. Therefore the status for this section ignores that behaviour.</p>
+<p>See also the <a href="#hyphenation">Hyphenation</a> section for information about use of TALING.</p>
 <p>This section marked as broken because browsers do not apply the necessary algorithm to to insert line-break opportunities at orthographic syllable boundaries for Javanese text in normal HTML. As a result, a line of text tends to run off the right edge of the window. See <a href="https://w3c.github.io/sealreq/gap-analysis/javanese-tests/javanese_line_break.html">this test</a>.</p>
 <p>It is possible to fudge things, using CSS properties, so that the text wraps, but the resulting line breaks are not always correct. It is also possible to make the breaking happen by inserting ZWSP at appropriate places, but we cannot expect Javanese users to do that accurately and consistently. ( See <a href="https://w3c.github.io/sealreq/gap-analysis/javanese-tests/javanese_line_break_zwsp.html">this test</a>.)</p>
 <p>Note, however, that lines ARE broken by orthographic syllable in a <code class="kw" translate="no">textarea</code> element. See <a href="https://w3c.github.io/sealreq/gap-analysis/javanese-tests/javanese_line_break_textarea.html">this test</a>.</p>
@@ -307,12 +307,14 @@
 
 
 
-<section id="hyphenation" class="na">
+<section id="hyphenation" class="ok">
     <h3>Hyphenation</h3>
     <p class="status_prompt">Is hyphenation used for your script, or something else? If hyphenation is used, does it work as expected? <a href="http://w3c.github.io/typography/index#hyphenation">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Ahyphenation%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
-    <p>There is a feature in use in print sometimes were when a line starts with ◌ꦺ [U+A9BA JAVANESE VOWEL SIGN TALING​] and another one is put at the end of the previous line. However, it is not felt that this is an important feature to enable at this time.</p>
+    <p>In some texts, when a new line begins with ◌ꦺ [U+A9BA JAVANESE VOWEL SIGN TALING], an additional spacing version of that character is placed at the end of the previous line. (See <a href="https://github.com/w3c/sealreq/issues/2">this discussion</a> for examples.) </p>
+<p>&quot;Since hyphenating taling turns out can also be found in handwritten manuscripts, and I've recently founded such taling from as late as 1960s handwritten Primbon, maybe we should say that it is common in printed and handwritten colonial era texts, but not used by contemporary standards.&quot; (<a href="https://github.com/w3c/sealreq/issues/2#issuecomment-394890536">@adtbayuperdana</a>) </p>
+<p>This behaviour is not supported by any browser, and in fact support would require a special algorithm to be defined for line-breaking, however it doesn't appear to be needed in modern Javanese text. Therefore the status for this section ignores that behaviour.</p>
 </section>
 
 
