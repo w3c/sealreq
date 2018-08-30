@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  lang="en" >
+<head>
+<meta charset="utf-8">
+<title>Lao letter-spacing</title>
+<link rel="author" title="r12a" href="mailto:ishida@w3.org">
+<style>
+.test { 
+    letter-spacing: 1em;
+}
+
+/* the CSS below is not part of the test */
+.question { margin: 2em 5% 0 5%; }
+.test {
+margin: 0 5% 0 5%;
+font-size: 36px;
+}
+.test {
+border: 1px solid orange;
+}
+#assertion, #advice { font-style: italic; color: #666; }
+</style>
+</head>
+<body>
+
+<div id="assertion"><b class="assertion">Assertion:</b> [Exploratory test] letter-spacing applied to Lao text produces the expected behaviour.</div>
+<div><b class="instructions">Test passes if</b> there are gaps in the text, and they are in the right places.</div>
+
+
+<div class="question">Are there gaps only around syllable boundaries?</div>
+<div class="test">ກກກັບຊິເຄື່ອງກກ</div>
+
+<div class="question">Do gaps split base from superscript vowel/tone?</div>
+<div class="test">ກກກັບຊິກໍ່ຄື່ຄ່ກກ</div>
+
+<div class="question">Do gaps appear between prescript vowel and base?</div>
+<div class="test">ກກເຄແຕກກ</div>
+
+<div class="question">Do gaps appear between postscript vowel and base?</div>
+<div class="test">ກກຄະປອຽກກ</div>
+
+<div class="question">Is AM separated from the base?<br/>
+Is the gap between the AA and nikihit in BAM?<br/>
+</div>
+<div class="test">ກກບຳກກ</div>
+
+<div class="question">Add your own test: <input id="in" type="text" placeholder="Add Lao text here."/> <button onClick="document.getElementById('out').textContent = document.getElementById('in').value">Go</button></div>
+<div id="out" class="test"></div>
+</body>
+</html>
+
