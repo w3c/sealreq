@@ -30,6 +30,7 @@ Group _members_ are expert contributors who provide advice on requirements and g
 - [Task Force Home Page](https://w3c.github.io/sealreq/homepage/)
 - Charter (tbd)
 - Action tracker (tbd)
+- [Writing i18n tests](https://github.com/w3c/i18n-activity/wiki/Writing-i18n-tests)
 - [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html)
 - Meeting info (tbd)
 - [Mail archive](https://lists.w3.org/Archives/Public/public-i18n-sea/)
