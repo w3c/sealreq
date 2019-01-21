@@ -184,19 +184,20 @@
     <p class="status_prompt">Are there any issues when dealing with quotations marks, especially when nested? Should block quotes be indented or handled specially? <a href="https://w3c.github.io/typography/index#quotations">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aquotations%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
 
+<p>See the <a href="../lao/#h_counters">requirements document</a>.</p>
 <section id="q_defaults">
-<h4><a href="#q_defaults">Default quotation marks for q element</a></h4>
+<h4><a href="#q_defaults">Default quotation marks for q element fail on Edge</a></h4>
 <p>If the <code class="kw" translate="no">html</code> tag sets the language of a page, the HTML specification says that  the <code class="kw" translate="no">q</code> element should by default produce quotation marks according to the information in CLDR for that language.</p>
-<p>For Lao, the default quote marks according to CLDR should be, reading right to left, “...”, and embedded quote marks ‘...’. <strong>Edge</strong> fails to produce any quotation marks, although it does so for other languages. (Firefox, Chrome &amp; Safari are ok.) See a <a href="https://w3c.github.io/i18n-tests/results/the-q-element.html#language">test and results</a>.</p>
+<p><span class="fail">Edge</span> <strong>fails to produce any quotation marks</strong>, although it does so for other languages. <span class="pass">Firefox</span>, <span class="pass">Chrome</span> &amp; <span class="pass">Safari</span> are ok. See a <a href="https://w3c.github.io/i18n-tests/results/the-q-element.html#language">test and results</a>.</p>
 </section>
 
 <section id="q_section">
-<h4><a href="#q_section">Default quotation marks in a new language section</a></h4>
+<h4><a href="#q_section">Default quotation marks in a new language section fail</a></h4>
 <p>In addition, the default quotation marks for the <code class="kw" translate="no">q</code> element  are not set to the appropriate characters by the browser  when the element appears inside an Lao section of a page that has a different overall language. This is currently per the HTML specification (both W3C and WhatWG).  There is <a href="https://github.com/whatwg/html/issues/3636#issuecomment-384340053">an issue</a> raised against the WhatWG version for this to be changed.</p>
 </section>
 
 <section id="q_multilingual">
-<h4><a href="#q_multilingual">Embedded quotations in a different language</a></h4>
+<h4><a href="#q_multilingual">Embedded quotations in a different language fail</a></h4>
 <p>Lao quotes embedded in text in another language can also be problematic if the outer language uses different quotation marks. This is due to the browsers choosing default quotation marks based on the language of the <em>quotation</em>, rather than that of the surrounding text. See <a href="https://w3c.github.io/i18n-tests/results/the-q-element.html#ml_nesting">a test</a>. This behaviour is specified in the WhatWG version of the HTML spec, but no longer in the W3C version. There is <a href="https://github.com/whatwg/html/issues/3636#issuecomment-384340053">an issue</a> raised against the WhatWG version for this to be changed.</p>
 </section>
 
@@ -307,14 +308,7 @@
     <h3>Line breaking</h3>
     <p class="status_prompt">Does the browser capture the rules about the way text in your script wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)?  What characters should not appear at the end or start of a line, and what should be done to prevent that? <a href="https://w3c.github.io/typography/index#line_breaking">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aline-break%20label%3Atype-info-request">check for currently needed data</a>.</p>
 
-<p>Although Lao doesn't use spaces or dividers between words, the expectation is that line-breaks occur at word boundaries.</p>
-<p>Unlike Thai or Khmer, it is fairly straightforward to parse individual syllables in Lao, because its alphabetic nature makes it possible to identify syllable-final consonants. (Note that syllable wrapping must include any syllable-initial clusters involving h or l.)</p>
-<p>While nearly all syllables can be argued to be words in their own right, there is still a preference for keeping multi-syllabic words (eg. ປະເທດ pa thēt country) together when wrapping text to the next line. For this, an application typically needs to use a dictionary to parse Lao text.</p>
-<p>However, widely used software automatically inserts ​ U+200B ZERO WIDTH SPACE (ZWSP) in Lao text at word or syllable boundaries, and many web pages use such inserted ZWSP characters to get browsers to wrap correctly.</p>
-<p>If a dictionary fails to keep two or more syllables together as needed, it should be possible to use the Unicode character U+2060 WORD JOINER between the two syllables. This is an invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks.</p>
-<p><em>Other ideas to consider:</em></p>
-<p>Also &quot;Some writers are beginning to use optional hyphens for syllable boundaries within words, which helps readability at line breaks.&quot; (<a href="https://github.com/w3c/sealreq/issues/3#issuecomment-385837202">@jmdurdin</a>)</p>
-<p>&quot;One other difference from Thai is that European style punctuation (period, comma) is much more widely used in Lao than in Thai, with the consequence that traditional spaced phrase punctuation is now often incorrectly used, with spaces sometimes inserted within words.&quot; (<a href="https://github.com/w3c/sealreq/issues/3#issuecomment-385837202">@jmdurdin</a>)</p>
+<p>See the <a href="../lao/#h_line_breaking">requirements document</a>.</p>
 <section id="linebreak-gaps">
 <h4>Some browsers fail at  word-based line breaking</h4>
 <p>See the <a href="https://github.com/w3c/sealreq/issues/3">github discussion</a> for this topic.</p>
