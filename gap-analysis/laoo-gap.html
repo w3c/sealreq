@@ -316,13 +316,14 @@
 </section>
 
 <section id="linebreak-gaps">
-<h4>Gaps</h4>
-<p>On Windows,   only Chrome wraps at word/syllable boundaries. Edge, IE11,  &amp; Firefox only wrap at white-space.  (<a href="https://github.com/w3c/sealreq/issues/3#issuecomment-385847864">@jmdurdin</a>)</p>
-<p>&quot;MacOS does implement word/syllable wrap for Lao at a system level, which both Safari and Firefox evidently use. Chrome may or may not use it, as it implements wrap for Lao at the application level on Windows, since Windows 10 does not yet implement line breaking for Lao at a system level.</p>
-<p>&quot;MS Office on Windows implements it at the application level in most situations, Firefox clearly does not, at least in its standard configuration. Safari on iOS also wraps Lao more or less correctly. Line-breaking on Chrome, and Safari could be improved&quot;  (<a href="https://github.com/w3c/sealreq/issues/3#issuecomment-386163401">@jmdurdin</a>)</p>
-<p>See a <a href="lao-tests/lao_line_break.html">test for line-breaking in Lao</a>.</p>
-<p>&quot;The increasing use of loan words often breaks the algorithms used for defining syllable boundaries, as does the still common preference for using the two-character combination for &quot;HL&quot; instead of the subscript L, and words that use other high-class sonorants than HM, HN, HL.&quot; (<a href="https://github.com/w3c/sealreq/issues/3#issuecomment-385837202">@jmdurdin</a>)</p>
-<p>On MacOS none of Firefox, Chrome or Safari wrap the word-initial sequence <span lang="lo">ຫມ</span> as a single unit. See (the third box in) <a href="lao-tests/lao_line_break.html">the test</a>.</p>
+<h4>Some browsers fail at  word-based line breaking</h4>
+<p>See the <a href="https://github.com/w3c/sealreq/issues/3">github discussion</a> for this topic.</p>
+<p>On Windows 10,  <span class="fail">Edge</span> and <span class="fail">Firefox</span> <strong>wrap on whitespace, rather than breaking at word boundaries</strong>. Only <span class="pass">Chrome</span> wraps at a sub-phrase level. On OS X <span class="pass">Firefox</span>, <span class="pass">Chrome</span>, and <span class="pass">Safari</span> wrap within a phrase. Default browsers on <span class="pass">Android</span> and <span class="pass">iOS</span> do the same. <a href="https://w3c.github.io/i18n-tests/css-text/line-breaking/exp-lo-line-break-000.html">Test here.</a></p>
+<p>The browsers that wrap within a line of text, also <span class="pass">all</span> wrap a multi-syllabic word like ປະເທດ as a single unit. <a href="https://w3c.github.io/i18n-tests/css-text/line-breaking/exp-lo-line-break-000.html">Test here.</a></p>
+<p>The browsers that wrap within a line of text, also <span class="pass">all</span> wrap a an initial h in a word like ຫຍັງ with the rest of the syllable. <a href="https://w3c.github.io/i18n-tests/css-text/line-breaking/exp-lo-line-break-000.html">Test here.</a></p>
+<p>The success in dealing with the latter two tests depends on the quality of the dictionary. For example, none of the dictionaries used appear to recognise the word for dog when written as ຫມາ - they only recognise it with the initial ligature, as in ໝາ.</p>
+<p>&quot;The <strong>increasing use of loan words often breaks the algorithms</strong> used for defining syllable boundaries, as does the still common preference for using the two-character combination for &quot;HL&quot; instead of the subscript L, and words that use other high-class sonorants than HM, HN, HL.&quot; (<a href="https://github.com/w3c/sealreq/issues/3#issuecomment-385837202">@jmdurdin</a>)</p>
+<p>The CSS spec says &quot;Scripts such as Thai, Lao, and Khmer, however, do not use spaces or punctuation to separate words. Although the zero width space (U+200B) can be used as an explicit word delimiter in these scripts, this practice is not common. As a result, a lexical resource is needed to correctly identify soft wrap opportunities in such texts.&quot;, but doesn't provide any specific rules or properties for Lao line-breaking.</p>
 </section>
 </section>
 
