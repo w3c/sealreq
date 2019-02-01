@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Thai Layout Requirements (Draft)</title>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove" type="text/javascript">
+</script>
+  <script class="remove" type="text/javascript">
+  var respecConfig = {
+      // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
+      specStatus:           "ED",
+      //publishDate:  		"2015-07-21",
+      //previousPublishDate:  "2014-12-16",
+      //previousMaturity:  "FPWD",
+
+      noRecTrack:           true,
+      shortName:            "thailreq",
+      copyrightStart:       "2019",
+      edDraftURI:           "http://w3c.github.io/sealreq/thai/",
+
+      // if this is a LCWD, uncomment and set the end of its review period
+      // lcEnd: "2009-08-05",
+
+      // editors, add as many as you like
+      // only "name" is required
+      editors:  [
+        { name: "Richard Ishida", company: "W3C" }
+      ],
+
+
+      wg:           "Internationalization Working Group",
+      wgURI:        "http://www.w3.org/International/core/",
+      wgPublicList: "public-i18n-sealreq",
+      bugTracker: { new: "https://github.com/w3c/sealreq/issues", open: "https://github.com/w3c/sealreq/issues" } ,
+      otherLinks: [
+        {
+          key: "Github",
+          data: [
+          {
+            value: "repository",
+            href: "https://github.com/w3c/sealreq"
+          }
+          ]
+        }
+      ],
+
+      // URI of the patent status for this WG, for Rec-track documents
+      // !!!! IMPORTANT !!!!
+      // This is important for Rec-track documents, do not copy a patent URI from a random
+      // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+      // Team Contact.
+      wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32113/status",
+      // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
+    };
+  </script>
+  <link rel="stylesheet" href="local.css" type="text/css">
+</head>
+
+<body>
+  <div id="abstract">
+    <p>This document describes requirements for the layout and presentation of text in languages that use the Thai script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
+  </div>
+
+  <div id="sotd">
+    <p>This document describes the basic requirements for Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Thai scripts. Currently the document focuses on Thai as used for the Thai language. The information here is developed in conjunction with a <a href="../gap-analysis/thai-gap.html">document that summarises gaps</a> in support on the Web for Thai.</p>
+<p>The editor's draft of this document is being developed by the <a href="http://www.w3.org/International/groups/sealreq-layout/">Southeast Asian Layout Task Force</a>, part of the W3C <a href="http://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="http://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+
+    <div class="note">
+      <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
+
+      <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/sealreq/issues" style="font-size: 120%;">github issues</a> <!--against the <a href="http://www.w3.org/TR/2015/WD-ilreq-20150721/" style="font-size: 120%">latest dated version in /TR</a>-->. Only send comments by email if you are unable to raise issues on github (see links below). All comments are welcome.</p>
+
+      <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using a URL.</p>
+    </div>
+  </div>
+
+  <section id="h_introduction">
+    <h2>Introduction</h2>
+
+    <section id="h_about_this_document">
+      <h3>About this document</h3>
+
+      <p>Some text goes here.</p>
+    </section>
+
+  <section id="h_gap_analysis">
+  <h3>Gap analysis</h3>
+
+    <p>This document is pointed to by a separate document, <a href="../gap-analysis/thai-gap.html">Thai Gap Analysis</a>, which describes gaps in support for Thai on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This  document is where those requirements are described.</p>
+<p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
+</section>
+
+
+  <section id="h_info_requests">
+  <h3>Other related resources</h3>
+
+    <p>The document <a href="https://w3c.github.io/typography/">International text layout and typography index</a> (known informally as the text layout index) points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+<p>The W3C also maintains a tracking system that  has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="http://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
+</section>
+
+
+  </section>
+<section id="h_script_overview">
+  <h2>Thai Script Overview</h2>
+    <p>Thai is an abugida. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel. </p>
+<p> Unlike devanagari, multiple vowel-signs may be used with a single character, and those positioned to the left or right of the consonant(s) are not combining characters. Like other Southeast Asian scripts, Thai is heavily based on syllables, so where there are syllable-initial clusters, a prescript vowel-sign will be displayed at the start of the syllable, rather than immediately before the consonant it follows.</p>
+<p>Thai is a tonal language, and the consonant characters chosen for a syllable have implications on the tone of that syllable.</p>
+<p>Words are not separated by spaces.</p>
+<p><a href="https://r12a.github.io/scripts/thai/">Thai script summary</a> can be read for a high level overview of characters used for the script, and some basic features. Text from that the latter part of that page was used for the initial version of this document.</p>
+</section>
+
+
+
+
+
+  <section>
+  <h2 id="h_text_direction">Text direction</h2>
+
+<p>Thai is written horizontally, left to right.</p>
+
+</section>
+
+
+<section id="h_characters_and_phrases">
+    <h2>Structural boundaries &amp; markers</h2>
+
+
+<section id="h_words">
+      <h3>Word boundaries</h3>
+<p>The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined but recognisable semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p>Spaces are used in Thai as phrase separators, but Thai doesn't separate words in a phrase using visible spaces. </p>
+<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries. </p>
+<figure>
+<p class="large">รวม|ทั้งวิ|ทยาการ|ด้าน|คอมพิว</p>
+<figcaption>Word boundaries occur where the vertical lines appear, though they are not marked by the script.</figcaption>
+</figure>
+<p>The main difficulty arises when dealing with compound words. It can often be difficult to decide whether a given string of syllables represents multiple words or a single compound word.</p>
+<figure>
+<p class="large">ตัวอย่าง|การเข้ยน|ภาษาไทย</p>
+<p class="large">ตัวอย่าง|การ|เข้ยน|ภาษา|ไทย</p>
+<figcaption>Alternative line break opportunities for Thai text using compound nouns.</figcaption>
+</figure>
+<p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
+<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถ</span> <span class="ipa">kʰon kʰàp ròt</span> <span class="meaning">driver</span></span> should be viewed as a single word in the context <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span> <span class="ipa">kʰon kʰàp ròt nâŋ kʰɔːj jûː nràjt</span> <span class="meaning">the (man who works as a) driver is waiting in the car</span></span>, whereas in the phrase <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span> <span class="ipa">kʰon kʰàp ròt pʰàːn jɛ̀ːk níː mâj màːk nàk</span> <span class="meaning">not many people drive through this intersection</span></span> it would be viewed as 3 words, referring to anyone who is driving. <sup><a href="http://pioneer.netserv.chula.ac.th/~awirote/ling/snlp2007-wirote.pdf">a</a></sup></p>
+<p>Proper names, which are composed from multiple words, are also problematic, especially because there are no capital letters to distinguish them from other pieces of text. . <sup><a href="https://github.com/w3c/csswg-drafts/issues/2455#issuecomment-375162188">g</a></sup></p>
+    </section>
+
+
+<section id="h_zwsp">
+      <h3>Zero-width space (ZWSP) &amp; Word-joiner (WJ)</h3>
+<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span> (ZWSP) can  be  used  to  create  breaks. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+<p>To prevent a break between syllables, <span class="codepoint" translate="no"><a href="/scripts/thai/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a></span>(WJ) can be used.</p>
+<p> It is also important to bear in mind that Thai may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
+<p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
+<p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
+</section>
+
+
+<section id="h_quotations">
+      <h3>Quotations</h3>
+<p>The default quote marks for Lao should be <span class="codepoint" translate="no"><span lang="th">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="th">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end. </p>
+<p>When an additional quote is embedded within the first, the quote marks should be <span class="ex" lang="lo"><span class="codepoint" translate="no"><span lang="th">&#x2018;</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="th">&#x2019;</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span></span>. &nbsp; <span class="ednote">This is according to CLDR – need to check.</span></p>
+</section>
+
+
+<section id="h_segmentation">
+      <h3>Text boundaries &amp; selection</h3>
+      <p class="prompt">TBD</p>
+    </section>
+
+    <section id="h_inline_spacing">
+      <h3>Inter-character spacing</h3>
+      <p class="prompt">TBD</p>
+    </section>
+
+
+
+</section>
+
+
+
+
+
+
+  <section id="h_lines_and_paragraphs">
+<h2>Line &amp; paragraph layout</h2>
+
+    <section id="h_line_breaking">
+      <h3>Line breaking</h3>
+<p>Although Thai doesn't use spaces or dividers between words, the expectation is that line-breaks occur at word boundaries.</p>
+<p>Because Thai doesn't separate words, applications typically look up word boundaries in a dictionary, however, such lookup doesn't always produce the needed result, especially when dealing with compound words and proper names (see <a href="#h_words"></a>). </p>
+<p>To counteract these deficiencies, authors may use U+200B ZERO WIDTH SPACE and U+2060 WORD JOINER (see <a href="#h_zwsp"></a>).</p>
+<p>If a dictionary fails to keep two or more syllables together as needed, it should be possible to use the Unicode character <span class="uname">U+2060 WORD JOINER</span> between the two syllables. This is an invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks.</p>
+</section>
+
+    
+    
+    
+    <section id="h_alignment">
+      <h3>Text alignment &amp; justification</h3>
+<p>Justification in Thai adjusts blank spaces, but also makes certain adjustments to inter-character spacing.</p>
+</section>
+
+    
+    
+    
+    <section id="h_height">
+      <h3>Line height</h3>
+<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for, say, Latin text. In addition, Thai tends to adds more interline spacing than Latin text does.</p>
+<figure>
+<p class="large">ผู้เชี่ย</p>
+<figcaption>An example of a word with combining characters above and below base characters.</figcaption>
+</figure>
+</section>
+
+    
+    
+    
+    <section id="h_counters">
+    <h3>List counters</h3>
+    
+<p>Counters are used to number lists, chapter headings, etc. </p>
+<p><span class="codepoint" translate="no"><span lang="th">๏</span> [<a href="/scripts/thai/block#char0E4F"><span class="uname">U+0E4F THAI CHARACTER FONGMAN</span></a>]</span> is the Thai bullet, which is used to mark items in lists or  appears  at  the  beginning  of  a  verse,  sentence,  paragraph,  or  other  textual  segment. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+<p>Thai uses  two counter styles:</p>
+<ol>
+<li>a numeric style, and </li>
+<li>an alphabetic style.</li>
+</ol>
+<p>The numeric style uses the Thai digits '๐' '๑' '๒' '๓' '๔' '๕' '๖' '๗' '๘' '๙' in a decimal pattern.</p>
+<div class="figwrap">
+<figure id="numeric_counter_style">
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">๑</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">๒</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">๓</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">๔</span> <br>
+11&nbsp;⇨&nbsp;<span class="ex" lang="km">๑๑</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">๒๒</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">๓๓</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">๔๔</span> <br>
+111&nbsp;⇨&nbsp;<span class="ex" lang="km">๑๑๑</span> 222&nbsp;⇨&nbsp;<span class="ex" lang="km">๒๒๒</span> 333&nbsp;⇨&nbsp;<span class="ex">๓</span><span class="ex">๓</span><span class="ex">๓</span></p>
+<figcaption>Examples of counter values using the Thai numeric counter style.</figcaption>
+</figure>
+</div>
+
+<p>The alphabetic style uses the following letters, in the order shown: 'ก' 'ข' 'ค' 'ง' 'จ' 'ฉ' 'ช' 'ซ' 'ฌ' 'ญ' 'ฎ' 'ฏ' 'ฐ' 'ฑ' 'ฒ' 'ณ' 'ด' 'ต' 'ถ' 'ท' 'ธ' 'น' 'บ' 'ป' 'ผ' 'ฝ' 'พ' 'ฟ' 'ภ' 'ม' 'ย' 'ร' 'ล' 'ว' 'ศ' 'ษ' 'ส' 'ห' 'ฬ' 'อ' 'ฮ'.</p>
+<div class="figwrap">
+<figure id="numeric_counter_style">
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">ก</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">ข</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">ค</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">ง</span> <br>
+11&nbsp;⇨&nbsp;<span class="ex" lang="km">ฎ</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">น</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">ล</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">กค</span> <br>
+111&nbsp;⇨&nbsp;<span class="ex" lang="km">ขภ</span> 222&nbsp;⇨&nbsp;<span class="ex" lang="km">จด</span> 333&nbsp;⇨&nbsp;<span class="ex" lang="km">ซจ</span></p>
+<figcaption>Examples of counter values using the Thai alphabetic counter style.</figcaption>
+</figure>
+</div>
+
+<p>In both cases, the separator is a comma. <span class="ednote">Check this - it's the assumption of the CSS spec.</span></p>
+</section>
+  
+  
+      
+</section>
+
+
+
+
+
+
+
+  <!--section class="appendix" id="glossary">
+    <h2>Glossary</h2>
+
+    <table class="glossary">
+      <thead>
+        <tr>
+          <th>Term</th>
+
+          <th>XXXX</th>
+
+          <th>Transliteration</th>
+
+          <th>Definition</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr id="def_alignment">
+          <td>alignment</td>
+
+          <td class="rtlTermCell">&nbsp;</td>
+
+          <td class="rtlTermCell">&nbsp;</td>
+
+          <td><br></td>
+        </tr>
+      </tbody>
+    </table>
+  </section-->
+
+<section class="appendix" id="acknowledgements">
+    <h2>Acknowledgements</h2>
+
+<p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
+<p>Anousak Anthony Souphavanh, Ben Mitchell, James Clarke, John Durdin, Martin Hosken, Norbert Lindenberg.</p>
+<p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a>.</p>
+</section>
+</body>
+</html>

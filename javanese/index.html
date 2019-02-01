@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javanese Layout Requirements (Draft)</title>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove" type="text/javascript">
+</script>
+  <script class="remove" type="text/javascript">
+  var respecConfig = {
+      // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
+      specStatus:           "ED",
+      //publishDate:  		"2015-07-21",
+      //previousPublishDate:  "2014-12-16",
+      //previousMaturity:  "FPWD",
+
+      noRecTrack:           true,
+      shortName:            "javanese-lreq",
+      copyrightStart:       "2019",
+      edDraftURI:           "http://w3c.github.io/sealreq/javanese/",
+
+      // if this is a LCWD, uncomment and set the end of its review period
+      // lcEnd: "2009-08-05",
+
+      // editors, add as many as you like
+      // only "name" is required
+      editors:  [
+        { name: "Richard Ishida", company: "W3C" }
+      ],
+
+
+      wg:           "Internationalization Working Group",
+      wgURI:        "http://www.w3.org/International/core/",
+      wgPublicList: "public-i18n-sealreq",
+      bugTracker: { new: "https://github.com/w3c/sealreq/issues", open: "https://github.com/w3c/sealreq/issues" } ,
+      otherLinks: [
+        {
+          key: "Github",
+          data: [
+          {
+            value: "repository",
+            href: "https://github.com/w3c/sealreq"
+          }
+          ]
+        }
+      ],
+
+      // URI of the patent status for this WG, for Rec-track documents
+      // !!!! IMPORTANT !!!!
+      // This is important for Rec-track documents, do not copy a patent URI from a random
+      // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+      // Team Contact.
+      wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32113/status",
+      // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
+    };
+  </script>
+  <link rel="stylesheet" href="local.css" type="text/css">
+</head>
+
+<body>
+  <div id="abstract">
+    <p>This document describes requirements for the layout and presentation of text in languages that use the Javanese script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
+  </div>
+
+  <div id="sotd">
+    <p>This document describes the basic requirements for Javanese script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of the Javanese script. Currently the document focuses on Javanese as used for the Javanese language. The information here is developed in conjunction with a <a href="../gap-analysis/javanese-gap.html">document that summarises gaps</a> in support on the Web for Javanese script.</p>
+<p>The editor's draft of this document is being developed by the <a href="http://www.w3.org/International/groups/sealreq-layout/">Southeast Asian Layout Task Force</a>, part of the W3C <a href="http://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="http://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+
+    <div class="note">
+      <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
+
+      <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/sealreq/issues" style="font-size: 120%;">github issues</a> <!--against the <a href="http://www.w3.org/TR/2015/WD-ilreq-20150721/" style="font-size: 120%">latest dated version in /TR</a>-->. Only send comments by email if you are unable to raise issues on github (see links below). All comments are welcome.</p>
+
+      <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using a URL.</p>
+    </div>
+  </div>
+
+  <section id="h_introduction">
+    <h2>Introduction</h2>
+
+    <section id="h_about_this_document">
+      <h3>About this document</h3>
+
+      <p>Some text goes here.</p>
+    </section>
+
+  <section id="h_gap_analysis">
+  <h3>Gap analysis</h3>
+
+    <p>This document is pointed to by a separate document, <a href="../gap-analysis/javanese-gap.html">Javanese Gap Analysis</a>, which describes gaps in support for Javanese on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This  document is where those requirements are described.</p>
+<p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
+</section>
+
+
+  <section id="h_info_requests">
+  <h3>Other related resources</h3>
+
+    <p>The document <a href="https://w3c.github.io/typography/">International text layout and typography index</a> (known informally as the text layout index) points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+<p>The W3C also maintains a tracking system that  has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="http://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
+</section>
+
+
+  </section>
+<section id="h_script_overview">
+  <h2>Javanese Script Overview</h2>
+    <p> Javanese is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using vowel signs.    In Javanese, consonants carry an inherent vowel, which can be <span class="trans">a</span> or <span class="trans">o</span>.</p>
+			<p>An orthographic syllable in Javanese can be described as {C F} C {{R}Y} {V{A}} {Z}, where: </p>
+<ul>
+<li>C is a consonant (or consonant + <span class="codepoint"><span lang="jv">◌꦳</span> [<span class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</span>]</span>), </li>
+<li>F is <span class="codepoint"><span lang="jv">◌꧀</span> [<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</span>, </li>
+<li>R is<span class="codepoint"><span lang="jv">◌ꦿ</span> [<span class="uname">U+A9BF JAVANESE CONSONANT SIGN CAKRA​</span>]</span>, </li>
+<li>Y is <span class="codepoint"><span lang="jv">◌ꦾ</span> [<span class="uname">U+A9BE JAVANESE CONSONANT SIGN PENGKAL​</span>]</span>, </li>
+<li>V is a vowel-sign, </li>
+<li>A is <span class="codepoint"><span lang="jv">◌ꦴ</span> [<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</span>, and </li>
+<li>Z is one of the syllable-final consonants.</li>
+</ul>
+<p>The initial consonant cluster may represent a word-initial cluster such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>,<sup><a href="#refs">c</a></sup> eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦩꦧꦸꦫꦸ</span> <span class="trans">mburu</span> <span class="meaning">hunting</span></span>, or it may represent the final consonant of a preceding syllable and the initial consonant of another, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦏ꧀ꦱꦫ</span> <span class="trans">hk͓sr (aksara)</span> <span class="meaning">characters</span></span>.</p>
+<p>Root words are typically disyllables of the form Cˡ V Cˡ V Cˡ, where Cˡ represents an optional consonant or consonant cluster, and V represents a vowel. Most commonly, this represents CVCVC, followed by CVCCVC.<sup><a href="#refs">c</a></sup></p>
+</section>
+
+
+
+
+
+<section>
+  <h2 id="h_text_direction">Text direction</h2>
+
+<p>Javanese is written horizontally, left to right.</p>
+
+</section>
+
+
+
+
+
+<section id="h_characters_and_phrases">
+<h2>Structural boundaries &amp; markers</h2>
+
+
+<section id="h_words">
+      <h3>Word boundaries</h3>
+<p>The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined but recognisable semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p>Spaces are used in Javanese as phrase separators, but Javanese doesn't separate words in a phrase using visible spaces. </p>
+</section>
+<section id="h_quotations">
+<h3>Quotations</h3>
+<p>Javanese text may use <span class="codepoint"><span lang="jv">꧊</span> [<span class="uname">U+A9CA JAVANESE PADA ADEG</span>]</span> for quotation marks.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
+<p><span class="codepoint">Alternatively, the pair of characters <span lang="jv">꧌</span> [<span class="uname">U+A9CC JAVANESE PADA PISELEH</span>] and <span lang="jv">꧍</span> [<span class="uname">U+A9CD JAVANESE TURNED PADA PISELEH</span>] may be used.</span></p>
+</section>
+
+
+<section id="h_segmentation">
+      <h3>Text boundaries &amp; selection</h3>
+      <p class="prompt">TBD</p>
+</section>
+</section>
+
+
+
+
+
+
+  <section id="h_lines_and_paragraphs">
+<h2>Line &amp; paragraph layout</h2>
+
+    <section id="h_line_breaking">
+      <h3>Line breaking</h3>
+      
+      <p>Like Tibetan, line breaking can occur after any full orthographic syllable. Hyphenation is not used.<sup><a href="https://github.com/w3c/sealreq/issues/2#issuecomment-388524506">→g</a></sup></p>
+<p>Javanese stacks consonants when they occur without intervening vowels, and this stacking occurs across word and syllable boundaries. When breaking a line, these stacks are not split. Similarly, some consonant clusters are rendered with conjoined glyphs, which should also not be broken. This means that line-breaking is done at the boundaries of 'orthographic syllables', rather than phonetic ones.</p>
+<p>The example in the figure below shows the Javanese words <span class="trans">pangan</span> and <span class="trans">dika</span>. The final <span class="trans">n</span> in <span class="trans">pangan</span> and the initial <span class="trans">di</span> in <span class="trans">dika</span> form a stack. The line break opportunity appears just before the stack, which means that the final <span class="trans">n</span> in <span class="trans">pangan</span> will be wrapped to the next line with the word <span class="trans">dika</span>.</p>
+     <figure>
+	  <p><img src="images/pangandika.png" alt=""></p>
+      <figcaption>Line break opportunity between the words pangan and dika (red line) splits the final consonant from pangan<span class="trans"></span>.</figcaption>
+  </figure>
+
+<p>In some printed material, when a new line begins with <span class="codepoint"><span lang="jv">ꦺ</span> [<span class="uname">U+A9BA JAVANESE VOWEL SIGN TALING</span>]</span>, an additional spacing glyph of the same character is placed at the end of the previous line.</p>
+     <figure>
+	  <p><img src="images/line-break-taling.png" alt=""></p>
+      <figcaption>An extra taling at the end of the line when the word <span class="trans">kawon</span> is split before <span class="trans">won</span>.</figcaption>
+  </figure>
+</section>
+
+    
+    
+    
+    <section id="h_alignment"> </section>
+</section>
+
+
+
+
+
+
+
+  <!--section class="appendix" id="glossary">
+    <h2>Glossary</h2>
+
+    <table class="glossary">
+      <thead>
+        <tr>
+          <th>Term</th>
+
+          <th>XXXX</th>
+
+          <th>Transliteration</th>
+
+          <th>Definition</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr id="def_alignment">
+          <td>alignment</td>
+
+          <td class="rtlTermCell">&nbsp;</td>
+
+          <td class="rtlTermCell">&nbsp;</td>
+
+          <td><br></td>
+        </tr>
+      </tbody>
+    </table>
+  </section-->
+
+<section class="appendix" id="acknowledgements">
+    <h2>Acknowledgements</h2>
+
+<p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
+<p>Ben Mitchell, Danh Hong, Marc Durdin, Martin Hosken.</p>
+<p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a>.</p>
+</section>
+</body>
+</html>
