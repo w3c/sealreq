@@ -9,9 +9,14 @@ Some experts may go a step further, and contribute to a gap-analysis or requirem
 Topics for discussion are suggested by [the gap-analysis template](http://w3c.github.io/i18n-activity/templates/gap-analysis/gap-analysis_template.html). This work supports the development of the [matrix](http://w3c.github.io/typography/gap-analysis/language-matrix.html) indicating hot-spots for language support.
 
 ### Documents
-- [Javanese Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/java-gap.html)
 - [Khmer Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/khmr-gap.html)
+- [Lao Layout Requirements](https://w3c.github.io/sealreq/lao/) (early draft)
 - [Lao Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/laoo-gap.html)
+- [Thai Layout Requirements](https://w3c.github.io/sealreq/thai/) (early draft)
+- [Khmer Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/khmr-gap.html)
+- [Khmer Layout Requirements](https://w3c.github.io/sealreq/khmer/) (early draft)
+- [Javanese Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/java-gap.html)
+- [Javanese Layout Requirements](https://w3c.github.io/sealreq/javanese/) (early draft)
 
 ### Feedback
 Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) to report issues for language support, for discussions, and to send feedback about documents.
