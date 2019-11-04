@@ -41,13 +41,15 @@ W3C staff: [Richard Ishida](mailto:ishida@w3.org)
 
 
 ### Links
-- [Task Force Home Page](https://w3c.github.io/sealreq/homepage/)
-- Charter (tbd)
-- Action tracker (tbd)
+- [Github issues](https://github.com/w3c/sealreq/issues)
+- [Issue tracker](http://w3c.github.io/i18n-activity/textlayout/?filter=sealreq)
+- [Mail archive](https://lists.w3.org/Archives/Public/public-i18n-sea/)
 - [Writing i18n tests](https://github.com/w3c/i18n-activity/wiki/Writing-i18n-tests)
 - [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html)
+- (See also the github and editorial guidelines below)
+- [Charter](charter/index)
+- Action tracker (tbd)
 - Meeting info (tbd)
-- [Mail archive](https://lists.w3.org/Archives/Public/public-i18n-sea/)
 
 
 ### Links to background information
