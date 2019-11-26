@@ -105,14 +105,12 @@
   </section>
 <section id="h_script_overview">
   <h2>Thai Script Overview</h2>
-    <p>Thai is an abugida. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel. </p>
+    <p>Thai is an abugida. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel.</p>
 <p> Unlike devanagari, multiple vowel-signs may be used with a single character, and those positioned to the left or right of the consonant(s) are not combining characters. Like other Southeast Asian scripts, Thai is heavily based on syllables, so where there are syllable-initial clusters, a prescript vowel-sign will be displayed at the start of the syllable, rather than immediately before the consonant it follows.</p>
 <p>Thai is a tonal language, and the consonant characters chosen for a syllable have implications on the tone of that syllable.</p>
 <p>Words are not separated by spaces.</p>
 <p><a href="https://r12a.github.io/scripts/thai/">Thai script summary</a> can be read for a high level overview of characters used for the script, and some basic features. Text from that the latter part of that page was used for the initial version of this document.</p>
 </section>
-
-
 
 
 
@@ -131,16 +129,16 @@
 <section id="h_words">
       <h3>Word boundaries</h3>
 <p>The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined but recognisable semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
-<p>Spaces are used in Thai as phrase separators, but Thai doesn't separate words in a phrase using visible spaces. </p>
-<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries. </p>
+<p>Spaces are used in Thai as phrase separators, but Thai doesn't separate words in a phrase using visible spaces.</p>
+<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries.</p>
 <figure>
-<p class="large">รวม|ทั้งวิ|ทยาการ|ด้าน|คอมพิว</p>
+<p class="large">รวม|ทั้ง|วิทยาการ|ด้าน|คอมพิว</p>
 <figcaption>Word boundaries occur where the vertical lines appear, though they are not marked by the script.</figcaption>
 </figure>
 <p>The main difficulty arises when dealing with compound words. It can often be difficult to decide whether a given string of syllables represents multiple words or a single compound word.</p>
 <figure>
-<p class="large">ตัวอย่าง|การเข้ยน|ภาษาไทย</p>
-<p class="large">ตัวอย่าง|การ|เข้ยน|ภาษา|ไทย</p>
+<p class="large">ตัวอย่าง|การเขียน|ภาษาไทย</p>
+<p class="large">ตัวอย่าง|การ|เขียน|ภาษา|ไทย</p>
 <figcaption>Alternative line break opportunities for Thai text using compound nouns.</figcaption>
 </figure>
 <p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
@@ -161,7 +159,7 @@
 
 <section id="h_quotations">
       <h3>Quotations</h3>
-<p>The default quote marks for Lao should be <span class="codepoint" translate="no"><span lang="th">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="th">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end. </p>
+<p>The default quote marks for Lao should be <span class="codepoint" translate="no"><span lang="th">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="th">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.</p>
 <p>When an additional quote is embedded within the first, the quote marks should be <span class="ex" lang="lo"><span class="codepoint" translate="no"><span lang="th">&#x2018;</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="th">&#x2019;</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span></span>. &nbsp; <span class="ednote">This is according to CLDR – need to check.</span></p>
 </section>
 
@@ -191,20 +189,18 @@
     <section id="h_line_breaking">
       <h3>Line breaking</h3>
 <p>Although Thai doesn't use spaces or dividers between words, the expectation is that line-breaks occur at word boundaries.</p>
-<p>Because Thai doesn't separate words, applications typically look up word boundaries in a dictionary, however, such lookup doesn't always produce the needed result, especially when dealing with compound words and proper names (see <a href="#h_words"></a>). </p>
+<p>Because Thai doesn't separate words, applications typically look up word boundaries in a dictionary, however, such lookup doesn't always produce the needed result, especially when dealing with compound words and proper names (see <a href="#h_words"></a>).</p>
 <p>To counteract these deficiencies, authors may use U+200B ZERO WIDTH SPACE and U+2060 WORD JOINER (see <a href="#h_zwsp"></a>).</p>
 <p>If a dictionary fails to keep two or more syllables together as needed, it should be possible to use the Unicode character <span class="uname">U+2060 WORD JOINER</span> between the two syllables. This is an invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks.</p>
 </section>
 
-    
-    
-    
+
+
     <section id="h_alignment">
       <h3>Text alignment &amp; justification</h3>
 <p>Justification in Thai adjusts blank spaces, but also makes certain adjustments to inter-character spacing.</p>
 </section>
 
-    
     
     
     <section id="h_height">
@@ -222,7 +218,7 @@
     <section id="h_counters">
     <h3>List counters</h3>
     
-<p>Counters are used to number lists, chapter headings, etc. </p>
+<p>Counters are used to number lists, chapter headings, etc.</p>
 <p><span class="codepoint" translate="no"><span lang="th">๏</span> [<a href="/scripts/thai/block#char0E4F"><span class="uname">U+0E4F THAI CHARACTER FONGMAN</span></a>]</span> is the Thai bullet, which is used to mark items in lists or  appears  at  the  beginning  of  a  verse,  sentence,  paragraph,  or  other  textual  segment. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
 <p>Thai uses  two counter styles:</p>
 <ol>
