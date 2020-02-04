@@ -2,10 +2,12 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
 
-  <title>Javanese Script Gap Analysis</title>
-  <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove">
+<title>Javanese Script Gap Analysis</title>
+<script src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"> </script>
+
+<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove">
 </script>
   <script class="remove">
   var respecConfig = {
@@ -116,15 +118,12 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <h2>Text direction</h2>
 <p>See also General page layout &amp; progression for features such as column layout, page turning direction, etc. that are affected by text direction.</p>
 
+
 <section id="vertical_text" class="na">
 <h3>Vertical text</h3>
 <p id="prompt-vertical_text" class="status_prompt promptStub"></p>
 
-
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-vertical_text"></div>
 </section>
 
 
@@ -134,11 +133,8 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <h3>Bidirectional text</h3>
 <p id="prompt-bidi_text" class="status_prompt promptStub"></p>
 
+<div id="insert-bidi_text"></div>
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
 </section>
 </section>
 
@@ -154,24 +150,17 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <h3>Characters &amp; encoding</h3>
 <p id="prompt-charset" class="status_prompt promptStub"></p>
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-charset"></div>
 </section>
 
 
 
-<section id="fonts" class="advanced">
+<section id="fonts" class="tbd">
 <h3>Fonts</h3>
 <p id="prompt-fonts" class="status_prompt promptStub"></p>
 
 
-<section id="font_availablility">
-<h4>Few fonts available, and they are problematic</h4>
-    <p>There are only a handful of Javanese script fonts. Google's original Javanese Noto font was disliked, but they updated it. </p>
-<p>The most popular font appears to be Tuladha Jejeg, but that requires Graphite for rendering, so it only works properly on <span class="pass">Firefox</span>.</p>
-</section>
+<div id="insert-fonts"></div>
 </section>
 
 
@@ -181,10 +170,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-font_style" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-font_style"></div>
 </section>
 
 
@@ -194,10 +180,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-glyphs" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-glyphs"></div>
 </section>
 
 
@@ -207,11 +190,19 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-cursive" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-cursive"></div>
 </section>
+
+
+
+<section id="baselines" class="ok">
+<h3>Baselines, line-height, etc</h3>
+<p id="prompt-baselines" class="status_prompt promptStub"></p>
+
+
+<div id="insert-baselines"></div>
+</section>
+
 
 
 
@@ -219,53 +210,29 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <h3>Transforming characters</h3>
 <p id="prompt-transforms" class="status_prompt promptStub"></p>
 
+<p>Should case transforms in CSS map ordinary characters to murda or mahaprana equivalents? Probably not, since the actual characters that need to be changed are not easily chosen automatically. Therefore, marking this as OK.</p>
 
-<p>Should case transforms in CSS map ordinary characters to murda or mahaprana equivalents? I imagine not, since the actual characters that need to be changed are not easily chosen automatically. Therefore, marking this as OK.</p>
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-transforms"></div>
 </section>
 
 
 
 
-<section id="baselines" class="ok">
-<h3>Baselines &amp; inline alignment</h3>
-<p id="prompt-baselines" class="status_prompt promptStub"></p>
-
-
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
-</section>
-
-
-
-
-<section id="segmentation" class="basic">
+<section id="segmentation" class="tbd">
 <h3>Grapheme/word segmentation &amp; selection</h3>
 <p id="prompt-segmentation" class="status_prompt promptStub"></p>
 
 
-<section id="double_click">
-<h4>Double-click doesn't highlight a word</h4>
-    <p>Double-click doesn't highlight a word. Instead, it highlights a whole phrase between spaces.</p>
-</section>
+<div id="insert-segmentation"></div>
 </section>
  
 
 
 <section id="punctuation_etc" class="tbd">
-<h3>Punctuation &amp; other inline features</h3>
-<p id="prompt-punctuation_etc" class="status_prompt promptStub"></p>
+<h3>Inline features &amp; punctuation</h3><p id="prompt-punctuation_etc" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-punctuation_etc"></div>
 </section>
    
     
@@ -275,40 +242,26 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-text_decoration" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-text_decoration"></div>
 </section>
 
 
 
-<section id="quotations" class="advanced">
+<section id="quotations" class="tbd">
 <h3>Quotations</h3>
 <p id="prompt-quotations" class="status_prompt promptStub"></p>
-
-
-    <p>HTML sets no default quotation marks for the <code class="kw" translate="no">q</code> element in a Javanese page (see <a href="https://www.w3.org/TR/html5/rendering.html#quotes">the list of defaults</a>), because quotation marks are not listed in CLDR. There's <a href="https://github.com/w3c/sealreq/issues/8">an issue</a> asking for expert advice on whether the fallback quotes are ok for Javanese, or whether ꧊ [U+A9CA JAVANESE PADA ADEG] or ꧌ [U+A9CC JAVANESE PADA PISELEH] and ꧍ [U+A9CD JAVANESE TURNED PADA PISELEH] would be a better choice?</p>
-<p>Firefox currently doesn't set default quotes at all based on the language of the content.</p>
-<p>Neither are the default quotation marks for the <code class="kw" translate="no">q</code> element  set to the appropriate characters by the browser  when the element appears inside a Javanese section within a page. This is currently per the HTML specification (both W3C and WhatWG).</p>
-<p>Javanese quotes embedded in text in another language can also be problematic if the outer language uses different quotation marks. This is due to the browsers choosing default quotation marks based on the language of the quotation, rather than that of the surrounding text. This is specified in the WhatWG version of the HTML spec, but not in the W3C version. There is <a href="https://github.com/whatwg/html/issues/3636#issuecomment-384340053">an issue</a> raised against the WhatWG version for this to be changed. That issue also addresses the need to change the default inside a section of a page with a different language (which is relevant to both W3C and WhatWG specs.)</p>
-<p>Marking this as advanced, because use of the <code class="kw" translate="no">q</code> element is optional (quote characters can be used instead), and it can be styled using CSS for the general case.</p>
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+	
+	
+<div id="insert-quotations"></div>
 </section>
 
 
-<section id="inline_notes" class="na">
+<section id="inline_notes" class="ok">
 <h3>Inline notes &amp; annotations</h3>
 <p id="prompt-inline_notes" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-inline_notes"></div>
 </section>
 
 
@@ -318,10 +271,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-data_formats" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-data_formats"></div>
 </section>
 
 
@@ -345,21 +295,14 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <h2>Lines and Paragraphs</h2>
 
  
-<section id="line_breaking" class="broken">
+<section id="line_breaking" class="tbd">
 <h3>Line breaking</h3>
 <p id="prompt-line_breaking" class="status_prompt promptStub"></p>
 
 
-<section id="text_wrap">
-<h4>Text wrapping fails</h4>
-    <p>Wrapping needs to occur at  orthographic syllable boundaries, which are not delimited by punctuation or spaces. Orthographic syllables are different from phonetic syllables, in that consonant clusters using pangkon are not split. </p>
-<p>Unlike Thai, which uses dictionary lookup to wrap word-by-word, the basic break points in Javanese can be calculated using a grammar for syllables. (There are likely to be additional considerations to check related to punctuation, digits, etc.)</p>
-<p>See <a href="https://github.com/w3c/sealreq/issues/2">this discussion</a> for examples.</p>
-<p>See also the <a href="#hyphenation">Hyphenation</a> section for information about use of TALING.</p>
-<p>This section marked as broken because browsers do not apply the necessary algorithm to to insert line-break opportunities at orthographic syllable boundaries for Javanese text in normal HTML. As a result, a line of text tends to run off the right edge of the window. See <a href="https://w3c.github.io/sealreq/gap-analysis/javanese-tests/javanese_line_break.html">this test</a>.</p>
-<p>It is possible to fudge things, using CSS properties, so that the text wraps, but the resulting line breaks are not always correct. It is also possible to make the breaking happen by inserting ZWSP at appropriate places, but we cannot expect Javanese users to do that accurately and consistently. ( See <a href="https://w3c.github.io/sealreq/gap-analysis/javanese-tests/javanese_line_break_zwsp.html">this test</a>.)</p>
-<p>Note, however, that lines ARE broken by orthographic syllable in a <code class="kw" translate="no">textarea</code> element. See <a href="https://w3c.github.io/sealreq/gap-analysis/javanese-tests/javanese_line_break_textarea.html">this test</a>.</p>
-</section>
+<div id="insert-line_breaking"></div>
+
+<p>See also <a href="#hyphenation">hyphenation</a> below. </p>
 </section>
 
 
@@ -368,14 +311,11 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <h3>Hyphenation</h3>
 <p id="prompt-hyphenation" class="status_prompt promptStub"></p>
 
-
-    <p>In some texts, when a new line begins with ◌ꦺ [U+A9BA JAVANESE VOWEL SIGN TALING], an additional spacing version of that character is placed at the end of the previous line. (See <a href="https://github.com/w3c/sealreq/issues/2">this discussion</a> for examples.) </p>
-<p>&quot;Since hyphenating taling turns out can also be found in handwritten manuscripts, and I've recently founded such taling from as late as 1960s handwritten Primbon, maybe we should say that it is common in printed and handwritten colonial era texts, but not used by contemporary standards.&quot; (<a href="https://github.com/w3c/sealreq/issues/2#issuecomment-394890536">@adtbayuperdana</a>) </p>
+<p>In some texts, when a new line begins with ◌ꦺ [U+A9BA JAVANESE VOWEL SIGN TALING], an additional spacing version of that character is placed at the end of the previous line. (See <a href="https://github.com/w3c/sealreq/issues/2">this discussion</a> for examples.) </p>
+<p>"Since hyphenating taling turns out can also be found in handwritten manuscripts, and I've recently founded such taling from as late as 1960s handwritten Primbon, maybe we should say that it is common in printed and handwritten colonial era texts, but not used by contemporary standards." (<a href="https://github.com/w3c/sealreq/issues/2#issuecomment-394890536">@adtbayuperdana</a>) </p>
 <p>This behaviour is not supported by any browser, and in fact support would require a special algorithm to be defined for line-breaking, however it doesn't appear to be needed in modern Javanese text. Therefore the status for this section ignores that behaviour.</p>
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+
+<div id="insert-hyphenation"></div>
 </section>
 
 
@@ -385,10 +325,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-justification" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-justification"></div>
 </section>
 
 
@@ -398,10 +335,8 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-spacing" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+
+<div id="insert-spacing"></div>
 </section>
 
 
@@ -411,10 +346,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-lists" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-lists"></div>
 </section>
 
 
@@ -424,10 +356,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-initials" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-initials"></div>
 </section>
 
 
@@ -456,10 +385,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-page_layout" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-page-layout"></div>
 </section>
 
 
@@ -469,10 +395,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-footnotes_etc" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-footnotes_etc"></div>
 </section>
 
 
@@ -483,10 +406,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-headers_footers"></div>
 </section>
 
 
@@ -496,10 +416,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 <p id="prompt-interaction" class="status_prompt promptStub"></p>
 
 
-<!--section id="xxxxxx">
-<h4>xxxxxx</h4>
-<p></p>
-</section-->
+<div id="insert-interaction"></div>
 </section>
 
 
@@ -526,7 +443,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
     <p class="status_prompt">Sometimes a script or language does things that are not common outside of its sphere of influence. This is a loose bag of additional items that weren't previously mentioned. This section may also be relevant for observations related to locale formats (such as number, date, currency, format support).</p>
 
 
-    <p></p>
+<div id="insert-culturespecific"></div>
     </section>
 
 
@@ -536,7 +453,7 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
     <p class="status_prompt">There are many other CSS modules which may need review for script-specific requirements, not to mention the SVG, HTML, Speech, MathML and other specifications. What else is likely to cause problems for worldwide deployment of the Web, and what requirements need to be addressed to make the Web function well locally?</p>
 
 
-    <p></p>
+<div id="insert-other"></div>
     </section>
     
 </section>
@@ -545,68 +462,17 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 
 
 <details>
-<summary style="margin-top:4em; cursor: pointer;">Show summary</summary>
+<summary style="margin-top:4em; cursor: pointer;" onClick="printSummary(true)">Show summary</summary>
 <pre id="summaryPlaceholder" style="white-space: pre-wrap;"></pre>
 </details>
+
+
+
+
 <script>
-var out = ''
-for (let i=0;i<respecConfig.langs.length;i++) {
-    out += '{lang: "'+respecConfig.langs[i]+'"'
-    out += ', url:"'+respecConfig.gapDocPath+'"'
-    out += ', tentative:' + true
-    out += ', vertical_text:"'+document.getElementById('vertical_text').className+'"'
-    out += ', bidi_text:"'+document.getElementById('bidi_text').className+'"'
-
-    out += ', charset:"'+document.getElementById('charset').className+'"'   
-    out += ', fonts:"'+document.getElementById('fonts').className+'"'
-    out += ', font_style:"'+document.getElementById('font_style').className+'"'
-    out += ', glyphs:"'+document.getElementById('glyphs').className+'"'
-    out += ', cursive:"'+document.getElementById('cursive').className+'"'
-    out += ', transforms:"'+document.getElementById('transforms').className+'"'
-    out += ', baselines:"'+document.getElementById('baselines').className+'"'
-    out += ', segmentation:"'+document.getElementById('segmentation').className+'"'
-    out += ', punctuation_etc:"'+document.getElementById('punctuation_etc').className+'"'
-    out += ', text_decoration:"'+document.getElementById('text_decoration').className+'"'
-    out += ', quotations:"'+document.getElementById('quotations').className+'"'
-    out += ', inline_notes:"'+document.getElementById('inline_notes').className+'"'
-    out += ', data_formats:"'+document.getElementById('data_formats').className+'"'
-
-    out += ', line_breaking:"'+document.getElementById('line_breaking').className+'"'
-    out += ', hyphenation:"'+document.getElementById('hyphenation').className+'"'
-    out += ', justification:"'+document.getElementById('justification').className+'"'
-    out += ', spacing:"'+document.getElementById('spacing').className+'"'
-    out += ', lists:"'+document.getElementById('lists').className+'"'
-    out += ', initials:"'+document.getElementById('initials').className+'"'
-
-    out += ', page_layout:"'+document.getElementById('page_layout').className+'"'
-    out += ', footnotes_etc:"'+document.getElementById('footnotes_etc').className+'"'
-    out += ', headers_footers:"'+document.getElementById('headers_footers').className+'"'
-    out += ', interaction:"'+document.getElementById('interaction').className+'"'
-    out += '},\n'
-
-    out = out.replace(/tbd/g,'')
-    out = out.replace(/broken/g,'0')
-    out = out.replace(/ok/g,'3')
-    out = out.replace(/advanced/g,'2')
-    out = out.replace(/basic/g,'1')
-    out = out.replace(/"na/g,'"-')
-    }
-document.getElementById('summaryPlaceholder').textContent = out
-
-var temp = document.querySelectorAll('section')
-for (let x=0;x<temp.length;x++) {
-    console.log(temp[x].id)
-    }
-
-
-
-
-
-
-
+setUpSummary()
 addPrompts() 
-
-
+getAllData('sealreq','doc:jv')
 </script>
 
 
