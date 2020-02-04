@@ -2,10 +2,10 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
 
-  <title>Lao Layout Requirements (Draft)</title>
-  <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove" type="text/javascript">
+<title>Lao Layout Requirements (Draft)</title>
+<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove" type="text/javascript">
 </script>
   <script class="remove" type="text/javascript">
   var respecConfig = {
@@ -31,27 +31,16 @@
 
       wg:           "Internationalization Working Group",
       wgURI:        "https://www.w3.org/International/core/",
-      wgPublicList: "public-i18n-sealreq",
-      bugTracker: { new: "https://github.com/w3c/sealreq/issues", open: "https://github.com/w3c/sealreq/issues" } ,
-      otherLinks: [
-        {
-          key: "Github",
-          data: [
-          {
-            value: "repository",
-            href: "https://github.com/w3c/sealreq"
-          }
-          ]
-        }
-      ],
+ 
+ 	  github:	"w3c/sealreq",
+             
+      
 
       // URI of the patent status for this WG, for Rec-track documents
-      // !!!! IMPORTANT !!!!
       // This is important for Rec-track documents, do not copy a patent URI from a random
       // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
       // Team Contact.
       wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/32113/status",
-      // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
     };
   </script>
   <link rel="stylesheet" href="local.css" type="text/css">
@@ -64,7 +53,7 @@
 
   <div id="sotd">
     <p>This document describes the basic requirements for Lao script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Lao scripts. Currently the document focuses on Lao as used for the Lao language. The information here is developed in conjunction with a <a href="../gap-analysis/laoo-gap.html">document that summarises gaps</a> in support on the Web for Lao.</p>
-<p>The editor's draft of this document is being developed by the <a href="https://www.w3.org/International/groups/#mission">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+<p>The editor's draft of this document is being developed by the <a href="https://github.com/w3c/sealreq/">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
 
     <div class="note">
       <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
@@ -129,8 +118,8 @@
 
 <section id="h_quotations">
       <h3>Quotations</h3>
-<p>The default quote marks for Lao should be <span class="codepoint" translate="no"><span lang="th">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="th">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.</p>
-<p>When an additional quote is embedded within the first, the quote marks should be <span class="ex" lang="lo"><span class="codepoint" translate="no"><span lang="th">&#x2018;</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="th">&#x2019;</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span></span>. &nbsp; <span class="ednote">This is according to CLDR – need to check.</span></p>
+<p>The default quote marks for Lao should be <span class="codepoint" translate="no"><span lang="lo">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="lo">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.</p>
+<p>When an additional quote is embedded within the first, the quote marks should be <span class="ex" lang="lo"><span class="codepoint" translate="no"><span lang="lo">&#x2018;</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="lo">&#x2019;</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span></span>. &nbsp; <span class="ednote">This is according to CLDR – need to check.</span></p>
 </section>
 
 
@@ -175,7 +164,7 @@
 <p>Lao uses a numeric counter style, based on the decimal model, and using the standard Lao digits, '໐' '໑' '໒' '໓' '໔' '໕' '໖' '໗' '໘' '໙' in a decimal pattern.</p>
 <div class="figwrap">
 <figure id="counter-styles">
-<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">໑</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">໒</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">໓</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">໔</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">໑໑</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">໒໒</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">໓໓</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">໔໔</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">໑໑໑</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">໒໒໒</span></p>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="lo">໑</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="lo">໒</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="lo">໓</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="lo">໔</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="lo">໑໑</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="lo">໒໒</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="lo">໓໓</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="lo">໔໔</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="lo">໑໑໑</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="lo">໒໒໒</span></p>
 <figcaption>Examples of counter values using the Lao numeric counter style.</figcaption>
 </figure>
 </div>
@@ -225,7 +214,7 @@
     <h2>Acknowledgements</h2>
 
 <p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
-<p>Anousak Anthony Souphavanh, Ben Mitchell, James Clarke, John Durdin, Martin Hosken, Norbert Lindenberg.</p>
+<p>Anousak Anthony Souphavanh, Arthit Suriyawongkul, Ben Mitchell, James Clarke, John Durdin, Martin Hosken, Norbert Lindenberg.</p>
 <p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a>.</p>
 </section>
 </body>
