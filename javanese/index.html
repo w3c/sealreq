@@ -18,7 +18,7 @@
       noRecTrack:           true,
       shortName:            "javanese-lreq",
       copyrightStart:       "2019",
-      edDraftURI:           "http://w3c.github.io/sealreq/javanese/",
+      edDraftURI:           "https://w3c.github.io/sealreq/javanese/",
 
       // if this is a LCWD, uncomment and set the end of its review period
       // lcEnd: "2009-08-05",
@@ -29,9 +29,8 @@
         { name: "Richard Ishida", company: "W3C" }
       ],
 
-
       wg:           "Internationalization Working Group",
-      wgURI:        "http://www.w3.org/International/core/",
+      wgURI:        "https://www.w3.org/International/core/",
       wgPublicList: "public-i18n-sealreq",
       bugTracker: { new: "https://github.com/w3c/sealreq/issues", open: "https://github.com/w3c/sealreq/issues" } ,
       otherLinks: [
@@ -51,7 +50,7 @@
       // This is important for Rec-track documents, do not copy a patent URI from a random
       // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
       // Team Contact.
-      wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32113/status",
+      wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/32113/status",
       // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
     };
   </script>
@@ -65,12 +64,12 @@
 
   <div id="sotd">
     <p>This document describes the basic requirements for Javanese script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of the Javanese script. Currently the document focuses on Javanese as used for the Javanese language. The information here is developed in conjunction with a <a href="../gap-analysis/javanese-gap.html">document that summarises gaps</a> in support on the Web for Javanese script.</p>
-<p>The editor's draft of this document is being developed by the <a href="http://www.w3.org/International/groups/sealreq-layout/">Southeast Asian Layout Task Force</a>, part of the W3C <a href="http://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="http://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+<p>The editor's draft of this document is being developed by the <a href="https://www.w3.org/International/groups/#mission">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
 
     <div class="note">
       <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
 
-      <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/sealreq/issues" style="font-size: 120%;">github issues</a> <!--against the <a href="http://www.w3.org/TR/2015/WD-ilreq-20150721/" style="font-size: 120%">latest dated version in /TR</a>-->. Only send comments by email if you are unable to raise issues on github (see links below). All comments are welcome.</p>
+      <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/sealreq/issues" style="font-size: 120%;">github issues</a>. Only send comments by email if you are unable to raise issues on github (see links below). All comments are welcome.</p>
 
       <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using a URL.</p>
     </div>
@@ -89,7 +88,7 @@
   <h3>Gap analysis</h3>
 
     <p>This document is pointed to by a separate document, <a href="../gap-analysis/javanese-gap.html">Javanese Gap Analysis</a>, which describes gaps in support for Javanese on the Web, and prioritises and describes the impact of those gaps on the user.</p>
-<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This  document is where those requirements are described.</p>
+<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This document is where those requirements are described.</p>
 <p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
 </section>
 
@@ -98,22 +97,22 @@
   <h3>Other related resources</h3>
 
     <p>The document <a href="https://w3c.github.io/typography/">International text layout and typography index</a> (known informally as the text layout index) points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
-<p>The W3C also maintains a tracking system that  has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="http://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
+<p>The W3C also maintains a tracking system that has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs. For example, you can find out <a href="https://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
 </section>
 
 
   </section>
 <section id="h_script_overview">
   <h2>Javanese Script Overview</h2>
-    <p> Javanese is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using vowel signs.    In Javanese, consonants carry an inherent vowel, which can be <span class="trans">a</span> or <span class="trans">o</span>.</p>
-			<p>An orthographic syllable in Javanese can be described as {C F} C {{R}Y} {V{A}} {Z}, where: </p>
+    <p>Javanese is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using vowel signs. In Javanese, consonants carry an inherent vowel, which can be <span class="trans">a</span> or <span class="trans">o</span>.</p>
+			<p>An orthographic syllable in Javanese can be described as {C F} C {{R}Y} {V{A}} {Z}, where:</p>
 <ul>
-<li>C is a consonant (or consonant + <span class="codepoint"><span lang="jv">◌꦳</span> [<span class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</span>]</span>), </li>
-<li>F is <span class="codepoint"><span lang="jv">◌꧀</span> [<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</span>, </li>
-<li>R is<span class="codepoint"><span lang="jv">◌ꦿ</span> [<span class="uname">U+A9BF JAVANESE CONSONANT SIGN CAKRA​</span>]</span>, </li>
-<li>Y is <span class="codepoint"><span lang="jv">◌ꦾ</span> [<span class="uname">U+A9BE JAVANESE CONSONANT SIGN PENGKAL​</span>]</span>, </li>
-<li>V is a vowel-sign, </li>
-<li>A is <span class="codepoint"><span lang="jv">◌ꦴ</span> [<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</span>, and </li>
+<li>C is a consonant (or consonant + <span class="codepoint"><span lang="jv">◌꦳</span> [<span class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</span>]</span>),</li>
+<li>F is <span class="codepoint"><span lang="jv">◌꧀</span> [<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</span>,</li>
+<li>R is<span class="codepoint"><span lang="jv">◌ꦿ</span> [<span class="uname">U+A9BF JAVANESE CONSONANT SIGN CAKRA​</span>]</span>,</li>
+<li>Y is <span class="codepoint"><span lang="jv">◌ꦾ</span> [<span class="uname">U+A9BE JAVANESE CONSONANT SIGN PENGKAL​</span>]</span>,</li>
+<li>V is a vowel-sign,</li>
+<li>A is <span class="codepoint"><span lang="jv">◌ꦴ</span> [<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</span>, and</li>
 <li>Z is one of the syllable-final consonants.</li>
 </ul>
 <p>The initial consonant cluster may represent a word-initial cluster such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>,<sup><a href="#refs">c</a></sup> eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦩꦧꦸꦫꦸ</span> <span class="trans">mburu</span> <span class="meaning">hunting</span></span>, or it may represent the final consonant of a preceding syllable and the initial consonant of another, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦏ꧀ꦱꦫ</span> <span class="trans">hk͓sr (aksara)</span> <span class="meaning">characters</span></span>.</p>
@@ -141,8 +140,8 @@
 
 <section id="h_words">
       <h3>Word boundaries</h3>
-<p>The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined but recognisable semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
-<p>Spaces are used in Javanese as phrase separators, but Javanese doesn't separate words in a phrase using visible spaces. </p>
+<p>The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will treat it as a vaguely-defined but recognisable semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p>Spaces are used in Javanese as phrase separators, but Javanese doesn't separate words in a phrase using visible spaces.</p>
 </section>
 <section id="h_quotations">
 <h3>Quotations</h3>
