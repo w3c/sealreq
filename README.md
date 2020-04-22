@@ -34,6 +34,8 @@ You can participate in the task force work at various levels. In order of increa
 
 **To become a participant, editor, or chair:** contact [Richard Ishida](mailto:ishida@w3.org). We welcome participation requests.
 
+To get an idea about what's involved, see [How to contribute to an Language Enablement group](https://w3c.github.io/i18n-activity/guidelines/le-participation). 
+
 
 ### Contacts
 Chair: TBA
@@ -67,8 +69,6 @@ If you end up creating a document, you should be familiar with and use the follo
 - [Github guidelines for working with i18n documents](http://w3c.github.io/i18n-activity/guidelines/github)
 - [Editorial guidelines for working with i18n documents](http://w3c.github.io/i18n-activity/guidelines/editing)
 
-The following templates are available:
-- [Gap analysis template](http://w3c.github.io/i18n-activity/templates/gap-analysis/gap-analysis_template.html)
-- [Requirements document template](http://w3c.github.io/i18n-activity/templates/lreq_doc/gap-analysis_template.html)
+Contact [r12a](mailto:ishida@w3.org) for document templates.
 
 
