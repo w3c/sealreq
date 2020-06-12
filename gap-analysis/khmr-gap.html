@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 
 <title>Khmer Gap Analysis</title>
-<script src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"> </script>
+<script class="remove" src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"> </script>
 
 <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove">
 </script>
@@ -13,7 +13,7 @@
   var respecConfig = {
       // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
       specStatus:           "ED",
-      //publishDate:  		"2015-07-21",
+      //publishDate:  		"2020-06-16",
       //previousPublishDate:  "2014-12-16",
       //previousMaturity:  "FPWD",
 
@@ -37,12 +37,24 @@
 
 
 	  github: "w3c/sealreq",
+	  
+	  postProcess: [
+    	function importStyleSheet() {
+			[...document.querySelectorAll("link[rel='stylesheet'][data-import]")].forEach(l => {
+				const style = document.createElement("style");
+				fetch(l.href).then(r => r.text()).then(t => {
+					style.textContent = t;
+					l.replaceWith(style);
+					});
+      			});
+    		}
+   		],
       
       
       // langs array lists languages addressed by this document, in order of speaker (highest first)
       // it is used to generate the javascript needed for the matrix
       langs: ['Khmer'],
-      gapDocPath: 'https://w3c.github.io/sealreq/gap-analysis/khmr-gap',
+      gapDocPath: 'https://www.w3.org/TR/khmr-gap/',
 
 
       // URI of the patent status for this WG, for Rec-track documents
@@ -54,8 +66,8 @@
       // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
     };
   </script>
-<script src="/i18n-activity/templates/gap-analysis/prompts.js"> </script>
-<link rel="stylesheet" href="https://w3c.github.io/typography/gap-analysis/gapanalysis.css">
+<script class="remove" src="/i18n-activity/templates/gap-analysis/prompts.js"> </script>
+<link rel="stylesheet" data-import href="https://w3c.github.io/typography/gap-analysis/gapanalysis.css">
 </head>
 
 <body>
@@ -267,17 +279,6 @@
 
 <div id="insert-data_formats"></div>
 </section>
-
-
-
-<!--section id="otherinline" class="tbd">
-    <h3>Other inline features</h3>
-    <p class="status_prompt">Does the script have special ways of representing inline notes (such as  kumimoji in Japanese) or other inline features that need to be supported? <a href="https://w3c.github.io/typography/index#other_inline_features">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Ainline-features%20label%3Atype-info-request">check for currently needed data</a>.</p>
-
-
-    <p></p>
-    </section-->
-
 </section>
 
 
@@ -315,7 +316,6 @@
 <h3>Text alignment &amp; justification</h3>
 <p id="prompt-justification" class="status_prompt promptStub"></p>
 
-<p>There is <a href="https://w3c.github.io/i18n-tests/misc/justification/khmer_am.html">a test for CSS text-justify property</a> with value set to inter-character.</p>
 <p>Firefox on MacOS keeps all vowel signs and diacritics with base characters. It also keeps together consonant stacks and their vowel signs, such as <span lang="km">ខ្លួ</span>. Also, ligated combinations such as <span lang="km">បា កា</span> are rendered as expected.</p>
 <p>Chrome and Safari don't support text-justify: inter-character.</p>
 <div id="insert-justification"></div>
@@ -338,12 +338,12 @@
 <h3>Lists, counters, etc.</h3>
 <p id="prompt-lists" class="status_prompt promptStub"></p>
 
-<p>Two numeric CSS counter styles are defined for Khmer, using Khmer digits, in the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>: <code class="kw" translate="no">khmer</code> and <code class="kw" translate="no">cambodian</code>.  Both styles are exactly the same, and are listed separately  because both names are supported in some browsers, and it makes it easier to cut and paste if two clean instances are provided.</p>
+<p>Two numeric CSS counter styles are defined for Khmer, using Khmer digits, in the document <a href="https://www.w3.org/TR/predefined-counter-styles/#khmer-styles">Ready-made Counter Styles</a>: <code class="kw" translate="no">khmer</code> and <code class="kw" translate="no">cambodian</code>.  Both styles are exactly the same, and are listed separately  because both names are supported in some browsers, and it makes it easier to cut and paste if two clean instances are provided.</p>
 <p>In addition, an alphabetic counter style is defined: <code class="kw" translate="no">khmer-consonant</code>.</p>
 <p>The <a href="https://www.w3.org/TR/css-counter-styles-3/#simple-numeric">CSS Counter Styles specification</a> only specifies the  <code class="kw" translate="no">khmer</code> and <code class="kw" translate="no">cambodian</code> styles.</p>
 <p>The <code class="kw" translate="no">khmer</code> and <code class="kw" translate="no">khmer</code> counter styles are supported by Firefox, Chrome, Edge, and Safari, but not by legacyEdge. </p>
 <p>The <code class="kw" translate="no">khmer-consonant</code> style is not supported by any browser natively, and although the CSS Counter Styles spec allows users to create their own counter styles,  the feature is only implemented by Firefox at the moment, so no support is available for this style.</p>
-<p>See   tests: <a href="https://w3c.github.io/i18n-tests/results/predefined-counter-styles#simplenumeric">Simple numeric</a> • <a href="https://w3c.github.io/i18n-tests/results/custom-counter-styles#khmer-styles">Khmer script</a></p>
+<p>See   tests: <a href="https://w3c.github.io/i18n-tests/results/predefined-counter-styles#simplenumeric">Simple numeric</a> • <a href="https://w3c.github.io/i18n-tests/results/custom-counter-styles#khmer">Khmer script</a></p>
 <p>Unless a proposal is made that the <code class="kw" translate="no">khmer-consonant</code> or some other style is important, marking the status for this as ok.</p>
 
 <div id="insert-lists"></div>
@@ -358,17 +358,6 @@
 
 <div id="insert-initials"></div>
 </section>
-
-
-
-<!--section id="otherpara" class="tbd">
-    <h3>Other paragraph features</h3>
-    <p class="status_prompt">IAre there other features of paragraph design that are peculiar to your script? <a href="https://w3c.github.io/typography/index#other_para_features">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aparagraph-features%20label%3Atype-info-request">check for currently needed data</a>.</p>
-
-
-    <p></p>
-</section-->
-
 </section>
 
 
@@ -418,15 +407,6 @@
 
 <div id="insert-interaction"></div>
 </section>
-
-
-
-<!--section id="morepage" class="ok">
-    <h3>Other page layout &amp; pagination features</h3>
-
-
-    <p></p>
-    </section-->
 </section>
 
 
@@ -462,17 +442,18 @@
 
 
 <details>
-<summary style="margin-top:4em; cursor: pointer;" onClick="printSummary(true)">Show summary</summary>
+<summary style="margin-top:4em; cursor: pointer;">Show summary</summary>
 <pre id="summaryPlaceholder" style="white-space: pre-wrap;"></pre>
 </details>
 
 
 
 
-<script>
+<script class="remove">
 setUpSummary()
 addPrompts() 
 getAllData('sealreq','doc:khmr')
+printSummary(true)
 </script>
 
 
