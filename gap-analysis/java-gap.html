@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 
 <title>Javanese Script Gap Analysis</title>
-<script src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"> </script>
+<script class="remove" src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"> </script>
 
 <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="" class="remove">
 </script>
@@ -13,14 +13,14 @@
   var respecConfig = {
       // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
       specStatus:           "ED",
-      //publishDate:  		"2015-07-21",
+      //publishDate:  		"2020-06-16",
       //previousPublishDate:  "2014-12-16",
       //previousMaturity:  "FPWD",
 
       noRecTrack:           true,
       shortName:            "java-gap",
       copyrightStart:       "2018",
-      edDraftURI:           "http://w3c.github.io/sealreq/gap-analysis/java-gap.html",
+      edDraftURI:           "https://w3c.github.io/sealreq/gap-analysis/java-gap",
 
       // if this is a LCWD, uncomment and set the end of its review period
       // lcEnd: "2009-08-05",
@@ -33,17 +33,29 @@
 
 
       wg:           "Internationalization Working Group",
-      wgURI:        "http://www.w3.org/International/core/",
+      wgURI:        "https://www.w3.org/International/core/",
 	  
 
       github: "w3c/sealreq",
+	  
+	  postProcess: [
+    	function importStyleSheet() {
+			[...document.querySelectorAll("link[rel='stylesheet'][data-import]")].forEach(l => {
+				const style = document.createElement("style");
+				fetch(l.href).then(r => r.text()).then(t => {
+					style.textContent = t;
+					l.replaceWith(style);
+					});
+      			});
+    		}
+   		],
 
       
       
       // langs array lists languages addressed by this document, in order of speaker (highest first)
       // it is used to generate the javascript needed for the matrix
       langs: ['Javanese'],
-      gapDocPath: 'https://w3c.github.io/sealreq/gap-analysis/java-gap',
+      gapDocPath: 'https://www.w3.org/TR/java-gap/',
 
 
       // URI of the patent status for this WG, for Rec-track documents
@@ -51,12 +63,12 @@
       // This is important for Rec-track documents, do not copy a patent URI from a random
       // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
       // Team Contact.
-      wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32113/status",
+      wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/32113/status",
       // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
     };
   </script>
-<script src="/i18n-activity/templates/gap-analysis/prompts.js"> </script>
-<link rel="stylesheet" href="https://w3c.github.io/typography/gap-analysis/gapanalysis.css">
+<script class="remove" src="/i18n-activity/templates/gap-analysis/prompts.js"> </script>
+<link rel="stylesheet" data-import href="https://w3c.github.io/typography/gap-analysis/gapanalysis.css">
 </head>
 
 <body>
@@ -67,8 +79,8 @@
   <div id="sotd">
     <p>This document describes and prioritises gaps for the support of Javanese written with the Javanese script on the Web and in eBooks. In particular, it is concerned with text layout. It checks that needed features are supported in W3C specifications, in particular HTML and CSS and those relating to digital publications. It also checks whether the features have been implemented in browsers and ereaders.
 <!-- This document complements the document <a href="https://w3c.github.io/xxxxx/">Text Layout Requirements for the Xxxxx Script</a>, which describes the requirements for areas where gaps appear.-->
-It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/language-matrix.html">language matrix</a> that tracks Web support for many languages.</p>
-<p>This document is an individual contribution, and is not currently a work item in any group, however, you can contact the <a href="http://www.w3.org/International/core/">Internationalization Working Group</a> for more information. We welcome contributions to this and/or other documents.</p>
+It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/language-matrix.html">language matrix</a> that tracks Web support for many languages.</p>
+<p>This document is an individual contribution, and is not currently a work item in any group, however, you can contact the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a> for more information. We welcome contributions to this and/or other documents.</p>
 </div>
 
   <section id="h_introduction">
@@ -273,17 +285,6 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 
 <div id="insert-data_formats"></div>
 </section>
-
-
-
-<!--section id="otherinline" class="tbd">
-    <h3>Other inline features</h3>
-    <p class="status_prompt">Does the script have special ways of representing inline notes (such as  kumimoji in Japanese) or other inline features that need to be supported? <a href="https://w3c.github.io/typography/index#other_inline_features">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Ainline-features%20label%3Atype-info-request">check for currently needed data</a>.</p>
-
-
-    <p></p>
-    </section-->
-
 </section>
 
 
@@ -358,17 +359,6 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 
 <div id="insert-initials"></div>
 </section>
-
-
-
-<!--section id="otherpara" class="tbd">
-    <h3>Other paragraph features</h3>
-    <p class="status_prompt">IAre there other features of paragraph design that are peculiar to your script? <a href="https://w3c.github.io/typography/index#other_para_features">See available information</a> or <a href="https://github.com/w3c/i18n-activity/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20is%3Aopen%20label%3Aparagraph-features%20label%3Atype-info-request">check for currently needed data</a>.</p>
-
-
-    <p></p>
-</section-->
-
 </section>
 
 
@@ -418,15 +408,6 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 
 <div id="insert-interaction"></div>
 </section>
-
-
-
-<!--section id="morepage" class="ok">
-    <h3>Other page layout &amp; pagination features</h3>
-
-
-    <p></p>
-    </section-->
 </section>
 
 
@@ -462,17 +443,18 @@ It is linked to from the <a href="http://w3c.github.io/typography/gap-analysis/l
 
 
 <details>
-<summary style="margin-top:4em; cursor: pointer;" onClick="printSummary(true)">Show summary</summary>
+<summary style="margin-top:4em; cursor: pointer;">Summary</summary>
 <pre id="summaryPlaceholder" style="white-space: pre-wrap;"></pre>
 </details>
 
 
 
 
-<script>
+<script class="remove">
 setUpSummary()
 addPrompts() 
 getAllData('sealreq','doc:java')
+printSummary(true)
 </script>
 
 
