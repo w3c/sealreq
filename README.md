@@ -18,6 +18,9 @@ For more details about scope, deliverables, work methods, etc., see the [group's
 - [Javanese Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/java-gap.html)
 - [Javanese Layout Requirements](https://w3c.github.io/sealreq/javanese/) (early draft)
 
+### Related documents
+- [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/)
+
 
 ### Feedback
 Please use the [GitHub issue list](https://github.com/w3c/sealreq/issues) to report issues for language support, for discussions, and to send feedback about documents. (Learn [how GitHub issues work](http://w3c.github.io/i18n-activity/guidelines/issues.html).)
