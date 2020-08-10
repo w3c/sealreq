@@ -10,13 +10,15 @@ For more details about scope, deliverables, work methods, etc., see the [group's
 
 
 ### Documents
-- [Lao Layout Requirements](https://w3c.github.io/sealreq/lao/) (early draft)
 - [Lao Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/laoo-gap.html)
+- [Lao Layout Requirements](https://w3c.github.io/sealreq/lao/) (early draft)
+- [Thai Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/thai-gap.html)
 - [Thai Layout Requirements](https://w3c.github.io/sealreq/thai/) (early draft)
 - [Khmer Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/khmr-gap.html)
 - [Khmer Layout Requirements](https://w3c.github.io/sealreq/khmer/) (early draft)
 - [Javanese Script Gap Analysis](https://w3c.github.io/sealreq/gap-analysis/java-gap.html)
 - [Javanese Layout Requirements](https://w3c.github.io/sealreq/javanese/) (early draft)
+
 
 ### Related documents
 - [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/)
