@@ -7,9 +7,9 @@
 <title>Thai Gap Analysis</title>
 <script class="remove" src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"> </script>
 
-<script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common" async="">
+<script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c" async="">
 </script>
-  <script class="remove">
+<script class="remove">
   var respecConfig = {
       // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
       specStatus:           "ED",
@@ -30,13 +30,19 @@
       editors:  [
         { name: "Richard Ishida", mailto: "ishida@w3.org", company: "W3C", w3cid: 3439 },
       ],
+             
+      
+      // langs array lists languages addressed by this document, in order of speaker (highest first)
+      // it is used to generate the javascript needed for the matrix
+      langs: ['Thai'],
+      gapDocPath: 'https://www.w3.org/TR/thai-gap/',
 
 
-      wg:           "Internationalization Working Group",
-      wgURI:        "https://www.w3.org/International/core/",
+
  
  	  github:	"w3c/sealreq",
-	  
+      group:	"i18n",
+ 	  
 	  postProcess: [
     	function importStyleSheet() {
 			[...document.querySelectorAll("link[rel='stylesheet'][data-import]")].forEach(l => {
@@ -48,23 +54,9 @@
       			});
     		}
    		],
-             
-      
-      // langs array lists languages addressed by this document, in order of speaker (highest first)
-      // it is used to generate the javascript needed for the matrix
-      langs: ['Thai'],
-      gapDocPath: 'https://www.w3.org/TR/thai-gap/',
+      };
+</script>
 
-
-      // URI of the patent status for this WG, for Rec-track documents
-      // !!!! IMPORTANT !!!!
-      // This is important for Rec-track documents, do not copy a patent URI from a random
-      // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-      // Team Contact.
-      wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/32113/status",
-      // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
-    };
-  </script>
 <script class="remove" src="/i18n-activity/templates/gap-analysis/prompts.js"> </script>
 <link rel="stylesheet" data-import href="https://w3c.github.io/typography/gap-analysis/gapanalysis.css">
 </head>
@@ -434,20 +426,19 @@
 
 
 
-<details>
-<summary style="margin-top:4em; cursor: pointer;">Show summary</summary>
+<details id="summaryStats">
+<summary style="margin-top:4em; cursor: pointer;" onclick="setUpSummary(); printSummary(true)">Show summary</summary>
 <pre id="summaryPlaceholder" style="white-space: pre-wrap;"></pre>
 </details>
-
-
-
-
 <script class="remove">
-setUpSummary()
 addPrompts() 
-getAllData('sealreq','doc:th')
-printSummary(true)
+getAllData('iip','sealreq','doc:thai')
 </script>
+<script>
+if (window.location.href.includes('/TR/')) document.getElementById('summaryStats').style.display = 'none'
+</script>
+
+
 
 
 
