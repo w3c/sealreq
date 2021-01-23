@@ -5,7 +5,8 @@
 <meta charset="utf-8">
 
 <title>Khmer Gap Analysis</title>
-<script class="remove" src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"> </script>
+<script class="remove" src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"></script>
+<script class="remove" src="../../i18n-activity/templates/gap-analysis/prompts.js"></script>
 
 <script src="https://www.w3.org/Tools/respec/respec-w3c" async="" class="remove">
 </script>
@@ -41,21 +42,27 @@
  	  github:	"w3c/sealreq",
       group:	"i18n",
  	  
-	  postProcess: [
-    	function importStyleSheet() {
-			[...document.querySelectorAll("link[rel='stylesheet'][data-import]")].forEach(l => {
-				const style = document.createElement("style");
-				fetch(l.href).then(r => r.text()).then(t => {
-					style.textContent = t;
-					l.replaceWith(style);
-					});
-      			});
-    		}
-   		],
+	preProcess: [
+		() => { addPrompts() },
+		async () => { await getAllData('sealreq','doc:khmr') }
+		],
+
+	postProcess: [
+		async function importStyleSheet() { 
+			const elems = document.querySelectorAll(`link[rel='stylesheet'][data-import]`)
+			await Promise.all(
+				[...elems].map(async link => {
+					const text = await fetch(link.href).then(r => r.text())
+					const style = document.createElement("style")
+					style.textContent = text
+					link.replaceWith(style)
+					})
+				)
+			}
+		],
       };
 </script>
 
-<script class="remove" src="/i18n-activity/templates/gap-analysis/prompts.js"> </script>
 <link rel="stylesheet" data-import href="https://w3c.github.io/typography/gap-analysis/gapanalysis.css">
 </head>
 
@@ -75,7 +82,16 @@
 <p>This page documents difficulties people encounter when trying to use the Cambodian language in the Khmer script on the Web. </p>
 <p>Having identified an issue, it investigates the current status with regards to web specifications and implementations by user agents (browsers, e-readers, etc.), and attempts to prioritise the severity of the issue for web users.</p>
 <p>A summary of this report and others can be found as part of the <a href="https://w3c.github.io/typography/gap-analysis/language-matrix.html" style="font-size: 140%;">language matrix</a>.</p>
-    
+
+
+<p>For a description of the Khmer script see the (non-W3C) page <a href="https://r12a.github.io/scripts/khmer/">Khmer</a>, which summarises aspects of the orthography and typographic features, including relevant Unicode characters and their use.</p>
+
+
+
+
+
+
+
     <section id="workflow">
     <h3>Work flow</h3>
     <p><span style="font-weight:bold; font-size: 140%;">This version of the document is a preliminary analysis</span></p>
@@ -433,10 +449,6 @@
 <summary style="margin-top:4em; cursor: pointer;" onclick="setUpSummary(); printSummary(true)">Show summary</summary>
 <pre id="summaryPlaceholder" style="white-space: pre-wrap;"></pre>
 </details>
-<script class="remove">
-addPrompts() 
-getAllData('sealreq','doc:khmr')
-</script>
 <script>
 if (window.location.href.includes('/TR/')) document.getElementById('summaryStats').style.display = 'none'
 </script>
