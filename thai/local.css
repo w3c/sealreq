@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Noto Serif Thai WF';
+    src: url('https://r12a.github.io/shared/webfonts/NotoSerifThai-Regularwebfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+	}
+[lang=th] { font-family: 'Noto Serif Thai WF', serif; font-size: 150%; }
 
 
 h2 {

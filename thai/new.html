@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Thai Layout Requirements (Draft)</title>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer>
+</script>
+  <script class="remove">
+  var respecConfig = {
+      // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
+      specStatus:           "ED",
+      //publishDate:  		"2015-07-21",
+      //previousPublishDate:  "2014-12-16",
+      //previousMaturity:  "FPWD",
+
+      noRecTrack:           true,
+      shortName:            "thailreq",
+      copyrightStart:       "2019",
+      edDraftURI:           "https://w3c.github.io/sealreq/thai/",
+
+      // if this is a LCWD, uncomment and set the end of its review period
+      // lcEnd: "2009-08-05",
+
+      // editors, add as many as you like
+      // only "name" is required
+      editors:  [
+        { name: "Richard Ishida", company: "W3C" }
+      ],
+
+      group: "i18n",
+      github:	"w3c/sealreq",
+
+      wgPublicList: "public-i18n-sealreq",
+    };
+  </script>
+  <link rel="stylesheet" href="local.css">
+</head>
+
+<body>
+<div id="abstract">
+<p>This document describes requirements for the layout and presentation of text in languages that use the Thai script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
+</div>
+
+<div id="sotd">
+<p>This document describes the basic requirements for Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Thai scripts. Currently the document focuses on Thai as used for the Thai language. The information here is developed in conjunction with a <a href="../gap-analysis/thai-gap.html">document that summarises gaps</a> in support on the Web for Thai.</p>
+
+<p>The editor's draft of this document is being developed by the <a href="https://www.w3.org/International/groups/#mission">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+
+<div class="note">
+<p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
+
+<p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/sealreq/issues" style="font-size: 120%;">github issues</a>. Only send comments by email if you are unable to raise issues on github (see links below). All comments are welcome.</p>
+
+<p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on using a URL.</p>
+</div>
+  </div>
+
+
+
+
+
+
+<section id="h_introduction">
+<h2>Introduction</h2>
+
+<section id="h_about_this_document">
+<h3>About this document</h3>
+
+<p>This document outlines some features related to the layout of Thai text that may be useful background information for those reading the gap-analysis documents and issues for the Thai script.</p>
+
+<p><strong>This document is an initial draft and needs thorough review by Thai experts.</strong></p>
+</section>
+
+
+
+
+<section id="h_gap_analysis">
+<h3>Gap analysis</h3>
+
+<p>This document is pointed to by a separate document, <a href="../gap-analysis/thai-gap.html">Thai Gap Analysis</a>, which describes gaps in support for Thai on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+
+<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This  document is where those requirements are described.</p>
+
+<p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
+</section>
+
+
+
+
+
+<section id="h_info_requests">
+<h3>Other related resources</h3>
+
+<p>The document <a href="https://w3c.github.io/typography/">International text layout and typography index</a> (known informally as the text layout index) points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+
+<p>The W3C also maintains a tracking system that  has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="https://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="h_script_overview">
+<h2>Thai Script Overview</h2>
+
+<p>Thai is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel.</p>
+
+<p>Unlike devanagari, multiple vowel-signs may be used with a single character, and those positioned to the left or right of the consonant(s) are not combining characters. Like other Southeast Asian scripts, Thai is heavily based on syllables, so where there are syllable-initial clusters, a prebase vowel-sign will be displayed at the start of the syllable, rather than immediately before the consonant it follows.</p>
+
+<p>Thai is a tonal language, and the consonant characters chosen for a syllable have implications on the tone of that syllable.</p>
+
+<p>Words are not separated by spaces.</p>
+
+<p><a href="https://r12a.github.io/scripts/thai/">Thai script summary</a> can be read for a high level overview of characters used for the script, and some basic features. Text from that the latter part of that page was used for the initial version of this document.</p>
+</section>
+
+
+
+
+
+<section>
+<h2 id="h_text_direction">Text direction</h2>
+
+<p>Thai is written horizontally, left to right.</p>
+</section>
+
+
+
+
+
+
+<section id="h_shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+<p>None of the Thai characters require special shaping based on the visual context. Nor is printed text cursive.</p>
+<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+
+
+
+
+
+<section id="writing_styles">
+<h3>Font styles</h3>
+<p>Modern type styles often omit the loops found in more traditional typefaces. See <a href="http://www.fontpad.co.uk/loops-and-latinisation/#more-666">an article</a> that explores this in depth.</p>
+<p>Loopless is considered to be more contemporary and modern, and is mainly used for advertising and titling. The distinction doesn’t necessarily map to that of serif vs sans – Noto, for example, provides both serif and sans Thai font faces, but they both have loops.  On the other hand, Neue Frutiger Thai offers traditional (looped) and modern (loopless) alternatives as part of the same font family (each with both regular, italic and bold substyles).</p>
+<figure>
+<img src="index-data/looped_silom.png" alt="ทุกคนมีสิทธิที่จะออกจากประเทศใด ๆ ไป รวมทั้งประเทศของตนเองด้วย และที่จะกลับยังประเทศตน" data-notes="silom 36px">
+<figcaption>The Silom font uses the traditional looped glyphs.</figcaption>
+</figure>
+
+<figure>
+<img src="index-data/loopless_sukhumvitset.png" alt="ทุกคนมีสิทธิที่จะออกจากประเทศใด ๆ ไป รวมทั้งประเทศของตนเองด้วย และที่จะกลับยังประเทศตน" data-notes="sukhumvit set 36px">
+<figcaption>The Sukhumvit Set font uses modern unlooped glyphs.</figcaption>
+</figure>
+</section>
+
+
+
+
+  
+
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+<p>Most of the combining characters in Thai are used for vowel-signs and tone marks.</p>
+<p>Combining characters need to be placed in different positions, according to the context. The  example below shows the same tone character displayed at different heights, according to what falls beneath it.</p>
+
+<figure id="fig_thai_position">
+<p class="large"><img src="index-data/thai_position.png" class="ex" alt="ให้มีขึ้น" data-notes="62px Noto Serif Thai"></p>
+<figcaption>The same tone mark displayed at different heights.</figcaption>
+</figure>
+
+<p>Thai regularly combines multiple combining characters above a base consonant. There are two examples in the text below, both of which show a base character with a vowel sign and then a tone mark on top.</p>
+
+<figure id="fig_multiple_diacritics">
+<p class="large"><img src="index-data/multiple_diacritics.png" class="ex" alt="ครั้งที่" data-notes="62px Noto Serif Thai"></p>
+<figcaption>Multiple diacritics (vowel sign + tone mark) attached to the same base character.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section id="fontstyle">
+<h3>Font styling &amp; weight</h3>
+
+<p><a href="http://www.fontpad.co.uk/thai-italics-1/">Mitchell</a> describes how italicisation is used for meta text and to convey the ‘about’ voice, rather than for emphasis or names of things (for which  bold is used).</p>
+<p>Italicisation tends to be applied to whole paragraphs or groups of paragraphs, for such things as picture captions, bylines, and other labels, commentaries, summaries such as standfirsts in magazines or news stories, and signposting. It is also regularly used for direct speech between quote marks.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="graphemes">
+<h2>Graphemes</h2>  
+
+<p id="def-grapheme" class="explanatoryintro definitionStub">A <a class="termref" target="_blank" href="../glossary/index.html#grapheme">grapheme</a> is a user-perceived unit of text. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement &amp; selection, character counts, text spacing, text insertion, justification, case conversions, and sorting.  The Unicode Standard uses generalised rules to define '<a class="termref" target="_blank" href="../glossary/index.html#graphemecluster">grapheme clusters</a>', which approximate the likely grapheme boundaries in a writing system, however they don't work well with many complex scripts.</p>
+ 
+<p>Non-combining Thai vowel characters are treated as independent grapheme clusters. Only combining characters are grouped together with their base into a cluster.</p>
+
+
+
+
+
+<section id="graphemeC">
+<h3 title="Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement &amp; selection, character counts, searching &amp; matching, text insertion, line-breaking, justification, case conversions, sorting?">Grapheme clusters</h3>
+
+<!--figure id="fig_grapheme_boundaries">
+<img src="index-data/grapheme_boundaries.png" class="ex" alt="และที่จะกลับ" data-notes="58px Noto Serif Thai">
+<figcaption>Grapheme cluster boundaries split spacing vowel-signs from their base consonants, but not combining characters.</figcaption>
+</figure-->
+
+<p><code>Base Combining_mark*</code></p>
+<p>Combining marks may include zero or more of the following types of character.</p>
+
+<ol>
+<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=ิีึืุู็ั">Dependent vowels</a> [8] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#combiningvowels">Combining marks used for vowels</a>) There is usually only one vowel-sign per base consonant. Thai has many composite vowels that are made of combinations of ordinary spacing  characters and  combining characters clustered around a base. The spacing characters are all separate grapheme clusters, with the exception of <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>. They are manually positioned in the text stream.</li>
+
+<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=่้๊๋">Tone marks</a> [4] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#tones">Tones</a>) Tone marks should be typed and stored immediately after a dependent vowel, if there is one, and immediately after the base otherwise.</li>
+
+<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=์">Silencer</a> (<span class="name">májtʰantʰákʰâːt</span>) [1] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#novowel">Consonants with no following vowel</a>) Used after other elements in the grapheme cluster to indicate cancelling of a consonant or syllable.</li>
+</ol>
+<p>The following examples show a variety of grapheme clusters:</p>
+<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
+
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tbody><tr><td><img src="index-data/g_smell.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ได้กลิ่น', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', '')" lang="th">ได้กลิ่น</span> <bdi class="trans">dây.klìn</bdi> <bdi class="meaning">to smell</bdi></span></td></tr>
+
+<tr><td><img src="index-data/g_toilet.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ห้องน้ำ', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'hɔ̂§‹§ŋ.§n§áːm')" lang="th">ห้องน้ำ</span> <bdi class="ipa">hɔ̂ŋ.náːm</bdi> <bdi class="meaning">toilet</bdi></span></td></tr>
+
+<tr><td><img src="index-data/g_program.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('โปรแกรม', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', '››§p§rōː.§››§k§rɛ̄§m')" lang="th">โปรแกรม</span> <bdi class="ipa">prōː.krɛ̄m</bdi> <bdi class="meaning">(computer) program</bdi></span></td></tr>
+
+<tr><td><img src="index-data/g_sacred.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ศักดิ์สิทธิ์', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'sà§k̚.§–§sì§t̚§–')" lang="th">ศักดิ์สิทธิ์</span> <bdi class="ipa">sàk̚.sìt̚</bdi> <bdi class="meaning">to be sacred</bdi></span></td></tr>
+</tbody></table>
+
+<p>The grapheme cluster boundaries are convenient for justification algorithms, which  insert equal amounts of space between non-combining letters, including between non-combining vowel-signs and their consonants (see <a class="secref" href="#justification">Text alignment &amp; justification</a>).</p>
+
+<p>One exception is the aforementioned <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>, which is split across 2 typographic units for the purpose of justification (see inter_character_spacing).</p>
+</section>
+
+
+
+
+
+
+<section id="syllableParsing">
+<h3>Parsing syllables</h3>
+
+<p>Adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
+<span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ถนน', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'tʰà.§nǒ§n')" lang="th">ถนน</span> <bdi class="trans">thànǒn</bdi> <bdi class="ipa">tʰà.nǒn</bdi> <bdi class="meaning">road</bdi></span>
+</p>
+
+<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
+<span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('นม', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'nō§m / nama')" lang="th">นม</span> <bdi class="ipa">nōm / nama</bdi> <bdi class="meaning">milk / a salutation</bdi></span>
+</p>
+
+<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
+<span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('กรี', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'kà.§rīː / krīː')" lang="th">กรี</span> <bdi class="ipa">kà.rīː / krīː</bdi> <bdi class="meaning">elephant / pointy bit on shrimp head</bdi></span>
+</p>
+</section>
+</section>
+
+
+
+
+
+<section id="h_characters_and_phrases">
+<h2>Structural boundaries &amp; markers</h2>
+
+
+<section id="h_words">
+<h3>Word boundaries</h3>
+<p>The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined but recognisable semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p>Spaces are used in Thai as phrase separators, but Thai doesn't separate words in a phrase using visible spaces.</p>
+<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries.</p>
+<figure>
+<img src="index-data/thai_words.png" class="ex" alt="รวมทั้งวิทยาการด้านคอมพิว" data-alt="รวม​ทั้ง​วิทยาการ​ด้าน​คอมพิว" data-notes="56px Noto Serif Thai">
+<figcaption>Word boundaries occur where the vertical lines appear, though they are not marked by the script.</figcaption>
+</figure>
+
+
+
+
+<section id="h_wordBoundary">
+<h4>Word boundary detection</h4>
+
+<p>The main difficulty arises when dealing with compound words. It can often be difficult to decide whether a given string of syllables represents multiple words or a single compound word.</p>
+<figure>
+<p><img src="index-data/thai_alt1.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การเขียน​กาษาไทย" data-notes="42px Noto Serif Thai"></p>
+<p><img src="index-data/thai_alt2.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การ​เขียน​กาษาไทย" data-notes="42px Noto Serif Thai"></p>
+<figcaption>Alternative line break opportunities for Thai text using compound nouns.</figcaption>
+</figure>
+<p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
+<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถ</span> <span class="ipa">kʰon kʰàp ròt</span> <span class="meaning">driver</span></span> should be viewed as a single word in the context <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span> <span class="ipa">kʰon kʰàp ròt nâŋ kʰɔːj jûː nràjt</span> <span class="meaning">the (man who works as a) driver is waiting in the car</span></span>, whereas in the phrase <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span> <span class="ipa">kʰon kʰàp ròt pʰàːn jɛ̀ːk níː mâj màːk nàk</span> <span class="meaning">not many people drive through this intersection</span></span> it would be viewed as 3 words, referring to anyone who is driving. <sup><a href="http://pioneer.netserv.chula.ac.th/~awirote/ling/snlp2007-wirote.pdf">a</a></sup></p>
+<p>Proper names, which are composed from multiple words, are also problematic, especially because there are no capital letters to distinguish them from other pieces of text.</p>
+</section>
+
+
+<section id="h_zwsp">
+<h3>Zero-width space (ZWSP) &amp; Word-joiner (WJ)</h3>
+
+<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> (ZWSP) can  be  used  to  create  breaks.</p>
+<p>To prevent a break between syllables, <span class="codepoint" translate="no"><span class="uname">U+2060 WORD JOINER</span></span> (WJ) can be used.</p>
+<p>It is also important to bear in mind that Thai may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
+<p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
+<p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+
+<section id="repetition">
+<h4>Repetition</h4>
+
+<p><span class="codepoint" translate="no"><span lang="th">ๆ</span> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span> is used to mark repetition of preceding letters. It is typically preceded and followed by a space, eg. <span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ทุกวัน ๆ', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'tʰù§k.§wa§n§ §tʰùkwan')" lang="th">ทุกวัน ๆ</span> <bdi class="ipa">tʰùk.wan tʰùkwan</bdi> <bdi class="meaning">everyday</bdi></span> However, some publishers prefer to publish without a leading space, ie. <span class="charExample" translate="no"><span class="ex" lang="th">ทุกวันๆ</span></span></p>
+
+<p>This character shouldn't be wrapped to the beginning of a new line on its own, and should be kept not far from the preceding text that it duplicates during justification.</p>
+</section>
+
+
+
+
+<section id="abbreviation">
+<h4>Abbreviation</h4>
+
+<p><span class="codepoint" translate="no"><span lang="th">ฯ</span> [<span class="uname">U+0E2F THAI CHARACTER PAIYANNOI</span>]</span> is used to indicate elision or abbreviation of letters; it  is    viewed  as  a  kind  of  letter,  however,  and  is  used  with  considerable  frequency because of its appearance in such words as the Thai name for Bangkok, <span class="charExample" translate="no"><span class="ex" lang="th">กรุงเทพฯ</span> <span class="trans">k̯ṟuŋ̱eṯʰp̱ʰ⋯</span> <span class="ipa">krūŋ tʰêːp</span></span> which is short for <span class="charExample" translate="no"><span class="ex" lang="th">กรุงเทพมหานคร</span> <span class="trans">k̯ṟuŋ̱eṯʰp̱ʰm̱hāṉḵʰṟ</span> <span class="ipa">krūŋ tʰêːp mahǎː nákʰɔ̄ːn</span></span>It is followed by a space.</p>
+</section>
+
+
+
+
+<section id="ellipsis">
+<h4>Ellipsis</h4>
+
+<p><span class="name">Paiyannoi</span> is also used  in  the combination <span class="charExampleInline" translate="no"><span class="ex" lang="th">ฯลฯ</span></span>  to  create  a  construct  called   <span class="name">paiyanyai</span> , which means “et cetera, and so forth.”</p>
+<p>Some abbreviations are written using a full stop, eg. <span class="charExample" translate="no"><span class="ex" lang="th">สนง.ตปท.</span> <span class="trans">sṉŋ̱.t̯p̯ṯʰ.</span> <span class="meaning">Office of the Royal Thai Police</span></span> which is short for <span class="charExample" translate="no"><span class="ex" lang="th">สำนักงานตำรวจแห่งชาติ</span> <span class="trans">saᵐṉäk̯ŋ̱āṉt̯aᵐṟw̱c̯ɛh¹ŋ̱c̱ʰāt̯i</span></span></p>
+<p>CLDR indicates that <span class="codepoint" translate="no"><span lang="th">…</span> [<span class="uname">U+2026 HORIZONTAL ELLIPSIS</span>]</span> is also used for ellipsis.</p>
+</section>
+</section>
+</section>
+
+
+
+
+
+
+<section id="h_lines_and_paragraphs">
+<h2>Line &amp; paragraph layout</h2>
+
+
+
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+
+<p>Even where Thai doesn't indicate word boundaries, when Thai text is wrapped at the end of a line it should break at word boundaries. </p>
+<p>As  the width of a browser window changes, the text in [[[#fig_thai_wrap]]] should break at the  points shown if the browser supports Thai wrapping:</p>
+
+<figure id="fig_thai_wrap">
+<img src="index-data/thai_wrap.png" class="ex" alt="โลกจะใช้เพียง" data-notes="62px Noto Serif Thai">
+<figcaption>Break points detected in a sequence of Thai characters by an automatic word segmenter.</figcaption>
+</figure>
+
+<p>Because Thai doesn't separate words,  applications typically look up   word boundaries in a dictionary, however, such lookup doesn't always produce the needed result, especially when dealing with compound words and proper names (see [[[#h_words]]]). For more details, see [[[#h_wordBoundary]]]. </p>
+
+<p>To counteract these deficiencies, authors may use <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> and <span class="codepoint" translate="no"><span class="uname">U+2060 WORD JOINER</span></span>  (see [[[#h_zwsp]]]).</p>
+
+<p>For the  various restrictions on how specific characters, especially punctuation, can wrap from one line to the next, see the following link.</p>
+
+<p><a id="showLinebreaks" target="_blank" href="https://r12a.github.io/scripts/apps/listlinebreak/index.html?chars=%E0%B8%9C%20%E0%B8%96%20%E0%B8%90%20%E0%B8%82%20%E0%B8%83%20%E0%B8%9B%20%E0%B8%9A%20%E0%B8%95%20%E0%B8%94%20%E0%B8%8F%20%E0%B8%8E%20%E0%B8%81%20%E0%B8%AD%20%E0%B8%9E%20%E0%B8%A0%20%E0%B8%97%20%E0%B8%98%20%E0%B8%91%20%E0%B8%92%20%E0%B8%84%20%E0%B8%86%20%E0%B8%85%20%E0%B8%89%20%E0%B8%88%20%E0%B8%8A%20%E0%B8%8C%20%E0%B8%9D%20%E0%B8%AA%20%E0%B8%A8%20%E0%B8%A9%20%E0%B8%AB%20%E0%B8%9F%20%E0%B8%8B%20%E0%B8%AE%20%E0%B8%A1%20%E0%B8%99%20%E0%B8%93%20%E0%B8%87%20%E0%B8%A7%20%E0%B8%A3%20%E0%B8%A5%20%E0%B8%AC%20%E0%B8%A2%20%E0%B8%8D%20%E0%B9%80%20%E0%B9%81%20%E0%B9%83%20%E0%B9%84%20%E0%B9%82%20%E0%B8%B0%20%E0%B8%B2%20%E0%B8%B3%20%E0%B8%A4%20%E0%B8%A6%20%E0%B9%85%20%E0%B8%AF%20%E0%B9%86%20%E0%B8%B4%20%E0%B8%B5%20%E0%B8%B6%20%E0%B8%B7%20%E0%B8%B8%20%E0%B8%B9%20%E0%B8%B1%20%E0%B9%87%20%E0%B9%88%20%E0%B9%89%20%E0%B9%8A%20%E0%B9%8B%20%E0%B9%8C%20%E0%B9%90%20%E0%B9%91%20%E0%B9%92%20%E0%B9%93%20%E0%B9%94%20%E0%B9%95%20%E0%B9%96%20%E0%B9%97%20%E0%B9%98%20%E0%B9%99%20%E2%80%9C%20%E2%80%9D%20%E2%80%98%20%E2%80%99%20%E0%B9%9A%20%E0%B9%9B%20%E0%B9%8F%20%E2%80%90%20%E2%80%93%20%E2%80%94%20%E2%80%A6%20%20%20:%20.%20?%20!%20(%20)%20%E0%B8%BF%20%E2%80%8B%20%E2%81%A0%E0%B9%8D">Show (default) line-breaking properties for characters in the Thai language.</a></p>
+
+<p>The repetition character, 
+<span class="codepoint" translate="no"><bdi lang="th">ๆ</bdi> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span>
+is always preceded by space, however it should not wrap to the next line on its own.</p>
+</section>
+
+
+
+
+    
+    
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+
+<p>Justification in Thai primarily adjusts the blank spaces between phrases, rather than expanding the text between words or syllables. The fact that lines break at word boundaries helps reduce the size of the gaps produced.</p>
+<p>Thai may also make certain adjustments to inter-character spacing. The character-based spacing is most common in narrow columns, such as newsprint, where there is no space except at the end of a line.</p>
+<p>Any <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> (ZWSP) is used to separate words is ignored during  justification. Justification proceeds as if it wasn't there.</p>
+
+
+
+
+<section id="inter_character_spacing">
+<h4>Inter-character spacing</h4>
+
+<p>The justification in [[[#fig_justification_intercharacter_spacing]]] shows equal spacing across a phrase where there are no space characters to stretch. Note how the equal spacing separates prebase and postbase vowel signs from their consonants by the same amount as consonants are separated from each other; they are not kept together with the base consonant they modify.</p>
+
+<figure id="fig_justification_intercharacter_spacing">
+<img alt="แนะโบรกฯรวมตัวตั้งสนง.ตปท." src="index-data/justification_intercharacter_spacing.jpg" data-source="" >
+<figcaption>A line with no spaces applies inter-character spacing to justify the text.</figcaption>
+</figure>
+
+<p>This kind of spacing requires a special behaviour for <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>. The small circle is kept with the preceding consonant, and space is added before the spacing part of the vowel, as shown in [[[#fig_am_spacing]]].</p>
+
+<figure id="fig_am_spacing">
+<img src="index-data/am_spacing.png" class="ex" alt="น้ำ นํ้า" data-notes="62px Noto Serif Thai">
+<figcaption>Sara AM before (left) and after (right) inter-character spacing has been applied.</figcaption>
+</figure>
+
+<p>(To facilitate this, applications tend to convert <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span> to the sequence <span class="codepoint" translate="no"><span lang="th">&#x0E4D;&#x0E32;</span> [<span class="uname">U+0E4D THAI CHARACTER NIKHAHIT</span> + <span class="uname">U+0E32 THAI CHARACTER SARA AA</span>]</span> before stretching. Some care has to also be taken to correctly order the superscript glyphs, since in memory the tone mark precedes the nikhahit. The <span class="name">nikhahit</span> character is not otherwise used for modern Thai.)</p>
+</section>
+
+
+
+<section id="para_indent">
+<h4>Paragraph indentation</h4>
+<p>Thai does indent the initial line of a paragraph.</p>
+
+<figure id="fig_justification_para_indent">
+<p>
+<img alt="Examples of indented paragraph start." src="index-data/justification_para_indent.jpg" data-source="" ></p>
+<figcaption>Indentations at paragraph start in a Thai newspaper.</figcaption>
+</figure>
+</section>
+</section>
+
+
+
+
+
+
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+
+<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for English, or most Latin text. </p>
+
+<p>The baseline of Thai text is the same as that of embedded Latin text, so there are no particular issues related to alignment of baselines between fonts. </p>
+
+<figure id="fig_metrics">
+<img src="index-data/metrics.png" alt="พรุ่งนี้" class="ex" data-notes="Hibizcus default settings">
+<figcaption>Metrics for the Noto Serif Thai and Noto Serif fonts, viewed in Hibizcus.</figcaption>
+</figure>
+
+
+<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for, say, Latin text. In addition, Thai tends to adds more interline spacing than Latin text does.</p>
+</section>
+
+
+
+
+    
+    
+    
+<section id="h_counters">
+<h3>List counters</h3>
+
+<p>Counters are used to number lists, chapter headings, etc.</p>
+
+<p>The modern Thai orthography uses numeric and  alphabetic styles.</p>
+
+
+
+
+
+<section id="cs_numeric">
+<h4>Numeric counters</h4>
+
+<p>The numeric style uses the Thai digits '๐' '๑' '๒' '๓' '๔' '๕' '๖' '๗' '๘' '๙' in a decimal pattern.</p>
+
+<figure id="fig_cs_alphabetic">
+<img src="index-data/fig_cs_alphabetic.png" alt="1⇨๑ 2⇨๒ 3⇨๓ 4⇨๔ 11⇨๑๑ 22⇨๒๒ 33⇨๓๓ 44⇨๔๔ 111⇨๑๑๑ 222⇨๒๒๒ 333⇨๓๓๓" style="max-width: 90%;">
+<figcaption>Example values for the alphabetic counter style.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section id="cs_alphabetic">
+<h4>Alphabetic counters</h4>
+
+<p>The alphabetic style uses the following letters, in the order shown: 'ก' 'ข' 'ค' 'ง' 'จ' 'ฉ' 'ช' 'ซ' 'ฌ' 'ญ' 'ฎ' 'ฏ' 'ฐ' 'ฑ' 'ฒ' 'ณ' 'ด' 'ต' 'ถ' 'ท' 'ธ' 'น' 'บ' 'ป' 'ผ' 'ฝ' 'พ' 'ฟ' 'ภ' 'ม' 'ย' 'ร' 'ล' 'ว' 'ศ' 'ษ' 'ส' 'ห' 'ฬ' 'อ' 'ฮ'.</p>
+
+<figure id="fig_cs_numeric">
+<img src="index-data/fig_cs_numeric.png" alt="1⇨ก 2⇨ข 3⇨ค 4⇨ง 11⇨ฎ 22⇨น 33⇨ล 44⇨กค 111⇨ขภ 222⇨จด 333⇨ซจ
+" style="max-width: 90%;">
+<figcaption>Example values for the alphabetic counter style.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section id="cs_bullet">
+<h4>Bullets</h4>
+
+<p><span class="codepoint" translate="no"><span lang="th">&#x0E4F;</span> [<span class="uname">U+0E4F THAI CHARACTER FONGMAN</span>]</span> is the Thai bullet, which is used to mark items in lists or  appears  at  the  beginning  of  a  verse,  sentence,  paragraph,  or  other  textual  segment.</p>
+</section>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="initials">
+<h3>Styling initials</h3>
+
+<p>It is possible to find the first letter in a paragraph styled so that it is larger and sits alongside several lines of the continuing paragraph text.</p>
+<p><span class="observation">Combining characters are included in the selections</span>.</p>
+<figure id="fig_drop_caps">
+<p><img alt="Examples of dropped highlights" src="index-data/initial_diacritics.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_frangipaniP1.htm" style="max-width: 80%;"> 
+<img alt="Examples of dropped highlights" src="index-data/initial_multiple_diacritics.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_whatAbeautyP1.htm"  style="max-width: 80%;"></p>
+<figcaption>Two example paragraphs showing  dropped highlighted initials with combining characters.</figcaption>
+</figure>
+
+<p>The first spacing vowel in a syllable can be highlighted alone, without the related base or any other vowels being highlighted.</p>
+<figure id="fig_drop_caps_2">
+<img alt="Examples of dropped highlights" src="index-data/initial_e.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_ashes_delightP1.htm"  style="max-width: 60%;">
+<figcaption>Another example paragraph, showing  a prebase vowel-sign alone as a highlighted initial.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+
+
+<section class="appendix" id="acknowledgements">
+<h2>Acknowledgements</h2>
+
+<p>The initial content of this document was created from parts of <a href="https://r12a.github.io/scripts/thai/th.html">this page</a>.</p>
+<p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
+<p>Anousak Anthony Souphavanh, Ben Mitchell, James Clarke, John Durdin, Martin Hosken, Norbert Lindenberg.</p>
+<p data-lang="en">Latest info of the GitHub contributors is at the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a>.</p>
+</section>
+</body>
+</html>
