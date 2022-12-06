@@ -36,21 +36,22 @@ del {
 	color: silver; 
 	}
 
+/*
 figure { 
 	margin-bottom: 2em; 
 	text-align: center;
 	}
 figcaption {
-	 text-align: center;
+    text-align: center;
 	margin: 0.5em 2em;
 	font-style: italic;
 	font-size: 90%;
 	}
-/*
-.figno:after {
+*/
+figure .figno:after {
 	content: ':\00A0  ';
 }
-*/
+
 
 a.termref:link {
 	color:#C60;
