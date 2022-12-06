@@ -46,9 +46,11 @@ figcaption {
 	font-style: italic;
 	font-size: 90%;
 	}
+/*
 .figno:after {
 	content: ':\00A0  ';
 }
+*/
 
 a.termref:link {
 	color:#C60;
