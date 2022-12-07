@@ -90,6 +90,16 @@
 
 
 
+<section id="h_terminology">
+<h3>Terminology</h3>
+
+<p>Definitions for various terms used in this document can be found in <a href="https://r12a.github.io/scripts/glossary/index.html">this glossary</a>.</p>
+</section>
+
+
+
+
+
 <section id="h_info_requests">
 <h3>Other related resources</h3>
 
@@ -108,7 +118,7 @@
 <section id="h_script_overview">
 <h2>Thai Script Overview</h2>
 
-<p>The Thai orthography is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonant letters have an inherent vowel sound. Vowel signs are attached to the consonant to produce a different vowel.</p>
+<p>The Thai orthography is an <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#abugida">abugida</a>. Consonant letters have an inherent vowel sound. <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#vowelsign">Vowel signs</a> are attached to the consonant to produce a different vowel.</p>
 
 
 
@@ -117,21 +127,21 @@
 
 <p>Spaces  separate phrases, rather than words.</p>
 
-<p>Each onset consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p> 
+<p>Each <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#onset">onset</a> consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p> 
 
-<p>No conjuncts are used for consonant clusters.</p>
+<p>No <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters.</p>
 
 <p>Syllable-initial clusters and  syllable-final consonant sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.</p>
 
-<p>An inherent vowel is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.   Non-inherent vowels are represented using vowel signs. Characters used to represent vowels and dipthongs include combining marks, vowel letters, and consonants. There are pre-base vowel glyphs. Thai uses visual placement: only the  vowel sign components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are <em>typed in the order seen</em>.</p>
+<p>An <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#inherentvowel">inherent vowel</a> is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.   Non-inherent vowels are represented using vowel signs. Characters used to represent vowels and dipthongs include combining marks, vowel letters, and consonants. There are <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#prebase">pre-base vowel glyphs</a>. Thai uses visual placement: only the  vowel sign components that appear above or below the consonant are combining marks; the others are ordinary, spacing letters that are <em>typed in the order seen</em>.</p>
 
-<p>There are no independent vowels, and standalone vowel sounds are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<span class="uname">U+0E2D THAI CHARACTER O ANG</span>]</span>.</p>
+<p>There are no <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#independentvowel">independent vowels</a>, and <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#standalonevowel">standalone vowel sounds</a> are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<span class="uname">U+0E2D THAI CHARACTER O ANG</span>]</span>.</p>
 
-<p>Thai has a large number of  composite vowels (including diphthongs) made from  dedicated vowel characters and from consonants. Composite vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides, eg.
+<p>Thai has a large number of <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#compositevowel">composite vowels</a> (including diphthongs) made from  dedicated vowel characters and from consonants. Composite vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides, eg.
 <span class="charExample" translate="no"><span class="ex" lang="th">เกี๊ยะ</span> <bdi class="ipa">kía̯ʔ</bdi> <bdi class="meaning">geta (footwear)</bdi></span>
 </p>
 
-<p>Thai has vocalics.</p>
+<p>Thai has <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#vocalic">vocalics</a>.</p>
 
 <p>Thai has native digits, and they are commonly used.</p>
 </section>
@@ -263,7 +273,7 @@
 
 <p>The grapheme cluster boundaries are convenient for justification algorithms, which  insert equal amounts of space between non-combining letters, including between non-combining vowel sign components and their consonants (see <a class="secref" href="#justification">Text alignment &amp; justification</a>).</p>
 
-<p>One exception is the aforementioned <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>, which is split across 2 typographic units for the purpose of justification (see inter_character_spacing).</p>
+<p>One exception is the aforementioned <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>, which is split across 2 typographic units for the purpose of justification (see [[[#inter_character_spacing]]]).</p>
 </section>
 
 
