@@ -251,17 +251,14 @@
 
 <p>The following examples show a variety of grapheme clusters:</p>
 
-<p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
-
-
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tbody><tr><td><img src="index-data/g_smell.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ได้กลิ่น', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', '')" lang="th">ได้กลิ่น</span> <bdi class="trans">dây.klìn</bdi> <bdi class="meaning">to smell</bdi></span></td></tr>
+<tbody><tr><td><img src="index-data/g_smell.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" lang="th">ได้กลิ่น</span> <bdi class="trans">dây.klìn</bdi> <bdi class="meaning">to smell</bdi></span></td></tr>
 
-<tr><td><img src="index-data/g_toilet.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ห้องน้ำ', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'hɔ̂§‹§ŋ.§n§áːm')" lang="th">ห้องน้ำ</span> <bdi class="ipa">hɔ̂ŋ.náːm</bdi> <bdi class="meaning">toilet</bdi></span></td></tr>
+<tr><td><img src="index-data/g_toilet.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" lang="th">ห้องน้ำ</span> <bdi class="ipa">hɔ̂ŋ.náːm</bdi> <bdi class="meaning">toilet</bdi></span></td></tr>
 
-<tr><td><img src="index-data/g_program.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('โปรแกรม', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', '››§p§rōː.§››§k§rɛ̄§m')" lang="th">โปรแกรม</span> <bdi class="ipa">prōː.krɛ̄m</bdi> <bdi class="meaning">(computer) program</bdi></span></td></tr>
+<tr><td><img src="index-data/g_program.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" lang="th">โปรแกรม</span> <bdi class="ipa">prōː.krɛ̄m</bdi> <bdi class="meaning">(computer) program</bdi></span></td></tr>
 
-<tr><td><img src="index-data/g_sacred.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ศักดิ์สิทธิ์', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'sà§k̚.§–§sì§t̚§–')" lang="th">ศักดิ์สิทธิ์</span> <bdi class="ipa">sàk̚.sìt̚</bdi> <bdi class="meaning">to be sacred</bdi></span></td></tr>
+<tr><td><img src="index-data/g_sacred.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" lang="th">ศักดิ์สิทธิ์</span> <bdi class="ipa">sàk̚.sìt̚</bdi> <bdi class="meaning">to be sacred</bdi></span></td></tr>
 </tbody></table>
 
 <p>The grapheme cluster boundaries are convenient for justification algorithms, which  insert equal amounts of space between non-combining letters, including between non-combining vowel sign components and their consonants (see <a class="secref" href="#justification">Text alignment &amp; justification</a>).</p>
@@ -278,15 +275,15 @@
 <h3>Parsing syllables</h3>
 
 <p>Adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
-<span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ถนน', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'tʰà.§nǒ§n')" lang="th">ถนน</span> <bdi class="trans">thànǒn</bdi> <bdi class="ipa">tʰà.nǒn</bdi> <bdi class="meaning">road</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="th">ถนน</span> <bdi class="trans">thànǒn</bdi> <bdi class="ipa">tʰà.nǒn</bdi> <bdi class="meaning">road</bdi></span>
 </p>
 
 <p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
-<span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('นม', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'nō§m / nama')" lang="th">นม</span> <bdi class="ipa">nōm / nama</bdi> <bdi class="meaning">milk / a salutation</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="th">นม</span> <bdi class="ipa">nōm / nama</bdi> <bdi class="meaning">milk / a salutation</bdi></span>
 </p>
 
 <p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
-<span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('กรี', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'kà.§rīː / krīː')" lang="th">กรี</span> <bdi class="ipa">kà.rīː / krīː</bdi> <bdi class="meaning">elephant / pointy bit on shrimp head</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="th">กรี</span> <bdi class="ipa">kà.rīː / krīː</bdi> <bdi class="meaning">elephant / pointy bit on shrimp head</bdi></span>
 </p>
 </section>
 </section>
@@ -349,7 +346,7 @@
 <section id="repetition">
 <h4>Repetition</h4>
 
-<p><span class="codepoint" translate="no"><span lang="th">ๆ</span> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span> is used to mark repetition of preceding letters. It is typically preceded and followed by a space, eg. <span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ทุกวัน ๆ', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'tʰù§k.§wa§n§ §tʰùkwan')" lang="th">ทุกวัน ๆ</span> <bdi class="ipa">tʰùk.wan tʰùkwan</bdi> <bdi class="meaning">everyday</bdi></span> However, some publishers prefer to publish without a leading space, ie. <span class="charExample" translate="no"><span class="ex" lang="th">ทุกวันๆ</span></span></p>
+<p><span class="codepoint" translate="no"><span lang="th">ๆ</span> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span> is used to mark repetition of preceding letters. It is typically preceded and followed by a space, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ทุกวัน ๆ</span> <bdi class="ipa">tʰùk.wan tʰùkwan</bdi> <bdi class="meaning">everyday</bdi></span> However, some publishers prefer to publish without a leading space, ie. <span class="charExample" translate="no"><span class="ex" lang="th">ทุกวันๆ</span></span></p>
 
 <p>This character shouldn't be wrapped to the beginning of a new line on its own, and should be kept not far from the preceding text that it duplicates during justification.</p>
 </section>
