@@ -107,15 +107,32 @@
 <section id="h_script_overview">
 <h2>Thai Script Overview</h2>
 
-<p>Thai is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonant letters have an inherent vowel sound. Vowel signs are attached to the consonant to produce a different vowel.</p>
+<p>The Thai orthography is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonant letters have an inherent vowel sound. Vowel signs are attached to the consonant to produce a different vowel.</p>
 
-<p>Unlike devanagari, multiple vowel signs may be used with a single character, and those positioned to the left or right of the consonant(s) are not combining characters. Like other Southeast Asian scripts, Thai is heavily based on syllables, so where there are syllable-initial clusters, a pre-base vowel sign will be displayed at the start of the syllable, rather than immediately before the consonant it follows.</p>
 
-<p>Thai is a tonal language, and the consonant characters chosen for a syllable have implications on the tone of that syllable.</p>
 
-<p>Words are not separated by spaces.</p>
 
-<p><a href="https://r12a.github.io/scripts/thai/">Thai script summary</a> can be read for a high level overview of characters used for the script, and some basic features. Text from that the latter part of that page was used for the initial version of this document.</p>
+<p>Thai text runs left to right in horizontal lines.</p>
+
+<p>Spaces  separate phrases, rather than words.</p>
+
+<p>Each onset consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p> 
+
+<p>No conjuncts are used for consonant clusters.</p>
+
+<p>Syllable-initial clusters and  syllable-final consonant sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.</p>
+
+<p>An inherent vowel is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.   Non-inherent vowels are represented using vowel signs. Characters used to represent vowels and dipthongs include combining marks, vowel letters, and consonants. There are pre-base vowel glyphs. Thai uses visual placement: only the  vowel sign components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are <em>typed in the order seen</em>.</p>
+
+<p>There are no independent vowels, and standalone vowel sounds are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<span class="uname">U+0E2D THAI CHARACTER O ANG</span>]</span>.</p>
+
+<p>Thai has a large number of  composite vowels (including diphthongs) made from  dedicated vowel characters and from consonants. Composite vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides, eg.
+<span class="charExample" translate="no"><span class="ex" lang="th">เกี๊ยะ</span> <bdi class="ipa">kía̯ʔ</bdi> <bdi class="meaning">geta (footwear)</bdi></span>
+</p>
+
+<p>Thai has vocalics.</p>
+
+<p>Thai has native digits, and they are commonly used.</p>
 </section>
 
 
