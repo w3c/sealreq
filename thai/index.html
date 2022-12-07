@@ -420,13 +420,26 @@
 
 <p>To counteract these deficiencies, authors may use <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> and <span class="codepoint" translate="no"><span class="uname">U+2060 WORD JOINER</span></span>  (see [[[#h_zwsp]]]).</p>
 
-<p>For the  various restrictions on how specific characters, especially punctuation, can wrap from one line to the next, see the following link.</p>
+<p>Note that most browsers have heuristics for segmenting Thai text, but there is no guarantee that these rules will work equally well for <a href="index.html#languages">other languages that are written in the Thai script</a>.</p>
+<section id="linedge">
+<h4>Line-edge rules</h4>
 
-<p><a id="showLinebreaks" target="_blank" href="https://r12a.github.io/scripts/apps/listlinebreak/index.html?chars=%E0%B8%9C%20%E0%B8%96%20%E0%B8%90%20%E0%B8%82%20%E0%B8%83%20%E0%B8%9B%20%E0%B8%9A%20%E0%B8%95%20%E0%B8%94%20%E0%B8%8F%20%E0%B8%8E%20%E0%B8%81%20%E0%B8%AD%20%E0%B8%9E%20%E0%B8%A0%20%E0%B8%97%20%E0%B8%98%20%E0%B8%91%20%E0%B8%92%20%E0%B8%84%20%E0%B8%86%20%E0%B8%85%20%E0%B8%89%20%E0%B8%88%20%E0%B8%8A%20%E0%B8%8C%20%E0%B8%9D%20%E0%B8%AA%20%E0%B8%A8%20%E0%B8%A9%20%E0%B8%AB%20%E0%B8%9F%20%E0%B8%8B%20%E0%B8%AE%20%E0%B8%A1%20%E0%B8%99%20%E0%B8%93%20%E0%B8%87%20%E0%B8%A7%20%E0%B8%A3%20%E0%B8%A5%20%E0%B8%AC%20%E0%B8%A2%20%E0%B8%8D%20%E0%B9%80%20%E0%B9%81%20%E0%B9%83%20%E0%B9%84%20%E0%B9%82%20%E0%B8%B0%20%E0%B8%B2%20%E0%B8%B3%20%E0%B8%A4%20%E0%B8%A6%20%E0%B9%85%20%E0%B8%AF%20%E0%B9%86%20%E0%B8%B4%20%E0%B8%B5%20%E0%B8%B6%20%E0%B8%B7%20%E0%B8%B8%20%E0%B8%B9%20%E0%B8%B1%20%E0%B9%87%20%E0%B9%88%20%E0%B9%89%20%E0%B9%8A%20%E0%B9%8B%20%E0%B9%8C%20%E0%B9%90%20%E0%B9%91%20%E0%B9%92%20%E0%B9%93%20%E0%B9%94%20%E0%B9%95%20%E0%B9%96%20%E0%B9%97%20%E0%B9%98%20%E0%B9%99%20%E2%80%9C%20%E2%80%9D%20%E2%80%98%20%E2%80%99%20%E0%B9%9A%20%E0%B9%9B%20%E0%B9%8F%20%E2%80%90%20%E2%80%93%20%E2%80%94%20%E2%80%A6%20%20%20:%20.%20?%20!%20(%20)%20%E0%B8%BF%20%E2%80%8B%20%E2%81%A0%E0%B9%8D">Show (default) line-breaking properties for characters in the Thai language.</a></p>
+<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
+<p id="showLinebreaks"><a target="_blank" href="https://r12a.github.io/scripts/apps/listlinebreak/index.html?chars=%E0%B8%9C%20%E0%B8%96%20%E0%B8%90%20%E0%B8%82%20%E0%B8%83%20%E0%B8%9B%20%E0%B8%9A%20%E0%B8%95%20%E0%B8%94%20%E0%B8%8F%20%E0%B8%8E%20%E0%B8%81%20%E0%B8%AD%20%E0%B8%9E%20%E0%B8%A0%20%E0%B8%97%20%E0%B8%98%20%E0%B8%91%20%E0%B8%92%20%E0%B8%84%20%E0%B8%86%20%E0%B8%85%20%E0%B8%89%20%E0%B8%88%20%E0%B8%8A%20%E0%B8%8C%20%E0%B8%9D%20%E0%B8%AA%20%E0%B8%A8%20%E0%B8%A9%20%E0%B8%AB%20%E0%B8%9F%20%E0%B8%8B%20%E0%B8%AE%20%E0%B8%A1%20%E0%B8%99%20%E0%B8%93%20%E0%B8%87%20%E0%B8%A7%20%E0%B8%A3%20%E0%B8%A5%20%E0%B8%AC%20%E0%B8%A2%20%E0%B8%8D%20%E0%B9%80%20%E0%B9%81%20%E0%B9%83%20%E0%B9%84%20%E0%B9%82%20%E0%B8%B0%20%E0%B8%B2%20%E0%B8%B3%20%E0%B8%A4%20%E0%B8%A6%20%E0%B9%85%20%E0%B8%AF%20%E0%B9%86%20%E0%B8%B4%20%E0%B8%B5%20%E0%B8%B6%20%E0%B8%B7%20%E0%B8%B8%20%E0%B8%B9%20%E0%B8%B1%20%E0%B9%87%20%E0%B9%88%20%E0%B9%89%20%E0%B9%8A%20%E0%B9%8B%20%E0%B9%8C%20%E0%B9%90%20%E0%B9%91%20%E0%B9%92%20%E0%B9%93%20%E0%B9%94%20%E0%B9%95%20%E0%B9%96%20%E0%B9%97%20%E0%B9%98%20%E0%B9%99%20%E2%80%9C%20%E2%80%9D%20%E2%80%98%20%E2%80%99%20%E0%B9%9A%20%E0%B9%9B%20%E0%B9%8F%20%E2%80%90%20%E2%80%93%20%E2%80%94%20%E2%80%A6%20%20%20:%20.%20?%20!%20(%20)%20%E0%B8%BF%20%E2%80%8B%20%E2%81%A0%E0%B9%8D">Show line-breaking properties for characters in the Thai language.</a></p>
+
+<p>The following list gives examples of typical behaviours for characters used in modern Thai. Context may affect the behaviour of some of these and other characters.</p>
+<ul>
+<li><span class="ex list" lang="th">“ ‘ (</span> &nbsp; should not be the last character on a line</li>
+<li><span class="ex list" lang="th">” ’ ) ? ! ๚ ๛ %</span> &nbsp; should not begin a new line</li>
+<li><span class="ex list" lang="th">฿</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+</ul>
+
+<!--p>The following characters should <em>not</em> produce a line-break when they appear inside or alongside a word: <span class="charExample inline list" translate="no"><span class="ex" lang="hy">ʼ ՛ ՜ ՝ ՞ ՟</span></span>.</p-->
 
 <p>The repetition character, 
-<span class="codepoint" translate="no"><bdi lang="th">ๆ</bdi> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span>
+<span class="codepoint" translate="no"><bdi lang="th">&#x0E46;</bdi> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span>
 is always preceded by space, however it should not wrap to the next line on its own.</p>
+</section>
 </section>
 
 
