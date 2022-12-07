@@ -107,9 +107,9 @@
 <section id="h_script_overview">
 <h2>Thai Script Overview</h2>
 
-<p>Thai is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel.</p>
+<p>Thai is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonant letters have an inherent vowel sound. Vowel signs are attached to the consonant to produce a different vowel.</p>
 
-<p>Unlike devanagari, multiple vowel-signs may be used with a single character, and those positioned to the left or right of the consonant(s) are not combining characters. Like other Southeast Asian scripts, Thai is heavily based on syllables, so where there are syllable-initial clusters, a prebase vowel-sign will be displayed at the start of the syllable, rather than immediately before the consonant it follows.</p>
+<p>Unlike devanagari, multiple vowel signs may be used with a single character, and those positioned to the left or right of the consonant(s) are not combining characters. Like other Southeast Asian scripts, Thai is heavily based on syllables, so where there are syllable-initial clusters, a pre-base vowel sign will be displayed at the start of the syllable, rather than immediately before the consonant it follows.</p>
 
 <p>Thai is a tonal language, and the consonant characters chosen for a syllable have implications on the tone of that syllable.</p>
 
@@ -165,7 +165,7 @@
 
 <section id="context">
 <h3>Context-based shaping &amp; positioning</h3>
-<p>Most of the combining characters in Thai are used for vowel-signs and tone marks.</p>
+<p>Most of the combining characters in Thai are used for vowel signs and tone marks.</p>
 <p>Combining characters need to be placed in different positions, according to the context. The  example below shows the same tone character displayed at different heights, according to what falls beneath it.</p>
 
 <figure id="fig_thai_position">
@@ -210,24 +210,29 @@
 
 
 <section id="graphemeC">
-<h3 title="Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement &amp; selection, character counts, searching &amp; matching, text insertion, line-breaking, justification, case conversions, sorting?">Grapheme clusters</h3>
+<h3>Grapheme clusters</h3>
 
 <!--figure id="fig_grapheme_boundaries">
 <img src="index-data/grapheme_boundaries.png" class="ex" alt="และที่จะกลับ" data-notes="58px Noto Serif Thai">
-<figcaption>Grapheme cluster boundaries split spacing vowel-signs from their base consonants, but not combining characters.</figcaption>
+<figcaption>Grapheme cluster boundaries split spacing vowel signs from their base consonants, but not combining characters.</figcaption>
 </figure-->
 
-<p><code>Base Combining_mark*</code></p>
+<p><code>Base SARA_AM? Combining_mark*</code></p>
+
 <p>Combining marks may include zero or more of the following types of character.</p>
 
 <ol>
-<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=ิีึืุู็ั">Dependent vowels</a> [8] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#combiningvowels">Combining marks used for vowels</a>) There is usually only one vowel-sign per base consonant. Thai has many composite vowels that are made of combinations of ordinary spacing  characters and  combining characters clustered around a base. The spacing characters are all separate grapheme clusters, with the exception of <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>. They are manually positioned in the text stream.</li>
+<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=ิีึืุู็ั">Dependent vowels</a> [8] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#combiningvowels">Combining marks used for vowels</a>) There is usually only one vowel combining mark per base consonant. Thai has many composite vowels that are made of combinations of ordinary letter  characters and  combining marks clustered around a base. (The letter characters are manually positioned in the text stream.)</li>
 
 <li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=่้๊๋">Tone marks</a> [4] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#tones">Tones</a>) Tone marks should be typed and stored immediately after a dependent vowel, if there is one, and immediately after the base otherwise.</li>
 
 <li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=์">Silencer</a> (<span class="name">májtʰantʰákʰâːt</span>) [1] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#novowel">Consonants with no following vowel</a>) Used after other elements in the grapheme cluster to indicate cancelling of a consonant or syllable.</li>
 </ol>
+
+<p>The spacing letters used for vowel signs are all individual grapheme clusters, with the exception of &nbsp;&nbsp;<span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span> (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#nikhahit">Sara AM &amp; nikhahit</a>), which has the general category of Letter, but it is treated like a combining mark during segmentation.</p>
+
 <p>The following examples show a variety of grapheme clusters:</p>
+
 <p class="instructions">Click on the text version of these words to see more detail about the composition.</p>
 
 
@@ -241,7 +246,7 @@
 <tr><td><img src="index-data/g_sacred.png" alt=""></td><td><span class="charExample" translate="no"><span class="ex" onclick="showNameDetails('ศักดิ์สิทธิ์', 'th', window.blockDir, 'c', document.getElementById('panel'), '', '', 'sà§k̚.§–§sì§t̚§–')" lang="th">ศักดิ์สิทธิ์</span> <bdi class="ipa">sàk̚.sìt̚</bdi> <bdi class="meaning">to be sacred</bdi></span></td></tr>
 </tbody></table>
 
-<p>The grapheme cluster boundaries are convenient for justification algorithms, which  insert equal amounts of space between non-combining letters, including between non-combining vowel-signs and their consonants (see <a class="secref" href="#justification">Text alignment &amp; justification</a>).</p>
+<p>The grapheme cluster boundaries are convenient for justification algorithms, which  insert equal amounts of space between non-combining letters, including between non-combining vowel sign components and their consonants (see <a class="secref" href="#justification">Text alignment &amp; justification</a>).</p>
 
 <p>One exception is the aforementioned <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>, which is split across 2 typographic units for the purpose of justification (see inter_character_spacing).</p>
 </section>
@@ -405,7 +410,7 @@ is always preceded by space, however it should not wrap to the next line on its 
 <section id="inter_character_spacing">
 <h4>Inter-character spacing</h4>
 
-<p>The justification in [[[#fig_justification_intercharacter_spacing]]] shows equal spacing across a phrase where there are no space characters to stretch. Note how the equal spacing separates prebase and postbase vowel signs from their consonants by the same amount as consonants are separated from each other; they are not kept together with the base consonant they modify.</p>
+<p>The justification in [[[#fig_justification_intercharacter_spacing]]] shows equal spacing across a phrase where there are no space characters to stretch. Note how the equal spacing separates pre-base and post-base vowel sign components from their consonants by the same amount as consonants are separated from each other; they are not kept together with the base consonant they modify.</p>
 
 <figure id="fig_justification_intercharacter_spacing">
 <img alt="แนะโบรกฯรวมตัวตั้งสนง.ตปท." src="index-data/justification_intercharacter_spacing.jpg" data-source="" >
@@ -555,7 +560,7 @@ is always preceded by space, however it should not wrap to the next line on its 
 <p>The first spacing vowel in a syllable can be highlighted alone, without the related base or any other vowels being highlighted.</p>
 <figure id="fig_drop_caps_2">
 <img alt="Examples of dropped highlights" src="index-data/initial_e.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_ashes_delightP1.htm"  style="max-width: 60%;">
-<figcaption>Another example paragraph, showing  a prebase vowel-sign alone as a highlighted initial.</figcaption>
+<figcaption>Another example paragraph, showing  a pre-base vowel sign alone as a highlighted initial.</figcaption>
 </figure>
 </section>
 
