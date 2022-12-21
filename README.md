@@ -1,6 +1,6 @@
 # Southeast Asia Language Enablement (sealreq)
 
-This is the place to explore gaps in support for languages of the Americas on the Web and in eBooks, and to document requirements.
+This is the place to explore gaps in support for languages in Southeast Asia on the Web and in eBooks, and to document requirements.
 
 We aim to address the problem that local users don't know how to tell the W3C what problems exist for support of their language on the Web, and the W3C doesn't know how to contact people who can help when questions arise.
 
