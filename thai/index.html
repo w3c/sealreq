@@ -259,14 +259,14 @@
 
 <p><code>Base SARA_AM? Combining_mark*</code></p>
 
-<p>Combining marks may include zero or more of the following types of character.</p>
+<p>Combining marks may include zero or more of the following types of character, grouped by labels that correspond to Unicode Indic syllabic category values.</p>
 
 <ol>
 <li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=ิีึืุู็ั">Dependent vowels</a> [8] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#combiningvowels">Combining marks used for vowels</a>) There is usually only one vowel combining mark per base consonant. Thai has many composite vowels that are made of combinations of ordinary letter  characters and  combining marks clustered around a base. (The letter characters are manually positioned in the text stream.)</li>
 
 <li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=่้๊๋">Tone marks</a> [4] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#tones">Tones</a>) Tone marks should be typed and stored immediately after a dependent vowel, if there is one, and immediately after the base otherwise.</li>
 
-<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=์">Silencer</a> (<span class="name">májtʰantʰákʰâːt</span>) [1] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#novowel">Consonants with no following vowel</a>) Used after other elements in the grapheme cluster to indicate cancelling of a consonant or syllable.</li>
+<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=์">Consonant killer</a> (<span class="name">májtʰantʰákʰâːt</span>) [1] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#novowel">Consonants with no following vowel</a>) Used after other elements in the grapheme cluster to indicate cancelling of a consonant or syllable.</li>
 </ol>
 
 <p>The spacing letters used for vowel signs are all individual grapheme clusters, with the exception of &nbsp;&nbsp;<span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span> (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#nikhahit">Sara AM &amp; nikhahit</a>), which has the general category of Letter, but it is treated like a combining mark during segmentation.</p>
