@@ -287,27 +287,6 @@
 
 <p>One exception is the aforementioned <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>, which is split across 2 typographic units for the purpose of justification (see [[[#inter_character_spacing]]]).</p>
 </section>
-
-
-
-
-
-
-<section id="syllableParsing">
-<h3>Parsing syllables</h3>
-
-<p>Adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
-<span class="charExample" translate="no"><span class="ex" lang="th">ถนน</span> <bdi class="trans">thànǒn</bdi> <bdi class="ipa">tʰà.nǒn</bdi> <bdi class="meaning">road</bdi></span>
-</p>
-
-<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
-<span class="charExample" translate="no"><span class="ex" lang="th">นม</span> <bdi class="ipa">nōm / nama</bdi> <bdi class="meaning">milk / a salutation</bdi></span>
-</p>
-
-<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
-<span class="charExample" translate="no"><span class="ex" lang="th">กรี</span> <bdi class="ipa">kà.rīː / krīː</bdi> <bdi class="meaning">elephant / pointy bit on shrimp head</bdi></span>
-</p>
-</section>
 </section>
 
 
@@ -347,7 +326,7 @@
 
 
 <section id="h_zwsp">
-<h3>Zero-width space (ZWSP) &amp; Word-joiner (WJ)</h3>
+<h4>Zero-width space (ZWSP) &amp; Word-joiner (WJ)</h4>
 
 <p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> (ZWSP) can  be  used  to  create  breaks.</p>
 <p>To prevent a break between syllables, <span class="codepoint" translate="no"><span class="uname">U+2060 WORD JOINER</span></span> (WJ) can be used.</p>
@@ -355,6 +334,29 @@
 <p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
 <p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
 </section>
+
+
+
+
+
+
+
+<section id="syllableParsing">
+<h4>Parsing syllables</h4>
+
+<p>Automatically adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
+<span class="charExample" translate="no"><span class="ex" lang="th">ถนน</span> <bdi class="trans">thànǒn</bdi> <bdi class="ipa">tʰà.nǒn</bdi> <bdi class="meaning">road</bdi></span>
+</p>
+
+<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
+<span class="charExample" translate="no"><span class="ex" lang="th">นม</span> <bdi class="ipa">nōm / nama</bdi> <bdi class="meaning">milk / a salutation</bdi></span>
+</p>
+
+<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
+<span class="charExample" translate="no"><span class="ex" lang="th">กรี</span> <bdi class="ipa">kà.rīː / krīː</bdi> <bdi class="meaning">elephant / pointy bit on shrimp head</bdi></span>
+</p>
+</section>
+
 </section>
 
 
@@ -612,6 +614,26 @@ is always preceded by space, however it should not wrap to the next line on its 
 <img alt="Examples of dropped highlights" src="index-data/initial_e.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_ashes_delightP1.htm"  style="max-width: 60%;">
 <figcaption>Another example paragraph, showing  a pre-base vowel sign alone as a highlighted initial.</figcaption>
 </figure>
+</section>
+
+
+
+
+
+
+
+<section class="appendix" id="changelog">
+<h2>Changes</h2>
+
+<p>The following changes have been made since the previous version of this document was published.</p>
+
+
+<ol>
+<li>Moved section "Parsing syllables" under "Word boundaries".  Was under "Graphemes".</li>
+</ol>
+
+
+<p data-lang="en">See also the <a href="https://github.com/w3c/sealreq/commits/gh-pages/thai">GitHub commit history</a>.</p>
 </section>
 
 
