@@ -11,6 +11,18 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 [GitHub repo](https://github.com/w3c/sealreq) • [Discussion threads](https://github.com/w3c/sealreq/issues) • [Issue tracker](https://www.w3.org/International/i18n-activity/textlayout/?filter=sealreq) (with sealreq filter) • [Charter](https://www.w3.org/International/sealreq/charter/)
 
 
+
+---
+### Help wanted! ###
+**We're looking for information about these writing systems. Follow the links for specific questions.**
+
+**[Balinese](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Abali+label%3Aquestion) • [Javanese](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Ajava+label%3Aquestion) • [Khmer](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion) • [Lao](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Alaoo+label%3Aquestion) • [Myanmar](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Amymr+label%3Aquestion) • [Sundanese](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Asund+label%3Aquestion) • [Thai](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion)**
+
+---
+
+
+
+
 ### Documents
 - **Lao Gap Analysis** • [DNOTE](https://www.w3.org/TR/laoo-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/laoo-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/laoo-gap.html) • [*Discuss*](https://github.com/w3c/sealreq/labels/s%3Alaoo) • [*Edit*](https://github.com/w3c/sealreq/labels/doc%3Alaoo)
 - **Lao Layout Requirements** • [*Editor's draft*](https://www.w3.org/International/sealreq/lao/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/lao/index.html) • [*Discuss*](https://github.com/w3c/sealreq/labels/s%3Alaoo)
