@@ -31,6 +31,7 @@
 
       group: "i18n",
       github:	"w3c/sealreq",
+		  xref: ["i18n-glossary"],
 
       wgPublicList: "public-i18n-sealreq",
     };
@@ -46,7 +47,7 @@
 <div id="sotd">
 <p>This document describes the basic requirements for the Thai language, using the Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support  Thai language speakers. Currently the document focuses on Thai as used for the Thai language. The information here is developed in conjunction with a <a href="../gap-analysis/thai-gap.html">document that summarises gaps</a> in support on the Web for Thai.</p>
 
-<p>The editor's draft of this document is being developed by the <a href="https://www.w3.org/International/groups/#mission">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+<p>The editor's draft of this document is being developed by the <a href="https://w3c.github.io/sealreq/home">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
 
 <div class="note">
 <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
@@ -118,7 +119,7 @@
 <section id="h_script_overview">
 <h2>Thai Script Overview</h2>
 
-<p>The Thai orthography is an <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#abugida">abugida</a>. Consonant letters have an inherent vowel sound. <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#vowelsign">Vowel signs</a> are attached to the consonant to produce a different vowel.</p>
+<p>The Thai orthography is an <a class="termref">abugida</a>. Consonant letters have an inherent vowel sound. <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#vowelsign">Vowel signs</a> are attached to the consonant to produce a different vowel.</p>
 
 
 
@@ -129,13 +130,13 @@
 
 <p>Each <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#onset">onset</a> consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p> 
 
-<p>No <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters.</p>
+<p>No <a class="termref">conjuncts</a> are used for consonant clusters.</p>
 
 <p>Syllable-initial clusters and  syllable-final consonant sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.</p>
 
-<p>An <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#inherentvowel">inherent vowel</a> is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.   Non-inherent vowels are represented using vowel signs. Characters used to represent vowels and dipthongs include combining marks, vowel letters, and consonants. There are <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#prebase">pre-base vowel glyphs</a>. Thai uses visual placement: only the  vowel sign components that appear above or below the consonant are combining marks; the others are ordinary, spacing letters that are <em>typed in the order seen</em>.</p>
+<p>An <a class="termref">inherent vowel</a> is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.   Non-inherent vowels are represented using vowel signs. Characters used to represent vowels and dipthongs include combining marks, vowel letters, and consonants. There are <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#prebase">pre-base vowel glyphs</a>. Thai uses visual placement: only the  vowel sign components that appear above or below the consonant are combining marks; the others are ordinary, spacing letters that are <em>typed in the order seen</em>.</p>
 
-<p>There are no <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#independentvowel">independent vowels</a>, and <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#standalonevowel">standalone vowel sounds</a> are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<span class="uname">U+0E2D THAI CHARACTER O ANG</span>]</span>.</p>
+<p>There are no <a class="termref">independent vowels</a>, and <a class="termref">standalone vowel</a> sounds are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<span class="uname">U+0E2D THAI CHARACTER O ANG</span>]</span>.</p>
 
 <p>Thai has a large number of <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#compositevowel">composite vowels</a> (including diphthongs) made from  dedicated vowel characters and from consonants. Composite vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides, eg.
 <span class="charExample" translate="no"><span class="ex" lang="th">เกี๊ยะ</span> <bdi class="ipa">kía̯ʔ</bdi> <bdi class="meaning">geta (footwear)</bdi></span>
@@ -246,7 +247,7 @@
 <section id="graphemes">
 <h2>Graphemes</h2>  
 
-<p id="def-grapheme" class="explanatoryintro definitionStub">A <a class="termref" target="_blank" href="../glossary/index.html#grapheme">grapheme</a> is a user-perceived unit of text. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement &amp; selection, character counts, text spacing, text insertion, justification, case conversions, and sorting.  The Unicode Standard uses generalised rules to define '<a class="termref" target="_blank" href="../glossary/index.html#graphemecluster">grapheme clusters</a>', which approximate the likely grapheme boundaries in a writing system, however they don't work well with many complex scripts.</p>
+<p id="def-grapheme" class="explanatoryintro definitionStub">A <a class="termref" target="_blank">grapheme</a> is a user-perceived unit of text. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement &amp; selection, character counts, text spacing, text insertion, justification, case conversions, and sorting.  The Unicode Standard uses generalised rules to define '<a class="termref" target="_blank">grapheme clusters</a>', which approximate the likely grapheme boundaries in a writing system, however they don't work well with many complex scripts.</p>
  
 <p>Non-combining Thai vowel characters are treated as independent grapheme clusters. Only combining characters are grouped together with their base into a cluster.</p>
 
@@ -382,7 +383,7 @@
 <figcaption>An example of how multiple width spacing may look.</figcaption>
 </figure>
 
-<p class="observation"><span class="leadin">Observation:</span> It is currently not clear how to achieve this on the Web, where multiple space characters are collapsed to a single space by default.  One suggestion is to use <span class="codepoint" translate="no"><bdi lang="th">&#x2003;</bdi> [<a href="../../scripts/thai/block.html#char2003"><span class="uname">U+2003 EM SPACE</span></a>]</span>, but that is not well supported by Thai fonts, and doesn't expand during justification. See <a href="GitHub,https://github.com/w3c/sealreq/issues/46">GitHub</a> for a discussion.</p>
+<p class="observation"><span class="leadin">Observation:</span> It is currently not clear how to achieve this on the Web, where multiple space characters are collapsed to a single space by default.  One suggestion is to use <span class="codepoint" translate="no"><bdi lang="th">&#x2003;</bdi> [<a href="../../scripts/thai/block.html#char2003"><span class="uname">U+2003 EM SPACE</span></a>]</span>, but that is not well supported by Thai fonts, and doesn't expand during justification. See <a href="https://github.com/w3c/sealreq/issues/46">GitHub</a> for a discussion.</p>
 <p>&nbsp;</p>
 </section>
 
