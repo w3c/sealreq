@@ -7,7 +7,7 @@
   <title>Javanese Layout Requirements (Draft)</title>
   <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer>
 </script>
-  <script class="remove" type="text/javascript">
+  <script class="remove">
   var respecConfig = {
       // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
       specStatus:           "ED",
@@ -78,12 +78,12 @@
     <p>Javanese is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using vowel signs. In Javanese, consonants carry an inherent vowel, which can be <span class="trans">a</span> or <span class="trans">o</span>.</p>
 			<p>An orthographic syllable in Javanese can be described as {C F} C {{R}Y} {V{A}} {Z}, where:</p>
 <ul>
-<li>C is a consonant (or consonant + <span class="codepoint"><span lang="jv">◌꦳</span> [<span class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</span>]</span>),</li>
-<li>F is <span class="codepoint"><span lang="jv">◌꧀</span> [<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</span>,</li>
-<li>R is<span class="codepoint"><span lang="jv">◌ꦿ</span> [<span class="uname">U+A9BF JAVANESE CONSONANT SIGN CAKRA​</span>]</span>,</li>
-<li>Y is <span class="codepoint"><span lang="jv">◌ꦾ</span> [<span class="uname">U+A9BE JAVANESE CONSONANT SIGN PENGKAL​</span>]</span>,</li>
+<li>C is a consonant (or consonant + <span class="codepoint" translate="no"><bdi lang="jv">◌꦳</bdi><code class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</code></span>),</li>
+<li>F is <span class="codepoint" translate="no"><bdi lang="jv">◌꧀</bdi><code class="uname">U+A9C0 JAVANESE PANGKON​</code></span>,</li>
+<li>R is<span class="codepoint" translate="no"><bdi lang="jv">◌ꦿ</bdi><code class="uname">U+A9BF JAVANESE CONSONANT SIGN CAKRA​</code></span>,</li>
+<li>Y is <span class="codepoint" translate="no"><bdi lang="jv">◌ꦾ</bdi><code class="uname">U+A9BE JAVANESE CONSONANT SIGN PENGKAL​</code></span>,</li>
 <li>V is a vowel-sign,</li>
-<li>A is <span class="codepoint"><span lang="jv">◌ꦴ</span> [<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</span>, and</li>
+<li>A is <span class="codepoint" translate="no"><bdi lang="jv">◌ꦴ</bdi><code class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</code></span>, and</li>
 <li>Z is one of the syllable-final consonants.</li>
 </ul>
 <p>The initial consonant cluster may represent a word-initial cluster such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>,<sup><a href="#refs">c</a></sup> eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦩꦧꦸꦫꦸ</span> <span class="trans">mburu</span> <span class="meaning">hunting</span></span>, or it may represent the final consonant of a preceding syllable and the initial consonant of another, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦏ꧀ꦱꦫ</span> <span class="trans">hk͓sr (aksara)</span> <span class="meaning">characters</span></span>.</p>
@@ -116,8 +116,8 @@
 </section>
 <section id="h_quotations">
 <h3>Quotations</h3>
-<p>Javanese text may use <span class="codepoint"><span lang="jv">꧊</span> [<span class="uname">U+A9CA JAVANESE PADA ADEG</span>]</span> for quotation marks.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
-<p><span class="codepoint">Alternatively, the pair of characters <span lang="jv">꧌</span> [<span class="uname">U+A9CC JAVANESE PADA PISELEH</span>] and <span lang="jv">꧍</span> [<span class="uname">U+A9CD JAVANESE TURNED PADA PISELEH</span>] may be used.</span></p>
+<p>Javanese text may use <span class="codepoint" translate="no"><bdi lang="jv">꧊</bdi><code class="uname">U+A9CA JAVANESE PADA ADEG</code></span> for quotation marks.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
+<p>Alternatively, the pair of characters <span class="codepoint" translate="no"><bdi lang="jv">꧌</bdi><code class="uname">U+A9CC JAVANESE PADA PISELEH</code></span> and <span class="codepoint" translate="no"><bdi lang="jv">꧍</bdi><code class="uname">U+A9CD JAVANESE TURNED PADA PISELEH</code></span> may be used.</p>
 </section>
 
 
@@ -146,7 +146,7 @@
       <figcaption>Line break opportunity between the words pangan and dika (red line) splits the final consonant from pangan<span class="trans"></span>.</figcaption>
   </figure>
 
-<p>In some printed material, when a new line begins with <span class="codepoint"><span lang="jv">ꦺ</span> [<span class="uname">U+A9BA JAVANESE VOWEL SIGN TALING</span>]</span>, an additional spacing glyph of the same character is placed at the end of the previous line.</p>
+<p>In some printed material, when a new line begins with <span class="codepoint" translate="no"><bdi lang="jv">ꦺ</bdi><code class="uname">U+A9BA JAVANESE VOWEL SIGN TALING</code></span>, an additional spacing glyph of the same character is placed at the end of the previous line.</p>
      <figure>
 	  <p><img src="images/line-break-taling.png" alt=""></p>
       <figcaption>An extra taling at the end of the line when the word <span class="trans">kawon</span> is split before <span class="trans">won</span>.</figcaption>
