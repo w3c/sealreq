@@ -56,11 +56,18 @@
 
 
 
+  
+  
+<section id="h_introduction">
+<h2>Introduction</h2>
+
 
 
 
 <section id="h_acknowledgements">
-<h2>Acknowledgements</h2>
+<h3>Contributors</h3>
+
+<p>The initial information in this document was provided by Richard Ishida and derived from <a href="https://r12a.github.io/scripts/khmr/km"><cite>Cambodian (Khmer) Orthography Notes</cite></a>.</p>
 <p>Information and clarifications were provided by Ben Mitchell, Danh Hong, Marc Durdin, and Martin Hosken  as members of the W3C's Southeast Asia Language Enablement community.</p>
 
 <p data-lang="en">See also the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a> for the Southeast Asia Language Enablement project, and the <a href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr">discussions related to Khmer</a>.</p>
@@ -73,17 +80,13 @@
   
   
   
-  
-  
-<section id="h_introduction">
-<h2>Introduction</h2>
 
 <section id="h_about_this_document">
 <h3>About this document</h3>
 
 <p>The aim of this document is to describe the basic requirements for Khmer script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support users of the Khmer script. The document currently focuses on texts using the Cambodian language.</p>
 
-<p>In the absence of content authored specifically for this document, the sections in the document point to information that exists elsewhere for a given topic.  The document focuses on typographic layout issues.  For a deeper understanding of the Khmer script itself and how it works see <cite>Cambodian (Khmer) Orthography Notes</cite> by Richard Ishida. That document includes topics such as: <a href="https://r12a.github.io/scripts/khmr/km.html#phonology">Phonology</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#vowels">Vowels</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#vocalics">Vocalics</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#consonants">Consonants</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#encoding">Encoding choices</a>, and <a href="https://r12a.github.io/scripts/khmr/km.html#numbers">Numbers</a>.</p>
+<p>In the absence of content authored specifically for this document, the sections in the document point to information that exists elsewhere for a given topic.  The document focuses on typographic layout issues.  For a deeper understanding of the Khmer script itself and how it works see <cite>Cambodian (Khmer) Orthography Notes</cite>, which includes topics such as: <a href="https://r12a.github.io/scripts/khmr/km.html#phonology">Phonology</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#vowels">Vowels</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#vocalics">Vocalics</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#consonants">Consonants</a>, <a href="https://r12a.github.io/scripts/khmr/km.html#encoding">Encoding choices</a>, and <a href="https://r12a.github.io/scripts/khmr/km.html#numbers">Numbers</a>.</p>
 </section>
 
 
@@ -92,7 +95,7 @@
 <section id="h_gap_analysis">
 <h3>Gap analysis</h3>
 
-<p>This document is pointed to by a separate document, <a href="../gap-analysis/khmer-gap.html">Khmer Gap Analysis</a>, which describes gaps in support for Khmer on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+<p>This document is pointed to by a separate document, <a href="../gap-analysis/khmer-gap.html"><cite>Khmer Gap Analysis</cite></a>, which describes gaps in support for Khmer on the Web, and prioritises and describes the impact of those gaps on the user.</p>
 <p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This document is where those requirements are described.</p>
 <p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
 </section>
@@ -101,8 +104,9 @@
 <section id="h_info_requests">
 <h3>Other related resources</h3>
 
-<p>The document <a href="https://w3c.github.io/typography/">International text layout and typography index</a> (known informally as the text layout index) points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
-<p>The W3C also maintains a tracking system that has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="https://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
+<p>The <a href="https://w3c.github.io/typography/"><cite>Language enablement index</cite></a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+<p>The W3C also has a repository with discussion threads related to the Khmer script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues in W3C working groups related to Southeast Asian scripts. See a list of <a href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion">unresolved questions</a> for Khmer experts. For other discussion threads, see the <a href="https://w3c.github.io/sealreq/home">repository home page</a>.</p>
+</section>
 </section>
 
 
@@ -118,17 +122,26 @@
 
 
 
-</section>
+
 <section id="h_script_overview">
 <h2>Khmer Script Overview</h2>
-    <p>The script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. like most Brahmi-influenced scripts, each consonant carries with it an inherent vowel. The sound following a consonant can be modified by attaching vowel signs to the consonant when writing.</p>
-			<p>Glyphs constituting a single syllable can appear on any side of the base character, and multiple diacritics are often needed to create the vowel in a syllable.</p>
-<p>A key feature of Khmer is that there are a large number of vowel sounds, and only a few vowel signs; and there are a large number of consonant letters for only a small number of consonant sounds. This lead to a system where there are generally two consonant signs for a given sound, each belonging to one of two classes (or registers). So to determine the pronunciation of a vowel sign you start by seeing which class of consonant it follows. For example, using the two symbols for the sound <span class="ipa">k</span>, <span class="ex" lang="km">ក</span> is <span class="ipa">kɑː</span> <span class="meaning">neck</span>, and <span class="ex" lang="km">គ</span> is <span class="ipa">kɔː</span> <span class="meaning">mute</span>.</p>
-<p>Consonants stack in Khmer, but not always in a predictable way. Multiple consonants at the start and (sometimes) end of a syllable are usually stacked. Consonant clusters in a multisyllabic word also tend to stack. But syllable-final consonants, which can be one of a number of characters, often don't stack with the onset consonant of the next syllable.</p>
-<p>The syllable is fundamental in Cambodian.</p>
-  <p>Many native Cambodian words are monosyllabic. These start with one or more consonants or an independent vowel (or a vowel sign attached to <span class="name">ʔɑː</span>, which is a combination of both). Short vowels in stressed syllables are always followed by a consonant. Long vowels may not be. There are many monosyllabic words that begin with consonant clusters, and some monosyllabic words that end with clusters, although only one consonant is pronounced in syllable final position.</p>
-  <p>There are also many bisyllabic words. In many cases the first syllable in a bisyllabic word is unstressed, and the vowel is usually rendered in colloquial speech as a schwa. Some bisyllabic words are compounds, however, and this may not apply.</p>
-  <p>Polysyllabic words are usually of Sanskrit, Pali or French origin. These words tend to alternate stress across their syllables, but may not.</p>
+
+<p>The script is an <span class="newterm"><a class="termref" href="https://www.w3.org/TR/i18n-glossary/#dfn-abugida">abugida</a></span>, ie. like most Brahmi-influenced scripts, each consonant carries with it an inherent vowel. The sound following a consonant can be modified by attaching vowel signs to the consonant when writing.</p>
+
+
+<p>Khmer text runs left to right in horizontal lines. Words are not separated by spaces, however words may be separated by zero-width space characters (ZWSP). Spaces are used as phrase separators.</p>
+
+<p>The orthography is based around, and segmented into, <a href="https://www.w3.org/TR/i18n-glossary/#dfn-othographic-syllable" class="termref">orthographic syllables</a>, which may not match phonological syllables directly.</p>
+
+<p>A key feature of Khmer is that there are a large number of vowel sounds, and only a few vowel signs; and there are a large number of consonant letters for only a small number of consonant sounds. This led to a system where there are generally two consonant signs for a given sound, each belonging to one of two classes (or registers). So to determine the pronunciation of an inherent vowel or a vowel sign one first determines which class of consonant it follows. For example, using the two symbols for the sound <span class="ipa">k</span>, <span class="ex" lang="km">ក</span> is <span class="ipa">kɑː</span> <span class="meaning">neck</span>, and <span class="ex" lang="km">គ</span> is <span class="ipa">kɔː</span> <span class="meaning">mute</span>. Other factors may also affect the sound, such as stress, vowel harmony, and diacritics.</p>
+
+<p>Clusters of consonant letters are very common at the beginning of a word, but such clusters also occur medially in multisyllable words, and occasionally at the end of a word (though the second consonant at the word end is usually not pronounced). Clusters are indicated by stacked consonants. Subjoined forms are created using an invisible <em class="foreign">coeng</em> character. Stacks do not span word boundaries.</p>
+
+<p>Word-final consonant sounds (typically 8 consonants and characters) use ordinary code points without an inherent vowel. Because there are no spaces or other word dividers, it is difficult to detect boundaries algorithmically. Two word-final sounds (<span class="ipa">m</span> and <span class="ipa">h</span>) can be produced using combining marks.</p>
+
+<p>Khmer has <a href="https://www.w3.org/TR/i18n-glossary/#dfn-pre-base" class="termref">pre-base glyphs</a> and <a href="https://www.w3.org/TR/i18n-glossary/#dfn-circumgraph" class="termref">circumgraphs</a>, 2 of which can decompose into multipart vowels. It also has a good number of multipart vowels (made from combinations of vowel signs, and consonants/diacritics). Multipart vowels can involve up to 3 glyphs, but only surround the base consonant(s) on 2 sides.</p>
+
+<p><a href="https://www.w3.org/TR/i18n-glossary/#dfn-standalone-vowel" class="termref">Standalone vowel</a> sounds are typically written using vowel signs applied to <span class="codepoint" translate="no"><span lang="km">អ</span> <span class="uname">U+17A2 KHMER LETTER QA</span></span>, but there is also an incomplete set of <a class="termref" href="https://www.w3.org/TR/i18n-glossary/#dfn-independent-vowel">independent vowels</a>.</p>
 </section>
 
 
@@ -277,10 +290,15 @@
 
 <section id="h_zwsp">
 <h3>Zero-width space (ZWSP) &amp; Word-joiner (WJ)</h3>
-<p>In order to manually fine-tune word-boundary detection, the invisible character <span class="codepoint" translate="no"><a href="/scripts/khmer/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span> (ZWSP) can be used to create breaks. <sup><a href="https://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
-<p>To prevent a break between syllables, <span class="codepoint" translate="no"><a href="/scripts/khmer/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a></span>(WJ) can be used.</p>
+
+<p>In order to manually fine-tune word-boundary detection, the invisible character <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> (ZWSP) can be used to create breaks. <sup><a href="https://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+
+<p>To prevent a break between syllables, <span class="codepoint" translate="no"><span class="uname">U+2060 WORD JOINER</span></span>(WJ) can be used.</p>
+
 <p>It is also important to bear in mind that Khmer may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
+
 <p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
+
 <p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
 </section>
 
@@ -508,6 +526,24 @@
 <h2>Page &amp; book layout</h2>
 
 <p>tbd</p>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="a_changes" class="appendix">
+<h2>Change log</h2>
+
+<ul>
+<li>Moved Acknowledgements section to top of introduction and renamed 'Contributors'.</li>
+<li>Updated information and links in the introduction.</li>
+<li>Rewrote the script overview section.</li>
+<li>Added links to r12a.github.io/khmer for all sections where additional information is available.</li>
 </section>
 </body>
 </html>
