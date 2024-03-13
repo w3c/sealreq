@@ -68,7 +68,7 @@
 <h3>Contributors</h3>
 
 <p>The initial information in this document was provided by Richard Ishida and derived from <a href="https://r12a.github.io/scripts/khmr/km"><cite>Cambodian (Khmer) Orthography Notes</cite></a>.</p>
-<p>Information and clarifications were provided by Ben Mitchell, Danh Hong, Marc Durdin, and Martin Hosken  as members of the W3C's Southeast Asia Language Enablement community.</p>
+<p>Information and clarifications were provided by Ben Mitchell, Danh Hong, Marc Durdin, and Martin Hosken  as members of the W3C's <a href="https://w3c.github.io/sealreq/home">Southeast Asia Language Enablement</a> community.</p>
 
 <p data-lang="en">See also the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a> for the Southeast Asia Language Enablement project, and the <a href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr">discussions related to Khmer</a>.</p>
 </section>
@@ -95,7 +95,7 @@
 <section id="h_gap_analysis">
 <h3>Gap analysis</h3>
 
-<p>This document is pointed to by a separate document, <a href="../gap-analysis/khmer-gap.html"><cite>Khmer Gap Analysis</cite></a>, which describes gaps in support for Khmer on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+<p>This document is pointed to by a separate document, <a href="../gap-analysis/khmr-gap.html"><cite>Khmer Gap Analysis</cite></a>, which describes gaps in support for Khmer on the Web, and prioritises and describes the impact of those gaps on the user.</p>
 <p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This document is where those requirements are described.</p>
 <p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
 </section>
@@ -163,7 +163,9 @@
 
 
 
-
+<style>
+.prompts { font-style: italic; color: #999; font-size: 90%; }
+</style>
 
 
 
@@ -177,7 +179,11 @@
 <section id="h_writing_styles">
 <h3>Font styles</h3>
 
-<p>See: <a href="https://r12a.github.io/scripts/khmr/km.html#writingstyles" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Font styles</a></p>
+<aside class="prompts">How are fonts grouped into recognisable writing styles? How is each writing style used?</aside>
+
+<p>Useful links:
+<a href="https://r12a.github.io/scripts/khmr/km.html#writingstyles" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Font styles</a>
+</p>
 </section>
 
 
@@ -190,7 +196,11 @@
 <section class="h_context">
 <h3>Context-based shaping &amp; positioning</h3>
 
-<p>See <a href="https://r12a.github.io/scripts/khmr/km.html#context" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Context-based shaping &amp; positioning</a>.</p>
+<aside class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances? Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</aside>
+
+<p>Useful links:
+<a href="https://r12a.github.io/scripts/khmr/km.html#context" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Context-based shaping &amp; positioning</a>
+</p>
 </section>
 
 
@@ -203,7 +213,8 @@
 <section class="h_fontstyle">
 <h3>Letterform slopes, weights, &amp; italics</h3>
 
-<p>tbd</p>
+<aside class="prompts">Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</aside>
+
 </section>
 </section>
 
@@ -220,7 +231,11 @@
 <section class="h_graphemes">
 <h3>Graphemes</h3>
 
-<p>See <a href="https://r12a.github.io/scripts/khmr/km.html#graphemes" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Graphemes</a>.</p>
+<aside class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement &amp; selection, character counts, searching &amp; matching, text insertion, line-breaking, justification, case conversions, sorting?</aside>
+
+<p>Useful links:
+<a href="https://r12a.github.io/scripts/khmr/km.html#graphemes" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Graphemes</a>
+</p>
 </section>
 
 
@@ -238,11 +253,48 @@
 <section id="h_characters_and_phrases">
 <h2>Punctuation &amp; inline features</h2>
 
+<aside class="prompts">This section describes typographic features related to word boundaries, phrase &amp; section boundaries, bracketed text, quotations &amp; citations, emphasis, abbreviation, ellipsis &amp; repetition, inline notes &amp; annotations, other punctuation, and other inline text decoration.</aside>
+
+
+
+
 
 <section id="h_words">
 <h3>Word boundaries</h3>
 
-<p>See <a href="https://r12a.github.io/scripts/khmr/km.html#word" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Word boundaries</a>.</p>
+<aside class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking on the text? Are words hyphenated?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Ishida, Cambodian (Khmer) Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/khmr/km.html#word">Word boundaries</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr++label%3Ai%3Asegmentation">All issues</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion+label%3Ai%3Asegmentation">Requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Asegmentation">Spec issues</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/int-grapheme-word-segmentation#khmer">Exploratory/interactive test results</a></li><li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+is%3Aopen+label%3Adoc%3AGrapheme_word++label%3Ai%3Asegmentation">Exploratory/interactive test repo</a></li></ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/khmr-gap/#segmentation">Khmer</a></li>
+</ul>
+</dd></dl>
+
 </section>
 
 
@@ -361,12 +413,45 @@
 <h2>Line &amp; paragraph layout</h2>
 
 
-
+<aside class="prompts">This section describes typographic features related to line breaking &amp; hyphenation, text alignment &amp; justification, text spacing, baselines, line height, counters, lists, and styling initials.</aside>
 
 <section id="h_line_breaking">
 <h3>Line breaking &amp; hyphenation</h3>
 
-<p>See <a href="https://r12a.github.io/scripts/khmr/km.html#linebreak" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Line breaking &amp; hyphenation</a>.</p>
+<aside class="prompts">Are there special rules about the way text wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that? Is hyphenation used, or something else? What rules are used? What difficulties exist?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Ishida, Cambodian (Khmer) Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/khmr/km.html#linebreak">Line breaking &amp; hyphenation</a></li>
+<li><a href="https://www.w3.org/International/articles/typography/linebreak">Approaches to line-breaking</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Ai%3Aline_breaking">All issues</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion+label%3Ai%3Aline_breaking">Requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aline_breaking">Spec issues</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-line-breaking.html#khmer">Exploratory/interactive test results</a></li><li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3AKhmer+label%3Ai%3Aline_breaking">Exploratory/interactive test repo</a></li></ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/khmr-gap/#line_breaking">Khmer: Line breaking</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
@@ -377,7 +462,41 @@
 <section id="h_alignment">
 <h3>Text alignment &amp; justification</h3>
 
+<aside class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</aside>
+
+
 <p>Justification in Khmer adjusts blank spaces, but also makes certain adjustments to inter-character spacing.</p>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><a href="https://www.w3.org/International/articles/typography/justification">Approaches to full justification</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Ai%3Atext_align_justification">All issues</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion+label%3Ai%3Atext_align_justification">Requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Atext_align_justification">Spec issues</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-text-alignment-justification.html#khmer">Exploratory/interactive test results</a></li><li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3AKhmer+label%3Ai%3Atext_align_justification">Exploratory/interactive test repo</a></li></ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/khmr-gap/#justification">Khmer: Text alignment &amp; justification</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
@@ -388,9 +507,44 @@
 
 <section id="h_spacing">
 <h3>Text spacing</h3>
+
+<aside class="prompts">This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word? (For justification related spacing, see Text alignment &amp; justification, above).</aside>
+
+
 <p>Cambodian text doesn't appear to use inter-letter spacing in running text, however it is sometimes used in signage. (<a href="https://github.com/w3c/sealreq/issues/9#issuecomment-387971659">@mcdurdin)</a> See an <a href="https://www.phnompenhpost.com/post-property/impasse-tbong-khmum-over-who-starts-building-first">example</a>.</p>
 <p>The rules for where the separations appear are still not clear, however one might expect that it keeps together base + subjoined consonants, and base consonants + vowel signs.</p>
 <p>The situation is less clear for spacing vowel-signs such as <span class="codepoint" translate="no"><span lang="km">◌ា</span> [<span class="uname">U+17B6 KHMER VOWEL SIGN AA​</span>]</span>, which are shown separated in the example linked to above.</p>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Ai%3Aletter_spacing">All issues</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion+label%3Ai%3Aletter_spacing">Requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aletter_spacing">Spec issues</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing.html#khmer">Exploratory/interactive test results</a></li><li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3AKhmer+label%3Ai%3Aletter_spacing">Exploratory/interactive test repo</a></li></ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/khmr-gap/#spacing">Khmer: Text spacing</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
@@ -402,7 +556,41 @@
 <section id="h_baselines">
 <h3>Baselines, line height, etc.</h3>
 
-<p>See: <a href="https://r12a.github.io/scripts/khmr/km.html#baselines" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Baselines, line height, etc</a></p>
+<aside class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general? Is line height special for this script? Are there other aspects that affect line spacing, or positioning of items vertically within a line?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Ishida, Cambodian (Khmer) Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/khmr/km.html#baselines">Baselines, line height, etc.</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Ai%3Abaselines_line_height_etc">All issues</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion+label%3Ai%3Abaselines_line_height_etc">Requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Abaselines_line_height_etc">Spec issues</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing.html#khmer">Exploratory/interactive test results</a></li><li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3AKhmer+label%3Ai%3Aline_breaking">Exploratory/interactive test repo</a></li></ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/khmr-gap/#baselines">Khmer: Baselines, line-height, etc</a></li>
+</ul>
+</dd>
+</dl>
+
 </section>
 
 
@@ -414,7 +602,41 @@
 <section id="h_counters">
 <h3>Counters, lists, etc.</h3>
 
-<p>See <a href="https://r12a.github.io/scripts/khmr/km.html#lists" class="external">Ishida, Cambodian (Khmer) Orthography Notes/Counters, lists, etc</a> • <a href="https://www.w3.org/TR/predefined-counter-styles/#khmer-styles" class="external">Ishida, Ready-made Counter Styles</a></p>
+<aside class="prompts">Are there list or other counter styles in use? If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Ishida, Cambodian (Khmer) Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/khmr/km.html#lists">Counters, lists, etc</a></li>
+<li><cite>Ishida, Ready-made Counter Styles</cite>: <a target="_blank" href="https://www.w3.org/TR/predefined-counter-styles/#khmer-styles">Counters, lists, etc</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Ai%3Alists_counters_etc">All issues</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion+label%3Ai%3Alists_counters_etc">Requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Alists_counters_etc">Spec issues</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-lists-counters-etc.html#khmer">Exploratory/interactive test results</a></li><li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3AKhmer+label%3Ai%3ALists_counters_etc">Exploratory/interactive test repo</a></li></ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/khmr-gap/#lists">Khmer: Lists, counters, etc</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 </section>
 
