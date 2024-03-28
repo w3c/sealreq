@@ -112,5 +112,10 @@ samp, kbd {
 
 .prompts { font-style: italic; color: #999; font-size: 90%; }
 
+dl.reslinks {
+    border-block-end: 1px solid #ccc;
+    margin-block-end: 3em;
+	}
+
 
 
