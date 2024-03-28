@@ -110,6 +110,7 @@ samp, kbd {
     font-size: 90%;
     }
 
+.prompts { font-style: italic; color: #999; font-size: 90%; }
 
 
 
