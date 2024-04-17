@@ -1,11 +1,13 @@
 @font-face {
-    font-family: 'Noto Serif Thai WF';
-    src: url('https://r12a.github.io/shared/webfonts/NotoSerifThai-Regularwebfont.woff2');
+    font-family: 'NotoSansThaiWF';
+    src: url('webfonts/notosansthai-regular-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 	}
-[lang=th] { font-family: 'Noto Serif Thai WF', serif; font-size: 150%; }
-
+[lang=th] { 
+    font-family: "NotoSansThaiWF"; 
+    font-size: 130%;
+    }
 
 h2 {
 	margin-top: 4em !important;
@@ -36,22 +38,19 @@ del {
 	color: silver; 
 	}
 
-/*
 figure { 
 	margin-bottom: 2em; 
 	text-align: center;
 	}
 figcaption {
-    text-align: center;
+	 text-align: center;
 	margin: 0.5em 2em;
 	font-style: italic;
 	font-size: 90%;
 	}
-*/
-figure .figno:after {
+.figno:after {
 	content: ':\00A0  ';
 }
-
 
 a.termref:link {
 	color:#C60;
@@ -112,3 +111,20 @@ samp, kbd {
 .meaning:after {
     content:"’";
 }
+
+.reslinks dt {
+    font-size: 80%;
+    }
+.reslinks dd {
+    font-size: 90%;
+    }
+
+.prompts { font-style: italic; color: #999; font-size: 90%; }
+
+dl.reslinks {
+    border-block-end: 1px solid #ccc;
+    margin-block-end: 3em;
+	}
+
+
+
