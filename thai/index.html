@@ -11,12 +11,12 @@
   var respecConfig = {
       // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
       specStatus:           "ED",
-      //publishDate:  		"2015-07-21",
+      //publishDate:  		"2024-04-11",
       //previousPublishDate:  "2014-12-16",
       //previousMaturity:  "FPWD",
 
       noRecTrack:           true,
-      shortName:            "thailreq",
+      shortName:            "thai-lreq",
       copyrightStart:       "2019",
       edDraftURI:           "https://w3c.github.io/sealreq/thai/",
 
@@ -26,51 +26,67 @@
       // editors, add as many as you like
       // only "name" is required
       editors:  [
-        { name: "Richard Ishida", company: "W3C" }
+        { name: "Richard Ishida", company: "W3C", w3cid: 3439 }
       ],
 
       group: "i18n",
-      github:	"w3c/sealreq",
 
-      wgPublicList: "public-i18n-sealreq",
+ 	  github:	"w3c/sealreq",
     };
   </script>
   <link rel="stylesheet" href="local.css">
 </head>
 
 <body>
-<div id="abstract">
-<p>This document describes requirements for the layout and presentation of text in the Thai language, using the Thai script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
-</div>
-
-<div id="sotd">
-<p>This document describes the basic requirements for the Thai language, using the Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support  Thai language speakers. Currently the document focuses on Thai as used for the Thai language. The information here is developed in conjunction with a <a href="../gap-analysis/thai-gap.html">document that summarises gaps</a> in support on the Web for Thai.</p>
-
-<p>The editor's draft of this document is being developed by the <a href="https://www.w3.org/International/groups/#mission">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
-
-<div class="note">
-<p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
-
-<p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/sealreq/issues" style="font-size: 120%;">github issues</a>. Only send comments by email if you are unable to raise issues on github (see links below). All comments are welcome.</p>
-
-<p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on using a URL.</p>
-</div>
+  <div id="abstract">
+    <p>This document describes or points to requirements for the layout and presentation of text in languages that use the Thai script. The target audience is developers of Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode, as well as implementers of web browsers, ebook readers, and other applications that need to render Thai text.</p>
   </div>
 
+  <div id="sotd">
+    <p>This document describes the basic requirements for Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Thai scripts. Currently the document focuses on Thai as used for the Thai language. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/thai-gap/">document that summarises gaps</a> in support on the Web for Thai.</p>
+    
+	<p>The editor's draft of this document is being developed by the <a href="https://github.com/w3c/sealreq/">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/i18n-activity/i18n-ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/i18n-activity/i18n-wg/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+	</div>
 
 
 
 
 
+
+
+
+
+  
+  
 <section id="h_introduction">
 <h2>Introduction</h2>
+
+
+
+
+<section id="h_acknowledgements">
+<h3>Contributors</h3>
+
+<p>The initial information in this document was provided by Richard Ishida, drawing on the structure and information in <a href="https://r12a.github.io/scripts/thai/th"><cite>Thai Orthography Notes</cite></a>.</p>
+<p>Information and clarifications were provided by Ben Mitchell, Danh Hong, Marc Durdin, and Martin Hosken  as members of the W3C's <a href="https://w3c.github.io/sealreq/home">Southeast Asia Language Enablement</a> community.</p>
+
+<p data-lang="en">See also the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a> for the Southeast Asia Language Enablement project, and the <a href="https://github.com/w3c/sealreq/issues?q=is%3Aissue++label%3As%3Athai">discussions related to Thai</a>.</p>
+</section>
+
+  
+  
+  
+  
+  
+  
+  
 
 <section id="h_about_this_document">
 <h3>About this document</h3>
 
-<p>This document outlines some features related to the layout of Thai text used for the Thai language that may be useful background information for those reading the gap-analysis documents and issues for  Thai content authors. It doesn't address the needs of <a href="https://r12a.github.io/scripts/thai/index.html">other languages</a> that are written in the Thai script.</p>
+<p>The aim of this document is to describe the basic requirements for Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support users of the Thai script. The document currently focuses on texts using the Thai language.</p>
 
-<p><strong>This document is an initial draft and needs thorough review by Thai experts.</strong></p>
+<p>The document focuses on typographic layout issues.  For a deeper understanding of the Thai script itself and how it works see <cite>Thai Orthography Notes</cite>, which includes topics such as: <a href="https://r12a.github.io/scripts/thai/th.html#phonology">Phonology</a>, <a href="https://r12a.github.io/scripts/thai/th.html#vowels">Vowels</a>, <a href="https://r12a.github.io/scripts/thai/th.html#vocalics">Vocalics</a>, <a href="https://r12a.github.io/scripts/thai/th.html#consonants">Consonants</a>, <a href="https://r12a.github.io/scripts/thai/th.html#encoding">Encoding choices</a>, and <a href="https://r12a.github.io/scripts/thai/th.html#numbers">Numbers</a>.</p>
 </section>
 
 
@@ -79,36 +95,32 @@
 <section id="h_gap_analysis">
 <h3>Gap analysis</h3>
 
-<p>This document is pointed to by a separate document, <a href="../gap-analysis/thai-gap.html">Thai Gap Analysis</a>, which describes gaps in support for Thai on the Web, and prioritises and describes the impact of those gaps on the user.</p>
-
-<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. This  document is where those requirements are described.</p>
-
+<p>This document is pointed to by a separate document, <a href="https://www.w3.org/TR/thai-gap/"><cite>Thai Gap Analysis</cite></a>, which describes gaps in support for Thai on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. The gap reports will typically point back to this document for more information.</p>
+<p>As gaps in support for Thai are captured, the gaps can be brought to the attention of the relevant spec developer or the browser implementator community. The progress of such work is tracked in the <a href="https://github.com/w3c/i18n-activity/projects/3?card_filter_query=label%3Ax%3Athai">Gap Analysis Pipeline</a>.</p>
 <p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
 </section>
-
-
-
-
-
-<section id="h_terminology">
-<h3>Terminology</h3>
-
-<p>Definitions for various terms used in this document can be found in <a href="https://r12a.github.io/scripts/glossary/index.html">this glossary</a>.</p>
-</section>
-
-
-
 
 
 <section id="h_info_requests">
 <h3>Other related resources</h3>
 
-<p>The document <a href="https://www.w3.org/TR/typography/">Language enablement index</a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+<p>To complement any  content authored specifically for this document, the sections in the document also point to related, external information, tests, GitHub discussions, etc.</p>
 
-<p>The W3C also maintains a tracking system that  has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="https://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
-<p>The initial material for this document was an edited copy of part of the <a href="https://r12a.github.io/scripts/thai/th.html">Thai orthography description</a> by the same author.</p>
+<p>The <a href="https://w3c.github.io/typography/"><cite>Language enablement index</cite></a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+
+<p>The W3C also has a repository with discussion threads related to the Thai script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues in W3C working groups related to Southeast Asian scripts. See a list of <a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion+">unresolved questions</a> for Thai experts. Each section below points to related discussions. See also the <a href="https://w3c.github.io/sealreq/home">repository home page</a>.</p>
 </section>
 </section>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -117,6 +129,7 @@
 
 <section id="h_script_overview">
 <h2>Thai Script Overview</h2>
+
 
 <p>The Thai orthography is an <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#abugida">abugida</a>. Consonant letters have an inherent vowel sound. <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#vowelsign">Vowel signs</a> are attached to the consonant to produce a different vowel.</p>
 
@@ -127,17 +140,17 @@
 
 <p>Spaces  separate phrases, rather than words.</p>
 
-<p>Each <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#onset">onset</a> consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.</p> 
+<p>Each <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#onset">onset</a> consonant is associated with a high, mid, or low class related to tone. Tone is indicated by a combination of the consonant class, the syllable type (live/dead), plus any tone mark.</p> 
 
 <p>No <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#conjunct">conjuncts</a> are used for consonant clusters.</p>
 
 <p>Syllable-initial clusters and  syllable-final consonant sounds are all written with ordinary consonant letters. It can therefore be difficult to algorithmically detect syllable boundaries.</p>
 
-<p>An <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#inherentvowel">inherent vowel</a> is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.   Non-inherent vowels are represented using vowel signs. Characters used to represent vowels and dipthongs include combining marks, vowel letters, and consonants. There are <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#prebase">pre-base vowel glyphs</a>. Thai uses visual placement: only the  vowel sign components that appear above or below the consonant are combining marks; the others are ordinary, spacing letters that are <em>typed in the order seen</em>.</p>
+<p>An <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#inherentvowel">inherent vowel</a> is pronounced <span class="ipa">o</span> inside a closed syllable,  <span class="ipa">a</span> in an open syllable, and <span class="ipa">ɔː</span> before a final <span class="ipa">-r</span>.   Non-inherent vowels are represented using vowel signs. Characters used to represent vowels and dipthongs include combining marks, vowel letters, and consonants. There are <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#prebase">pre-base vowel glyphs</a>, but Thai uses visual placement: only the  vowel sign components that appear above or below the consonant are combining marks; the others are ordinary, spacing letters that are <em>typed in the order seen</em>.</p>
 
-<p>There are no <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#independentvowel">independent vowels</a>, and <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#standalonevowel">standalone vowel sounds</a> are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> [<span class="uname">U+0E2D THAI CHARACTER O ANG</span>]</span>.</p>
+<p>There are no <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#independentvowel">independent vowels</a>, and <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#standalonevowel">standalone vowel sounds</a> are written using  vowel signs applied to <span class="codepoint noindex" translate="no"><span lang="th">&#x0E2D;</span> <span class="uname">U+0E2D THAI CHARACTER O ANG</span></span>.</p>
 
-<p>Thai has a large number of <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#compositevowel">composite vowels</a> (including diphthongs) made from  dedicated vowel characters and from consonants. Composite vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides, eg.
+<p>Thai has a large number of <a class="termref" href="https://r12a.github.io/scripts/glossary/index.html#compositevowel">multipart vowels</a> (including diphthongs) made from  dedicated vowel characters and from consonants. Composite vowels can involve up to 4 glyphs (plus a tone mark), and glyphs can surround the base consonant(s) on up to 3 sides, eg.
 <span class="charExample" translate="no"><span class="ex" lang="th">เกี๊ยะ</span> <bdi class="ipa">kía̯ʔ</bdi> <bdi class="meaning">geta (footwear)</bdi></span>
 </p>
 
@@ -150,11 +163,67 @@
 
 
 
+
+
+
+
+
 <section>
 <h2 id="h_text_direction">Text direction</h2>
 
+
+<dl class="reslinks">
+<!--dt>Requirements</dt>
+<dd>
+<ul>
+<li>tba</li>
+</ul>
+</dd-->
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion+label%3As%3Athai+label%3Ai%3Abidirectional_text%2Ci%3Avertical_text">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Abidirectional_text%2Ci%3Avertical_text">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Abidi-text%2Cvertical-text">Southeast Asian issues in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<!--dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test repo (tbd)</li>
+
+<li>Exploratory/interactive test results (tbd)</li>
+</ul>
+</dd-->
+
+
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#direction">Text direction</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#text_direction">Text direction</a></li>
+</ul>
+</dd>
+</dl>
+
+
 <p>Thai is written horizontally, left to right.</p>
+
+
 </section>
+
 
 
 
@@ -163,78 +232,320 @@
 
 <section id="h_shaping">
 <h2>Glyph shaping &amp; positioning</h2>
-<p>The orthography has no case distinction, and no special transforms are needed to convert between characters. Nor is printed text cursive.</p>
 
 
+<section id="h_writing_styles">
+<h3>Fonts &amp; font styles</h3>
+
+<aside class="prompts">How are fonts grouped into recognisable writing styles? How is each writing style used? Are OpenType features needed? What other font-related requirements and issue exist?</aside>
 
 
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#writing_styles">Font styles</a></li>
+</ul>
+</dd>
 
-<section id="writing_styles">
-<h3>Font styles</h3>
-<p>Modern type styles often omit the loops found in more traditional typefaces. See <a href="http://www.fontpad.co.uk/loops-and-latinisation/#more-666">an article</a> that explores this in depth.</p>
-<p>Loopless is considered to be more contemporary and modern, and is mainly used for advertising and titling. The distinction doesn’t necessarily map to that of serif vs sans – Noto, for example, provides both serif and sans Thai font faces, but they both have loops.  On the other hand, Neue Frutiger Thai offers traditional (looped) and modern (loopless) alternatives as part of the same font family (each with both regular, italic and bold substyles).</p>
-<figure>
-<img src="index-data/looped_silom.png" alt="ทุกคนมีสิทธิที่จะออกจากประเทศใด ๆ ไป รวมทั้งประเทศของตนเองด้วย และที่จะกลับยังประเทศตน" data-notes="silom 36px">
-<figcaption>The Silom font uses the traditional looped glyphs.</figcaption>
-</figure>
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Afonts+label%3Aquestion+">Open requests for information</a></li>
 
-<figure>
-<img src="index-data/loopless_sukhumvitset.png" alt="ทุกคนมีสิทธิที่จะออกจากประเทศใด ๆ ไป รวมทั้งประเทศของตนเองด้วย และที่จะกลับยังประเทศตน" data-notes="sukhumvit set 36px">
-<figcaption>The Sukhumvit Set font uses modern unlooped glyphs.</figcaption>
-</figure>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Afonts">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Afonts">Southeast Asian issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-fonts.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/glyph_character_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3AFonts">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#fonts">Fonts</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#fonts">Fonts &amp; font styles</a></li>
+</ul>
+</dd>
+</dl>
+
+
 </section>
 
 
 
 
-  
 
-<section id="context">
+
+
+
+<section class="h_context">
 <h3>Context-based shaping &amp; positioning</h3>
 
-<p>Thai has no stacking or conjunct behaviour, but the following are a few  selected  examples of contextual shaping and positioning.</p>
-
-<p>Most of the combining characters in Thai are used for vowel signs and tone marks. Combining characters need to be placed in different positions, according to the visual context. The example below shows the same tone character displayed at different heights, according to what falls beneath it.</p>
+<aside class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances? Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</aside>
 
 
-<figure id="fig_thai_position" class="sideCaption">
-<img src="index-data/thai_position.svg" class="ex" alt="ให้มีขึ้น" data-notes="62px Noto Serif Thai" style="height:5rem;">
-<figcaption>The same tone mark displayed at different heights.</figcaption>
-</figure>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#context">Context-based shaping &amp; positioning</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Aglyph_shaping_positioning+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Aglyph_shaping_positioning">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aglyphs">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+</dd>
 
 
-<p>Thai regularly combines multiple combining characters above a base consonant. There are two examples in the text below, both of which show a base character with a vowel sign and then a tone mark on top.</p>
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#glyphs">Glyph shaping and positioning</a></li>
+</ul>
+</dd>
 
-
-<figure id="fig_multiple_diacritics" class="sideCaption">
-<img src="index-data/fig_multiple_diacritics.svg" class="ex" alt="ครั้งที่" data-notes="62px Noto Serif Thai" style="height:5rem;">
-<figcaption>Multiple diacritics (vowel sign + tone mark) attached to the same base character.</figcaption>
-</figure>
-
-
-<p>Although Thai has very little in the way of shaping, [[[#fig_shaping]]] shows a number of small glyph adaptations that occur in some fonts (here, Noto Serif Thai) when certain tall or deep consonant letters have vowel marks attached. The  2 examples on the left show a slight reduction in the downward extent of the consonant glyph; in the middle 2 examples the part of the consonant glyph that lies below the baseline is removed altogether and replaced by the vowel sign; and in the right-most example, the height of the consonant glyph is reduced when a vowel sign appears above it.</p>
-
-
-<figure id="fig_shaping" class="sideCaption">
-<div style="display: flex; flex-wrap: wrap;">
-<img src="index-data/fig_shaping3.svg" class="ex" lang="th" alt="ฎฎุ ฏฏุ ญญุ ฐฐุ ฬฬึ" data-notes="Noto Serif Thai 32px 144dpi" style="height:6rem; margin-inline: 1rem;">
-<img src="index-data/fig_shaping2.svg" class="ex" lang="th" alt="ฎฎุ ฏฏุ ญญุ ฐฐุ ฬฬึ" data-notes="Noto Serif Thai 32px 144dpi" style="height:6rem; margin-inline: 1rem;">
-<img src="index-data/fig_shaping1.svg" class="ex" lang="th" alt="ฎฎุ ฏฏุ ญญุ ฐฐุ ฬฬึ" data-notes="Noto Serif Thai 32px 144dpi" style="height:6rem; margin-inline: 1rem;"> 
-</div>
-<figcaption>Shaping changes in the Noto Serif Thai font. Each example shows an unadorned consonant glyph on the left, and on the right a shaped version when a vowel sign is attached.</figcaption>
-</figure>
-
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#glyphs">Glyph shaping &amp; positioning</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
 
 
 
-<section id="fontstyle">
-<h3>Font styling &amp; weight</h3>
 
-<p><a href="http://www.fontpad.co.uk/thai-italics-1/">Mitchell</a> describes how italicisation is used for meta text and to convey the ‘about’ voice, rather than for emphasis or names of things (for which  bold is used).</p>
-<p>Italicisation tends to be applied to whole paragraphs or groups of paragraphs, for such things as picture captions, bylines, and other labels, commentaries, summaries such as standfirsts in magazines or news stories, and signposting. It is also regularly used for direct speech between quote marks.</p>
+
+
+<!--section class="h_cursive">
+<h3>Cursive text ****NA****</h3>
+
+</section-->
+
+
+
+
+
+
+
+
+<section class="h_fontstyle">
+<h3>Letterform slopes, weights, &amp; italics</h3>
+
+<aside class="prompts">Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</aside>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#fontstyle">Letterform slopes, weights, &amp; italics</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Aletterforms+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Aletterforms">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Afont-style+">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letterforms.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3ALetterforms">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#font_style">Font styles, weight, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#font_style">Letterform slopes, weights, &amp; italics</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+
+<!--section class="h_transforms">
+<h3>Character transforms ****NA****</h3>
+
+</section-->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="h_graphemes">
+<h2>Typographic units</h2>
+
+
+
+
+<section class="h_transforms">
+<h3>Characters &amp; encoding</h3>
+
+
+<aside class="prompts">Most languages are now supported by Unicode, but there are still occasional issues. In particular, there may be issues related to ordering of characters, or competing encodings (as in Myanmar), or standardisation of variation selectors or the encoding model (as in Mongolian).</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/thai/th.html#vowels" class="external">Vowels</a> •  <a  target="_blank" href="https://r12a.github.io/scripts/thai/th.html#consonants" class="external">Consonants</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Acharacters_and_encoding+label%3Aquestion">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Acharacters_and_encoding">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Acharset">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#charset">Characters &amp; encoding</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#charset">Characters &amp; encoding</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+
+<section class="h_segmentation">
+<h3>Grapheme/word segmentation &amp; selection</h3>
+
+<aside class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement &amp; selection, character counts, searching &amp; matching, text insertion, line-breaking, justification, case conversions, sorting? Are words separated by spaces, or other characters? Are there special requirements when double-clicking on the text? Are words hyphenated?</aside>
+
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/thai/th.html#word" class="external">Word boundaries</a> • <a  target="_blank" href="https://r12a.github.io/scripts/thai/th.html#graphemes" class="external">Graphemes</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Agrapheme_word_segmentation+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Agrapheme_word_segmentation">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Asegmentation">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-grapheme-word-segmentation.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/glyph_character_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3AGrapheme_word">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#segmentation">Grapheme/word segmentation &amp; selection</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#segmentation">Grapheme/word segmentation &amp; selection</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -243,104 +554,17 @@
 
 
 
-<section id="graphemes">
-<h2>Graphemes</h2>  
-
-<p id="def-grapheme" class="explanatoryintro definitionStub">A <a class="termref" target="_blank" href="../glossary/index.html#grapheme">grapheme</a> is a user-perceived unit of text. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement &amp; selection, character counts, text spacing, text insertion, justification, case conversions, and sorting.  The Unicode Standard uses generalised rules to define '<a class="termref" target="_blank" href="../glossary/index.html#graphemecluster">grapheme clusters</a>', which approximate the likely grapheme boundaries in a writing system, however they don't work well with many complex scripts.</p>
- 
-<p>Non-combining Thai vowel characters are treated as independent grapheme clusters. Only combining characters are grouped together with their base into a cluster.</p>
 
 
-
-
-
-<section id="graphemeC">
-<h3>Grapheme clusters</h3>
-
-<!--figure id="fig_grapheme_boundaries">
-<img src="index-data/grapheme_boundaries.png" class="ex" alt="และที่จะกลับ" data-notes="58px Noto Serif Thai">
-<figcaption>Grapheme cluster boundaries split spacing vowel signs from their base consonants, but not combining characters.</figcaption>
-</figure-->
-
-<p>Composition: <code>Base SARA_AM? Combining_mark*</code></p>
-
-<p>Combining marks may include zero or more of the following types of character, grouped by labels that correspond to Unicode Indic syllabic category values.</p>
-
-<ol>
-<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=ิีึืุู็ัำ">Dependent vowels</a> [9] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#combiningvowels">Combining marks used for vowels</a>)  Thai has many composite vowels that are made of combinations of ordinary letter  characters and  combining marks clustered around a base, but in the modern Thai language only one of these dependent vowels is used per base. (Other languages may use more than one. The letter characters are ordinary spacing characters, that are manually positioned in the text stream.)</li>
-
-<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=่้๊๋">Tone marks</a> [4] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#tones">Tones</a>) Tone marks should be typed and stored immediately after a dependent vowel, if there is one, and immediately after the base otherwise.</li>
-
-<li><a href="https://r12a.github.io/scripts/apps/listindic/index.html?chars=์">Consonant killer</a> (<span class="name">májtʰantʰákʰâːt</span>) [1] (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#novowel">Consonants with no following vowel</a>) Used after other elements in the grapheme cluster to indicate cancelling of a consonant or syllable.</li>
-</ol>
-
-<p>The spacing letters used for vowel signs are all individual grapheme clusters, with the exception of &nbsp;&nbsp;<span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span> (see <a class="secref" href="https://r12a.github.io/scripts/thai/th.html#nikhahit">Sara AM &amp; nikhahit</a>), which has the general category of Letter, but it is treated like a combining mark during segmentation.</p>
-
-<p>The following examples show a variety of grapheme clusters:</p>
-
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="index-data/g_smell.svg" alt="" style="height:4rem;"></td><td><span class="charExample" translate="no"><span class="ex" lang="th">ได้กลิ่น</span> <bdi class="trans">dây.klìn</bdi> <bdi class="meaning">to smell</bdi></span></td></tr>
-
-<tr><td><img src="index-data/g_toilet.svg" alt="" style="height:4rem;"></td><td><span class="charExample" translate="no"><span class="ex" lang="th">ห้องน้ำ</span> <bdi class="ipa">hɔ̂ŋ.náːm</bdi> <bdi class="meaning">toilet</bdi></span></td></tr>
-
-<tr><td><img src="index-data/g_program.svg" alt="" style="height:3.5rem;"></td><td><span class="charExample" translate="no"><span class="ex" lang="th">โปรแกรม</span> <bdi class="ipa">prōː.krɛ̄m</bdi> <bdi class="meaning">(computer) program</bdi></span></td></tr>
-
-<tr><td><img src="index-data/g_sacred.svg" alt="" style="height:4rem;"></td><td><span class="charExample" translate="no"><span class="ex" lang="th">ศักดิ์สิทธิ์</span> <bdi class="ipa">sàk̚.sìt̚</bdi> <bdi class="meaning">to be sacred</bdi></span></td></tr>
-</table>
-
-
-<p>The grapheme cluster boundaries are convenient for justification algorithms, which  insert equal amounts of space between non-combining letters, including between non-combining vowel sign components and their consonants (see <a class="secref" href="#justification">Text alignment &amp; justification</a>).</p>
-
-<p>One exception is the aforementioned <span class="codepoint" translate="no"><bdi lang="th">ำ</bdi> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>, which is split across 2 typographic units for the purpose of justification (see [[[#inter_character_spacing]]]).</p>
-</section>
-</section>
 
 
 
 
 
 <section id="h_characters_and_phrases">
-<h2>Structural boundaries &amp; markers</h2>
+<h2>Punctuation &amp; inline features</h2>
 
-
-<section id="h_words">
-<h3>Word boundaries</h3>
-<p>The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined but recognisable semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
-<p>Spaces are used in Thai as phrase separators, but Thai doesn't separate words in a phrase using visible spaces.</p>
-<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries.</p>
-<figure>
-<img src="index-data/thai_words.png" class="ex" alt="รวมทั้งวิทยาการด้านคอมพิว" data-alt="รวม​ทั้ง​วิทยาการ​ด้าน​คอมพิว" data-notes="56px Noto Serif Thai">
-<figcaption>Word boundaries occur where the vertical lines appear, though they are not marked by the script.</figcaption>
-</figure>
-
-
-
-
-<section id="h_wordBoundary">
-<h4>Word boundary detection</h4>
-
-<p>The main difficulty arises when dealing with compound words. It can often be difficult to decide whether a given string of syllables represents multiple words or a single compound word.</p>
-<figure>
-<p><img src="index-data/thai_alt1.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การเขียน​กาษาไทย" data-notes="42px Noto Serif Thai"></p>
-<p><img src="index-data/thai_alt2.png" class="ex" alt="ตัวอย่างการเขียนกาษาไทย" data-alt="ตัวอย่าง​การ​เขียน​กาษาไทย" data-notes="42px Noto Serif Thai"></p>
-<figcaption>Alternative line break opportunities for Thai text using compound nouns.</figcaption>
-</figure>
-<p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
-<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถ</span> <span class="ipa">kʰon kʰàp ròt</span> <span class="meaning">driver</span></span> should be viewed as a single word in the context <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span> <span class="ipa">kʰon kʰàp ròt nâŋ kʰɔːj jûː nràjt</span> <span class="meaning">the (man who works as a) driver is waiting in the car</span></span>, whereas in the phrase <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span> <span class="ipa">kʰon kʰàp ròt pʰàːn jɛ̀ːk níː mâj màːk nàk</span> <span class="meaning">not many people drive through this intersection</span></span> it would be viewed as 3 words, referring to anyone who is driving. <sup><a href="http://pioneer.netserv.chula.ac.th/~awirote/ling/snlp2007-wirote.pdf">a</a></sup></p>
-<p>Proper names, which are composed from multiple words, are also problematic, especially because there are no capital letters to distinguish them from other pieces of text.</p>
-</section>
-
-
-<section id="h_zwsp">
-<h4>Zero-width space (ZWSP) &amp; Word-joiner (WJ)</h4>
-
-<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> (ZWSP) can  be  used  to  create  breaks.</p>
-<p>To prevent a break between syllables, <span class="codepoint" translate="no"><span class="uname">U+2060 WORD JOINER</span></span> (WJ) can be used.</p>
-<p>It is also important to bear in mind that Thai may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
-<p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
-<p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
-</section>
+<aside class="prompts">This section describes typographic features related to word boundaries, phrase &amp; section boundaries, bracketed text, quotations &amp; citations, emphasis, abbreviation, ellipsis &amp; repetition, inline notes &amp; annotations, other punctuation, and other inline text decoration.</aside>
 
 
 
@@ -348,42 +572,57 @@
 
 
 
-<section id="syllableParsing">
-<h4>Parsing syllables</h4>
 
-<p>Automatically adding spaces (zero-width or other) around Thai syllables is problematic because syllable-final consonants are not easy to identify. Thai segmentation may have to deal with ambiguous situations. Take for example the word
-<span class="charExample" translate="no"><span class="ex" lang="th">ถนน</span> <bdi class="trans">thànǒn</bdi> <bdi class="ipa">tʰà.nǒn</bdi> <bdi class="meaning">road</bdi></span>
-</p>
 
-<p>Because syllable-final sounds are ordinary letters, with no special indication, this could be parsed as <span class="ipa">ta.non</span>, <span class="ipa">ton.na</span>, or even <span class="ipa">ta.na.na</span>, and indeed some words are written the same but pronounced differently, eg.
-<span class="charExample" translate="no"><span class="ex" lang="th">นม</span> <bdi class="ipa">nōm / nama</bdi> <bdi class="meaning">milk / a salutation</bdi></span>
-</p>
+<section id="h_phrase">
+<h3>Phrase &amp; section boundaries</h3>
 
-<p>Similarly, because medial consonants are written with normal characters, there is a possibile ambiguity about whether a sequence contains an inherent vowel, eg.
-<span class="charExample" translate="no"><span class="ex" lang="th">กรี</span> <bdi class="ipa">kà.rīː / krīː</bdi> <bdi class="meaning">elephant / pointy bit on shrimp head</bdi></span>
-</p>
-</section>
-</section>
+
+<aside class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections? What about other punctuation, such as dashes, connectors, separators, etc?</aside>
 
 
 
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/thai/th.html#phrase" class="external">Phrase &amp; section boundaries</a></li>
+</ul>
+</dd>
 
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Ainline_features_punctuation+label%3Aquestion+">Open requests for information</a></li>
 
-<section id="space_widths">
-<h4>Space widths</h4>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Ainline_features_punctuation">All Thai issues on this topic in the sealreq repo</a></li>
 
-<p>It is possible to find two different sizes of space in Thai: large spaces between sentences, and small spaces in other places (eg. for separating sub clauses). The width of the small space is the same as <span class="codepoint" translate="no"><bdi lang="th">&#x0E01;</bdi> [<span class="uname">U+0E01 THAI CHARACTER KO KAI</span>]</span>, and the larger space is double that size.</p>
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Apunctuation-etc">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
 
-<p>Most people no longer make this distinction, but some may want to. It also occurs in other Southeast Asian scripts.</p>
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
 
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
 
-<figure id="fig_wide_spacing" class="sideCaption">
-<img src="index-data/fig_wide_spacing.png" alt="" data-source="https://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2" style="width:30rem;">
-<figcaption>An example of how multiple width spacing may look.</figcaption>
-</figure>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
 
-<p class="observation"><span class="leadin">Observation:</span> It is currently not clear how to achieve this on the Web, where multiple space characters are collapsed to a single space by default.  One suggestion is to use <span class="codepoint" translate="no"><bdi lang="th">&#x2003;</bdi> [<span class="uname">U+2003 EM SPACE</span>]</span>, but that is not well supported by Thai fonts, and doesn't expand during justification. See <a href="GitHub,https://github.com/w3c/sealreq/issues/46">GitHub</a> for a discussion.</p>
-<p>&nbsp;</p>
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#punctuation_etc">Phrase &amp; section boundaries</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
@@ -391,38 +630,303 @@
 
 
 
-<section id="abbrev">
+
+
+
+
+
+
+<section id="h_quotations">
+<h3>Quotations &amp; citations</h3>
+
+
+<aside class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue? Are the same mechanisms used to cite words, or for scare quotes, etc? What about citing book or article names?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/thai/th.html#quotations" class="external">Quotations &amp; citations</a></li>
+
+<li><cite>Wikipedia</cite>: <a  target="_blank" href="https://en.wikipedia.org/wiki/Quotation_mark" class="external">Quotation mark</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Aquotations+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Aquotations">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aquotations">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-quotations.html#thai">Exploratory/interactive test results</a>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3AQuotations">Exploratory/interactive test repo</a></li>
+</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#quotations">Quotations</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#quotations">Quotations &amp; citations</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+<section id="h_emphasis">
+<h3>Emphasis &amp; highlighting</h3>
+
+
+<aside class="prompts">How are emphasis and highlighting achieved? If lines or marks are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Aemphasis+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Aemphasis">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aemphasis">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-emphasis.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3AEmphasis">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#emphasis">Emphasis &amp; highlighting</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+<section id="h_abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 
-<section id="repetition">
-<h4>Repetition</h4>
 
-<p><span class="codepoint" translate="no"><span lang="th">ๆ</span> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span> is used to mark repetition of preceding letters. It is typically preceded and followed by a space, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ทุกวัน ๆ</span> <bdi class="ipa">tʰùk.wan tʰùkwan</bdi> <bdi class="meaning">everyday</bdi></span> However, some publishers prefer to publish without a leading space, ie. <span class="charExample" translate="no"><span class="ex" lang="th">ทุกวันๆ</span></span></p>
+<aside class="prompts">What characters or other methods are used to indicate abbreviation, ellipsis &amp; repetition?</aside>
 
-<p>This character shouldn't be wrapped to the beginning of a new line on its own, and should be kept not far from the preceding text that it duplicates during justification.</p>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/thai/th.html#abbrev" class="external">Abbreviation, ellipsis &amp; repetition</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Aabbr_ellip_repetition+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Aabbr_ellip_repetition">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aabbr_ellip_repetition">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li>tbd</li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
 
 
-<section id="abbreviation">
-<h4>Abbreviation</h4>
 
-<p><span class="codepoint" translate="no"><span lang="th">ฯ</span> [<span class="uname">U+0E2F THAI CHARACTER PAIYANNOI</span>]</span> is used to indicate elision or abbreviation of letters; it  is    viewed  as  a  kind  of  letter,  however,  and  is  used  with  considerable  frequency because of its appearance in such words as the Thai name for Bangkok, <span class="charExample" translate="no"><span class="ex" lang="th">กรุงเทพฯ</span> <span class="trans">k̯ṟuŋ̱eṯʰp̱ʰ⋯</span> <span class="ipa">krūŋ tʰêːp</span></span> which is short for <span class="charExample" translate="no"><span class="ex" lang="th">กรุงเทพมหานคร</span> <span class="trans">k̯ṟuŋ̱eṯʰp̱ʰm̱hāṉḵʰṟ</span> <span class="ipa">krūŋ tʰêːp mahǎː nákʰɔ̄ːn</span></span>It is followed by a space.</p>
+
+
+<section id="h_inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+
+
+<aside class="prompts">What mechanisms, if any, are used to create *inline* notes and annotations? (For referent-type notes such as footnotes, see further down.)</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Ainline_notes_annotations+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Ainline_notes_annotations">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Ainline_notes">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-inline-notes-annotations.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3AInline_notes_annotations">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#inline_notes">Inline notes &amp; annotations</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#inline_notes">Inline notes &amp; annotations</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
 
 
-<section id="ellipsis">
-<h4>Ellipsis</h4>
 
-<p><span class="name">Paiyannoi</span> is also used  in  the combination <span class="charExampleInline" translate="no"><span class="ex" lang="th">ฯลฯ</span></span>  to  create  a  construct  called   <span class="name">paiyanyai</span> , which means “et cetera, and so forth.”</p>
-<p>Some abbreviations are written using a full stop, eg. <span class="charExample" translate="no"><span class="ex" lang="th">สนง.ตปท.</span> <span class="trans">sṉŋ̱.t̯p̯ṯʰ.</span> <span class="meaning">Office of the Royal Thai Police</span></span> which is short for <span class="charExample" translate="no"><span class="ex" lang="th">สำนักงานตำรวจแห่งชาติ</span> <span class="trans">saᵐṉäk̯ŋ̱āṉt̯aᵐṟw̱c̯ɛh¹ŋ̱c̱ʰāt̯i</span></span></p>
-<p>CLDR indicates that <span class="codepoint" translate="no"><span lang="th">…</span> [<span class="uname">U+2026 HORIZONTAL ELLIPSIS</span>]</span> is also used for ellipsis.</p>
+
+
+<section id="h_otherinline">
+<h3>Other inline features</h3>
+
+
+<aside class="prompts">Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc. What characters or methods (eg. text decoration) are used to convey information about a range of text? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?  Are there other punctuation marks that were not covered in preceding sections?</aside>
+
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Atext-decoration+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Atext-decoration">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Atext-decoration">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-text-decoration.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3AThai+label%3Adoc%3AText_decoration">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#text_decoration">Other inline features</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 </section>
-</section>
+
+
+
+
+
+
+
+
 
 
 
@@ -433,216 +937,357 @@
 <h2>Line &amp; paragraph layout</h2>
 
 
+<aside class="prompts">This section describes typographic features related to line breaking &amp; hyphenation, text alignment &amp; justification, text spacing, baselines, line height, counters, lists, and styling initials.</aside>
 
-<section id="linebreak">
+<section id="h_line_breaking">
 <h3>Line breaking &amp; hyphenation</h3>
 
-<p>Even where Thai doesn't indicate word boundaries, when Thai text is wrapped at the end of a line it should break at word boundaries. </p>
-<p>As  the width of a browser window changes, the text in [[[#fig_thai_wrap]]] should break at the  points shown if the browser supports Thai wrapping:</p>
+<aside class="prompts">Are there special rules about the way text wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that? Is hyphenation used, or something else? What rules are used? What difficulties exist?</aside>
 
-<figure id="fig_thai_wrap">
-<img src="index-data/thai_wrap.png" class="ex" alt="โลกจะใช้เพียง" data-notes="62px Noto Serif Thai">
-<figcaption>Break points detected in a sequence of Thai characters by an automatic word segmenter.</figcaption>
-</figure>
 
-<p>Because Thai doesn't separate words,  applications typically look up   word boundaries in a dictionary, however, such lookup doesn't always produce the needed result, especially when dealing with compound words and proper names (see [[[#h_words]]]). For more details, see [[[#h_wordBoundary]]]. </p>
-
-<p>To counteract these deficiencies, authors may use <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> and <span class="codepoint" translate="no"><span class="uname">U+2060 WORD JOINER</span></span>  (see [[[#h_zwsp]]]).</p>
-
-<p>Note that most browsers have heuristics for segmenting Thai text, but there is no guarantee that these rules will work equally well for <a href="https://r12a.github.io/scripts/thai/index.html#languages">other languages that are written in the Thai script</a>.</p>
-<section id="linedge">
-<h4>Line-edge rules</h4>
-
-<p>As in almost all writing systems, certain punctuation characters should not appear at the end or the start of a line. The Unicode line-break properties help applications decide whether a character should appear at the start or end of a line.</p>
-<p id="showLinebreaks"><a target="_blank" href="https://r12a.github.io/scripts/apps/listlinebreak/index.html?chars=%E0%B8%9C%20%E0%B8%96%20%E0%B8%90%20%E0%B8%82%20%E0%B8%83%20%E0%B8%9B%20%E0%B8%9A%20%E0%B8%95%20%E0%B8%94%20%E0%B8%8F%20%E0%B8%8E%20%E0%B8%81%20%E0%B8%AD%20%E0%B8%9E%20%E0%B8%A0%20%E0%B8%97%20%E0%B8%98%20%E0%B8%91%20%E0%B8%92%20%E0%B8%84%20%E0%B8%86%20%E0%B8%85%20%E0%B8%89%20%E0%B8%88%20%E0%B8%8A%20%E0%B8%8C%20%E0%B8%9D%20%E0%B8%AA%20%E0%B8%A8%20%E0%B8%A9%20%E0%B8%AB%20%E0%B8%9F%20%E0%B8%8B%20%E0%B8%AE%20%E0%B8%A1%20%E0%B8%99%20%E0%B8%93%20%E0%B8%87%20%E0%B8%A7%20%E0%B8%A3%20%E0%B8%A5%20%E0%B8%AC%20%E0%B8%A2%20%E0%B8%8D%20%E0%B9%80%20%E0%B9%81%20%E0%B9%83%20%E0%B9%84%20%E0%B9%82%20%E0%B8%B0%20%E0%B8%B2%20%E0%B8%B3%20%E0%B8%A4%20%E0%B8%A6%20%E0%B9%85%20%E0%B8%AF%20%E0%B9%86%20%E0%B8%B4%20%E0%B8%B5%20%E0%B8%B6%20%E0%B8%B7%20%E0%B8%B8%20%E0%B8%B9%20%E0%B8%B1%20%E0%B9%87%20%E0%B9%88%20%E0%B9%89%20%E0%B9%8A%20%E0%B9%8B%20%E0%B9%8C%20%E0%B9%90%20%E0%B9%91%20%E0%B9%92%20%E0%B9%93%20%E0%B9%94%20%E0%B9%95%20%E0%B9%96%20%E0%B9%97%20%E0%B9%98%20%E0%B9%99%20%E2%80%9C%20%E2%80%9D%20%E2%80%98%20%E2%80%99%20%E0%B9%9A%20%E0%B9%9B%20%E0%B9%8F%20%E2%80%90%20%E2%80%93%20%E2%80%94%20%E2%80%A6%20%20%20:%20.%20?%20!%20(%20)%20%E0%B8%BF%20%E2%80%8B%20%E2%81%A0%E0%B9%8D">Show line-breaking properties for characters in the Thai language.</a></p>
-
-<p>The following list gives examples of typical behaviours for characters used in modern Thai. Context may affect the behaviour of some of these and other characters.</p>
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd class="reqs">
 <ul>
-<li><span class="ex list" lang="th">“ ‘ (</span> &nbsp; should not be the last character on a line</li>
-<li><span class="ex list" lang="th">” ’ ) ? ! ๚ ๛ %</span> &nbsp; should not begin a new line</li>
-<li><span class="ex list" lang="th">฿</span> &nbsp; should be kept with any number, even if separated by a space or parenthesis.</li>
+<li><cite> Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#linebreak">Line breaking &amp; hyphenation</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/articles/typography/linebreak">Approaches to line-breaking</a></li>
 </ul>
+</dd>
 
-<!--p>The following characters should <em>not</em> produce a line-break when they appear inside or alongside a word: <span class="charExample inline list" translate="no"><span class="ex" lang="hy">ʼ ՛ ՜ ՝ ՞ ՟</span></span>.</p-->
+<dt>GitHub discussions</dt>
+<dd class="gh_discussions">
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion+label%3Ai%3Aline_breaking+">Open requests for information</a></li>
 
-<p>The repetition character, 
-<span class="codepoint" translate="no"><bdi lang="th">&#x0E46;</bdi> [<span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span>]</span>
-is always preceded by space, however it should not wrap to the next line on its own.</p>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Aline_breaking">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aline-breaking">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd class="tests">
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-line-breaking.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3AThai+label%3Adoc%3ALine_breaking">Exploratory/interactive test repo</a></li>
+</ul>
+</dd>
+
+<dt>Gap analysis</dt>
+<dd class="gap_analysis">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#line_breaking"> Line breaking</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#line_breaking">Line breaking</a> • <a target="_blank" href="https://www.w3.org/TR/typography/#hyphenation">Hyphenation</a></li>
+</ul>
+</dd>
+</dl>
 </section>
-</section>
 
 
 
 
-    
-    
-<section id="justification">
+
+
+<section id="h_alignment">
 <h3>Text alignment &amp; justification</h3>
 
-<p>Justification in Thai primarily adjusts the blank spaces between phrases, rather than expanding the text between words or syllables. The fact that lines break at word boundaries helps reduce the size of the gaps produced.</p>
-<p>Thai may also make certain adjustments to inter-character spacing. The character-based spacing is most common in narrow columns, such as newsprint, where there is no space except at the end of a line.</p>
-<p>Any <span class="codepoint" translate="no"><span class="uname">U+200B ZERO WIDTH SPACE</span></span> (ZWSP) is used to separate words is ignored during  justification. Justification proceeds as if it wasn't there.</p>
+<aside class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite> Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#justification">Text alignment &amp; justification</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/articles/typography/justification">Approaches to full justification</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion+label%3Ai%3Atext_align_justification+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue++label%3As%3Athai+label%3Ai%3Atext_align_justification">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Ajustification">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-text-alignment-justification.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3AThai+label%3Adoc%3AText_alignment_justification">Exploratory/interactive test repo</a></li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#justification"> Text alignment &amp; justification</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#justification">Text alignment &amp; justification</a></li>
+</ul>
+</dd>
+</dl>
 
 
 
 
-<section id="inter_character_spacing">
-<h4>Inter-character spacing</h4>
 
-<p>The justification in [[[#fig_justification_intercharacter_spacing]]] shows equal spacing across a phrase where there are no space characters to stretch. Note how the equal spacing separates pre-base and post-base vowel sign components from their consonants by the same amount as consonants are separated from each other; they are not kept together with the base consonant they modify.</p>
-
-<figure id="fig_justification_intercharacter_spacing">
-<img alt="แนะโบรกฯรวมตัวตั้งสนง.ตปท." src="index-data/justification_intercharacter_spacing.jpg" data-source="" >
-<figcaption>A line with no spaces applies inter-character spacing to justify the text.</figcaption>
-</figure>
-
-<p>This kind of spacing requires a special behaviour for <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span>. The small circle is kept with the preceding consonant, and space is added before the spacing part of the vowel, as shown in [[[#fig_am_spacing]]].</p>
-
-
-<figure id="fig_am_spacing">
-<img src="index-data/am_spacing.svg" class="ex" alt="น้ำ นํ้า" data-notes="62px Noto Serif Thai" style="height: 6rem;">
-<figcaption>Sara AM before (left) and after (right) inter-character spacing has been applied.</figcaption>
-</figure>
-
-
-<p>(To facilitate this, applications tend to convert <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</span> to the sequence <span class="codepoint" translate="no"><span lang="th">&#x0E4D;&#x0E32;</span> [<span class="uname">U+0E4D THAI CHARACTER NIKHAHIT</span> + <span class="uname">U+0E32 THAI CHARACTER SARA AA</span>]</span> before stretching. Some care has to also be taken to correctly order the superscript glyphs, since in memory the tone mark precedes the nikhahit. The <span class="name">nikhahit</span> character is not otherwise used for modern Thai.)</p>
+<p>Justification in Thai adjusts the space between phrases, but also makes certain adjustments to inter-character spacing.</p>
 </section>
 
 
 
-<section id="para_indent">
-<h4>Paragraph indentation</h4>
-<p>Thai does indent the initial line of a paragraph.</p>
 
-<figure id="fig_justification_para_indent">
-<p>
-<img alt="Examples of indented paragraph start." src="index-data/justification_para_indent.jpg" data-source="" ></p>
-<figcaption>Indentations at paragraph start in a Thai newspaper.</figcaption>
-</figure>
+
+
+
+<section id="h_spacing">
+<h3>Text spacing</h3>
+
+<aside class="prompts">This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word? (For justification related spacing, see Text alignment &amp; justification, above).</aside>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue++label%3As%3Athai+label%3Aquestion+label%3Ai%3Aletter_spacing">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue++label%3As%3Athai+label%3Ai%3Aletter_spacing">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Aletter_spacing">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3AText_spacing">Exploratory/interactive test repo</a></li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#spacing">Letter spacing</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#spacing">Text spacing</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+
+
+<p>Thai text doesn't appear to use inter-letter spacing in running text, however it is sometimes used in signage. (<a href="https://github.com/w3c/sealreq/issues/9#issuecomment-387971659">@mcdurdin)</a> See an <a href="https://www.phnompenhpost.com/post-property/impasse-tbong-khmum-over-who-starts-building-first">example</a>.</p>
+
+<p>The rules for where the separations appear are still not clear, however one might expect that it keeps together base + subjoined consonants, and base consonants + vowel signs.</p>
+
+<p>The situation is less clear for spacing vowel-signs such as <span class="codepoint" translate="no"><span lang="th">ា</span> <span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></span>, which are shown separated in the example linked to above.</p>
 </section>
-</section>
 
 
 
 
 
 
-<section id="baselines">
+
+<section id="h_baselines">
 <h3>Baselines, line height, etc.</h3>
 
-<p>Thai uses the so-called 'alphabetic' baseline, which is the same as for Latin and many other scripts.</p>
-
-<p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for, say, Latin text. In addition.</p>
-
-<p>To give an approximate idea, [[[#fig_baselines]]] compares Latin and Thai glyphs from Noto  fonts. The basic height of Thai letters in this font is typically around the Latin x-height, however extenders and combining marks reach well beyond the Latin ascenders and descenders, creating a need for larger line spacing. In other fonts, the basic height of the Thai letters tends to be between the Latin x-height and cap-height, and the overall height of the Thai line is therefore greater. See for example the Angsana New font sample below.</p>
-
-<figure id="fig_baselines">
-<div>
-<img src="index-data/fig_baselines_noto_serif.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Noto Serif Thai 130px" style="max-width: 90%; margin-block-end:1rem;" lang="th">
-
-<img src="index-data/fig_baselines_noto_sans.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Noto Sans Thai 130px" style="max-width: 90%;" lang="th">
-</div>
-<figcaption>Font metrics for Latin text  compared with Thai glyphs in the Noto Serif Thai (top) and Noto Sans Thai (bottom) fonts.</figcaption>
-</figure>
+<aside class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general? Is line height special for this script? Are there other aspects that affect line spacing, or positioning of items vertically within a line?</aside>
 
 
-<p>[[[#fig_baselines_other]]] shows similar comparisons for the FreesiaUPC and Angsana New fonts.</p>
 
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite> Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#baselines">Baselines, line height, etc.</a></li>
+</ul>
+</dd>
 
-<figure id="fig_baselines_other">
-<div>
-<img src="index-data/fig_baselines_freesiaupc.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="FreesiaUPC 130px" style="max-width: 90%; margin-block-end:2rem;" lang="th">
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Abaselines_line_height_etc+label%3Aquestion+">Open requests for information</a></li>
 
-<img src="index-data/fig_baselines_angsana.png" alt="Hhqxใฏูกิ้ปีฬุฬึ์๕๙" class="ex" data-notes="Angsana New 130px" style="max-width: 90%;" lang="th">
-</div>
-<figcaption>Latin font metrics compared with Thai glyphs in the FreesiaUPC (top) and Angasana New (bottom) fonts.</figcaption>
-</figure>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Abaselines_line_height_etc">All Thai issues on this topic in the sealreq repo</a></li>
 
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Abaselines">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
 
-<!--figure id="fig_metrics">
-<img src="index-data/metrics.png" alt="พรุ่งนี้" class="ex" data-notes="Hibizcus default settings">
-<figcaption>Metrics for the Noto Serif Thai and Noto Serif fonts, viewed in Hibizcus.</figcaption>
-</figure-->
-<p>Thai tends to add more <em>interline</em> spacing than Latin text does.</p>
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#baselines"> Baselines, line-height, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#baselines">Baselines, line-height, etc</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
 
 
-    
-    
-    
+
+
+
 <section id="h_counters">
-<h3>List counters</h3>
+<h3>Lists, counters, etc.</h3>
 
-<p>Counters are used to number lists, chapter headings, etc.</p>
-
-<p>The modern Thai orthography uses numeric and  alphabetic styles.</p>
+<aside class="prompts">Are there list or other counter styles in use? If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?</aside>
 
 
 
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite> Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#lists">Counters, lists, etc</a></li>
+<li><cite> Ready-made Counter Styles</cite>: <a target="_blank" href="https://www.w3.org/TR/predefined-counter-styles/#thai-styles">Thai</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion+label%3Ai%3Alists_counters_etc">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue++label%3As%3Athai+label%3Ai%3Alists_counters_etc">All Thai issues on this topic in the sealreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Alists">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-lists-counters-etc.html#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3AThai+label%3Adoc%3ALists_counters_etc">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/predefined-counter-styles#simplenumeric">I18n test suite: CSS3 Counter Styles, predefined styles</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/custom-counter-styles#thai">I18n test suite: Custom counter styles</a></li>
+</ul>
 
 
-<section id="cs_numeric">
-<h4>Numeric counters</h4>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#lists"> Lists, counters, etc</a></li>
+</ul>
+</dd>
 
-<p>The numeric style uses the Thai digits '๐' '๑' '๒' '๓' '๔' '๕' '๖' '๗' '๘' '๙' in a decimal pattern.</p>
-
-<figure id="fig_cs_alphabetic">
-<img src="index-data/fig_cs_numeric.png" alt="1⇨ก 2⇨ข 3⇨ค 4⇨ง 11⇨ฎ 22⇨น 33⇨ล 44⇨กค 111⇨ขภ 222⇨จด 333⇨ซจ" style="max-width: 90%;">
-<figcaption>Example values for the numeric counter style.</figcaption>
-</figure>
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#lists">Lists, counters, etc</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
 
 
 
-<section id="cs_alphabetic">
-<h4>Alphabetic counters</h4>
-
-<p>The alphabetic style uses the following letters, in the order shown: 'ก' 'ข' 'ค' 'ง' 'จ' 'ฉ' 'ช' 'ซ' 'ฌ' 'ญ' 'ฎ' 'ฏ' 'ฐ' 'ฑ' 'ฒ' 'ณ' 'ด' 'ต' 'ถ' 'ท' 'ธ' 'น' 'บ' 'ป' 'ผ' 'ฝ' 'พ' 'ฟ' 'ภ' 'ม' 'ย' 'ร' 'ล' 'ว' 'ศ' 'ษ' 'ส' 'ห' 'ฬ' 'อ' 'ฮ'.</p>
-
-<figure id="fig_cs_numeric">
-<img src="index-data/fig_cs_alphabetic.png" alt="1⇨๑ 2⇨๒ 3⇨๓ 4⇨๔ 11⇨๑๑ 22⇨๒๒ 33⇨๓๓ 44⇨๔๔ 111⇨๑๑๑ 222⇨๒๒๒ 333⇨๓๓๓" style="max-width: 90%;">
-<figcaption>Example values for the alphabetic counter style.</figcaption>
-</figure>
-</section>
 
 
-
-
-
-<section id="cs_bullet">
-<h4>Bullets</h4>
-
-<p><span class="codepoint" translate="no"><span lang="th">&#x0E4F;</span> [<span class="uname">U+0E4F THAI CHARACTER FONGMAN</span>]</span> is the Thai bullet, which is used to mark items in lists or  appears  at  the  beginning  of  a  verse,  sentence,  paragraph,  or  other  textual  segment.</p>
-</section>
-</section>
-</section>
-
-
-
-
-
-
-
-<section id="initials">
+<section id="h_initials">
 <h3>Styling initials</h3>
 
-<p>It is possible to find the first letter in a paragraph styled so that it is larger and sits alongside several lines of the continuing paragraph text.</p>
-<p><span class="observation">Combining characters are included in the selections</span>.</p>
-<figure id="fig_drop_caps">
-<p><img alt="Examples of dropped highlights" src="index-data/initial_diacritics.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_frangipaniP1.htm" style="max-width: 80%;"> 
-<img alt="Examples of dropped highlights" src="index-data/initial_multiple_diacritics.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_whatAbeautyP1.htm"  style="max-width: 80%;"></p>
-<figcaption>Two example paragraphs showing  dropped highlighted initials with combining characters.</figcaption>
-</figure>
+<aside class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? Are dropped, sunken, and raised types found? etc.</aside>
 
-<p>The first spacing vowel in a syllable can be highlighted alone, without the related base or any other vowels being highlighted.</p>
-<figure id="fig_drop_caps_2">
-<img alt="Examples of dropped highlights" src="index-data/initial_e.jpg" data-source="http://www.seasite.niu.edu/lao/laolanguage/Advance_reading/Reading_short_stories/reading_ashes_delightP1.htm"  style="max-width: 60%;">
-<figcaption>Another example paragraph, showing  a pre-base vowel sign alone as a highlighted initial.</figcaption>
-</figure>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Thai Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/thai/th.html#initials">Styling initials</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion+label%3Ai%3Astyling_initials">Open requests for information</a></li>
+<li><a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai+label%3Ai%3Astyling_initials">All Thai issues on this topic in the sealreq repo</a></li><li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Asealreq+label%3Aspec-type-issue+label%3Ai%3Ainitials">Southeast Asian issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-styling-initials#thai">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+label%3Ah2%3AThai+label%3Adoc%3AStyling_initials">Exploratory/interactive test repo</a></li>
+</ul>
+
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/thai-gap/#initials">Styling initials</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#initials">Styling initials</a></li>
+</ul>
+</dd>
+</dl>
+</section>
 </section>
 
 
@@ -651,18 +1296,12 @@ is always preceded by space, however it should not wrap to the next line on its 
 
 
 
-<section class="appendix" id="changelog">
-<h2>Changes</h2>
-
-<p>The following changes have been made since the previous version of this document was published.</p>
 
 
-<ol>
-<li>Moved section "Parsing syllables" under "Word boundaries".  Was under "Graphemes".</li>
-</ol>
+<section id="h_page">
+<h2>Page &amp; book layout</h2>
 
-
-<p data-lang="en">See also the <a href="https://github.com/w3c/sealreq/commits/gh-pages/thai">GitHub commit history</a>.</p>
+<p>tbd</p>
 </section>
 
 
@@ -671,13 +1310,18 @@ is always preceded by space, however it should not wrap to the next line on its 
 
 
 
-<section class="appendix" id="acknowledgements">
-<h2>Acknowledgements</h2>
 
-<p>The initial content of this document was created from parts of <a href="https://r12a.github.io/scripts/thai/th.html">this page</a>.</p>
-<p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
-<p>Anousak Anthony Souphavanh, Ben Mitchell, James Clarke, John Durdin, Martin Hosken, Norbert Lindenberg.</p>
-<p data-lang="en">Latest info of the GitHub contributors is at the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a>.</p>
+
+<section id="a_changes" class="appendix">
+<h2>Change log</h2>
+
+<ul>
+<li>Moved Acknowledgements section to top of introduction and renamed 'Contributors'.</li>
+<li>Updated information and links in the introduction.</li>
+<li>Rewrote the script overview section.</li>
+<li>Added links to all sections where additional information is available.</li>
+<li>Removed text that is just a copy of content at r12a.github.io</li>
+</ul>
 </section>
 </body>
 </html>
