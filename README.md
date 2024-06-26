@@ -23,15 +23,20 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 
-### Documents
-- **Lao Gap Analysis** • [DNOTE](https://www.w3.org/TR/laoo-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/laoo-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/laoo-gap.html)
+### LReq docs
 - **Lao Layout Requirements** • [DNOTE](https://www.w3.org/TR/laoo-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/lao/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/lao/index.html)
-- **Thai Gap Analysis** • [DNOTE](https://www.w3.org/TR/thai-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/thai-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/thai-gap.html)
 - **Thai Layout Requirements** • [DNOTE](https://www.w3.org/TR/thai-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/thai/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/thai/index.html)
-- **Khmer Gap Analysis** • [DNOTE](https://www.w3.org/TR/khmr-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/khmr-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/khmr-gap.html)
 - **Khmer Layout Requirements** • [DNOTE](https://www.w3.org/TR/khmr-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/khmer/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/khmer/index.html)
-- **Javanese Gap Analysis** • [DNOTE](https://www.w3.org/TR/java-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/java-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/java-gap.html)
 - **Javanese Layout Requirements** • [*Editor's draft*](https://www.w3.org/International/sealreq/javanese/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/javanese/index.html)
+
+
+
+
+### Gap-analysis docs
+- **Lao Gap Analysis** • [DNOTE](https://www.w3.org/TR/laoo-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/laoo-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/laoo-gap.html)
+- **Thai Gap Analysis** • [DNOTE](https://www.w3.org/TR/thai-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/thai-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/thai-gap.html)
+- **Khmer Gap Analysis** • [DNOTE](https://www.w3.org/TR/khmr-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/khmr-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/khmr-gap.html)
+- **Javanese Gap Analysis** • [DNOTE](https://www.w3.org/TR/java-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/java-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/java-gap.html)
 
 
 
