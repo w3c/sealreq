@@ -139,7 +139,7 @@ It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/
 
 
 
-<section id="vertical_text" class="tbd">
+<section id="vertical_text" class="na">
 <h3>Vertical text</h3>
 <p id="prompt-vertical_text" class="status_prompt promptStub"></p>
 
@@ -150,7 +150,7 @@ It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/
 
 
 
-<section id="bidi_text" class="tbd">
+<section id="bidi_text" class="na">
 <h3>Bidirectional text</h3>
 <p id="prompt-bidi_text" class="status_prompt promptStub"></p>
 
@@ -179,7 +179,7 @@ It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/
 
 
 
-<section id="fonts" class="tbd">
+<section id="fonts" class="ok">
 <h3>Fonts &amp; font styles</h3>
 <p id="prompt-fonts" class="status_prompt promptStub"></p>
 
@@ -272,7 +272,7 @@ It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/
 <h2>Typographic units</h2>
 
 
-<section id="encoding" class="tbd">
+<section id="encoding" class="ok">
 <h3>Characters &amp; encoding</h3>
 <p id="prompt-encoding" class="status_prompt promptStub"></p>
 
@@ -329,10 +329,11 @@ It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/
 
 
 
-<section id="quotations" class="tbd">
+<section id="quotations" class="ok">
 <h3>Quotations &amp; citations</h3>
 <p id="prompt-quotations" class="status_prompt promptStub"></p>
 
+<p>The quotation marks indicated in CLDR are the same as the default marks, so the issue related to quote marks being determined by the content inside or outside the q elements is not relevant here.</p>
 
 <div id="insert-quotations"></div>
 </section>
@@ -449,11 +450,11 @@ It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/
 
 
 
-<section id="spacing" class="tbd">
+<section id="spacing" class="ok">
 <h3>Text spacing</h3>
 <p id="prompt-spacing" class="status_prompt promptStub"></p>
 
-
+<p>We don't appear to have sufficient information at this point to determine the rules and expectations for this in Lao. There is a <a href="https://github.com/w3c/sealreq/issues/17">useful discussion of the issue in the GitHub issue list</a>.</p>
 
 <div id="insert-spacing"></div>
 </section>
@@ -480,10 +481,18 @@ It is linked to from the <a href="https://w3c.github.io/typography/gap-analysis/
 
 
 
-<section id="lists" class="tbd">
+<section id="lists" class="ok">
 <h3>Lists, counters, etc.</h3>
 <p id="prompt-lists" class="status_prompt promptStub"></p>
 
+<p>One numeric CSS counter style is defined for Lao, using Lao digits, in the document <a href="https://www.w3.org/TR/predefined-counter-styles/#tamil-styles)">Ready-made Counter Styles</a>: <code class="kw" translate="no">lao</code>.  It is also defined explicitly in the <a href="https://www.w3.org/TR/css-counter-styles-3/#simple-numeric">CSS Counter Styles specification</a>.
+</p>
+
+<p>The <code class="kw" translate="no">lao</code> counter style is supported by <span class="pass">Firefox</span>, <span class="pass">Chrome</span>, <span class="pass">Edge</span> and <span class="pass">Safari</span>, though not by <span class="fail">legacyEdge</span>. See   tests: <a href="https://w3c.github.io/i18n-tests/results/predefined-counter-styles#simplenumeric">Simple numeric</a> • <a href="https://w3c.github.io/i18n-tests/results/custom-counter-styles#lao">Lao script</a>
+</p>
+
+<p>Therefore marking this as ok.
+</p>
 
 <div id="insert-lists"></div>
 </section>
