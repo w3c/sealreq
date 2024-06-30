@@ -133,12 +133,9 @@ dl.reslinks {
 
 
 #linkWarning {
-    position:fixed;
-    bottom:0;
     margin-inline: 2.5%;
     background-color: antiquewhite;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-radius: 1em;
     font-size: 90%;
     padding: 1em;
     z-index: 2000;
@@ -150,4 +147,13 @@ dl.reslinks {
     cursor:pointer;
     color: #999;
     }
+
+
+
+.variable.empty, .variable.empty:visited {
+    color: gray;
+    font-style: italic;
+    }
+
+
 
