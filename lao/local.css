@@ -113,6 +113,13 @@ samp, kbd {
     content:"’";
 }
 
+
+
+
+
+
+
+
 .reslinks dt {
     font-size: 80%;
     }
@@ -127,10 +134,9 @@ dl.reslinks {
     margin-block-end: 3em;
 	}
 
-
-
-
-
+.nobullet {
+    list-style-type: none;
+    }
 
 
 
@@ -152,10 +158,20 @@ dl.reslinks {
 
 
 
-
-
-.variable.empty, .variable.empty:visited {
+.variable.empty[href], .variable.empty[href]:visited {
     color: gray;
     font-style: italic;
     }
+
+
+.reslinks a[href] {
+    color: darkorange;
+    }
+.reslinks a[href]:visited {
+    color: darkorange;
+    }
+
+
+
+
 
