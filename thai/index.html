@@ -12,46 +12,52 @@
       // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
       specStatus:           "ED",
       //publishDate:  		"2024-04-30",
-      //previousPublishDate:  "2014-12-16",
-      //previousMaturity:  "FPWD",
 
       noRecTrack:           true,
       shortName:            "thai-lreq",
       copyrightStart:       "2019",
       edDraftURI:           "https://w3c.github.io/sealreq/thai/",
 
-      // if this is a LCWD, uncomment and set the end of its review period
-      // lcEnd: "2009-08-05",
-
-      // editors, add as many as you like
-      // only "name" is required
       editors:  [
         { name: "Richard Ishida", company: "W3C", w3cid: 3439 }
       ],
 
-      group: "i18n",
+    group:      "i18n",
+    github: 	"w3c/sealreq",
 
- 	  github:	"w3c/sealreq",
-    };
+
+    postProcess: [
+            async function importStyleSheet() { 
+                const elems = document.querySelectorAll(`link[rel='stylesheet'][data-import]`)
+                await Promise.all(
+                    [...elems].map(async link => {
+                        const text = await fetch(link.href).then(r => r.text())
+                        const style = document.createElement("style")
+                        style.textContent = text
+                        link.replaceWith(style)
+                        })
+                    )
+                }
+            ],
+        };
   </script>
-  <link rel="stylesheet" href="local.css">
+
+<link rel="stylesheet" data-import href="https://w3c.github.io/i18n-drafts/style/respec_2022.css">
+<link rel="stylesheet" href="local.css">
 </head>
 
 <body>
 <div id="abstract">
-<p>This document describes or points to requirements for the layout and presentation of text in languages that use the Thai script. The target audience is developers of Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode, as well as implementers of web browsers, ebook readers, and other applications that need to render Thai text.</p>
+<p>This document  points to resources for the layout and presentation of text in languages that use the Thai script. The target audience includes developers of Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode, as well as implementers of web browsers, ebook readers, and other applications that need to render Thai text.</p>
 </div>
-
-
-
 
 <div id="sotd">
-<p>This document describes the basic requirements for Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Thai scripts. Currently the document focuses on Thai as used for the Thai language. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/thai-gap/">document that summarises gaps</a> in support on the Web for Thai.</p>
+<p>This document  points to resources for Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support languages written using the Thai script. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/thai-gap/">document that summarises gaps</a> where the Web fails to adequately support the Thai script.</p>
 
-<p>The editor's draft of this document is being developed by the <a href="https://github.com/w3c/sealreq/">Southeast Asian Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/i18n-activity/i18n-ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/i18n-activity/i18n-wg/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+<p>The editor's draft of this document is being developed in the GitHub repository <a href="https://w3c.github.io/sealreq/">Southeast Asian (sealreq)</a>, with contributors from the <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/International/i18n-activity/i18n-ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/i18n-activity/i18n-wg/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+
+<p>To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on using a URL.</p>
 </div>
-
-
 
 
 <div id="linkWarning">
@@ -68,38 +74,43 @@
 
 
 
-  
-  
+
+
 <section id="h_introduction">
 <h2>Introduction</h2>
-
 
 
 
 <section id="h_acknowledgements">
 <h3>Contributors</h3>
 
-<p>The initial information in this document was provided by Richard Ishida, drawing on the structure and information in <a href="https://r12a.github.io/scripts/thai/th"><cite>Thai Orthography Notes</cite></a>.</p>
-<p>Information and clarifications were provided by Ben Mitchell, Danh Hong, Marc Durdin, and Martin Hosken  as members of the W3C's <a href="https://w3c.github.io/sealreq/home">Southeast Asia Language Enablement</a> community.</p>
+<p>This document was created by Richard Ishida.</p>
 
-<p data-lang="en">See also the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a> for the Southeast Asia Language Enablement project, and the <a href="https://github.com/w3c/sealreq/issues?q=is%3Aissue++label%3As%3Athai">discussions related to Thai</a>.</p>
+<p>The following people contributed information that was used in preparing this document (in alphabetic order): Ben Mitchell, Danh Hong, Marc Durdin, and Martin Hosken as members of the W3C's <a href="https://w3c.github.io/sealreq/home">Southeast Asia Language Enablement</a> community.</p>
+
+<p data-lang="en">See also the <a href="https://github.com/w3c/sealreq/graphs/contributors">GitHub contributors list</a> for the Southeast Asian Language Enablement project, and the <a href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+label%3As%3Athai">discussions related to the Thai script</a>.</p>
 </section>
 
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
 
 <section id="h_about_this_document">
 <h3>About this document</h3>
 
-<p>The aim of this document is to describe the basic requirements for Thai script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support users of the Thai script. The document currently focuses on texts using the Thai language.</p>
+<p>This document points to resources for Thai script layout and text support on the Web and in eBooks. These resources provide information for developers of Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support languages written using the Thai script. They include requirements, tests, GitHub discussions, type samples, and more,</p>
 
-<p>The document focuses on typographic layout issues.  For a deeper understanding of the Thai script itself and how it works see <cite>Thai Orthography Notes</cite>, which includes topics such as: <a href="https://r12a.github.io/scripts/thai/th.html#phonology">Phonology</a>, <a href="https://r12a.github.io/scripts/thai/th.html#vowels">Vowels</a>, <a href="https://r12a.github.io/scripts/thai/th.html#vocalics">Vocalics</a>, <a href="https://r12a.github.io/scripts/thai/th.html#consonants">Consonants</a>, <a href="https://r12a.github.io/scripts/thai/th.html#encoding">Encoding choices</a>, and <a href="https://r12a.github.io/scripts/thai/th.html#numbers">Numbers</a>.</p>
+<p>The document focuses on typographic layout issues.  For a deeper understanding of the Thai script and how it works see <cite>Southeast Asian Orthography Notes</cite>, which includes topics such as: 
+<a href="https://r12a.github.io/scripts/thai/th.html#phonology">Phonology</a>, 
+<a href="https://r12a.github.io/scripts/thai/th.html#vowels">Vowels</a>, 
+<a href="https://r12a.github.io/scripts/thai/th.html#consonants">Consonants</a>, 
+<a href="https://r12a.github.io/scripts/thai/th.html#encoding">Encoding choices</a>, and 
+<a href="https://r12a.github.io/scripts/thai/th.html#numbers">Numbers</a>.
+</p>
 </section>
+
+
 
 
 
@@ -107,21 +118,23 @@
 <section id="h_gap_analysis">
 <h3>Gap analysis</h3>
 
-<p>This document is pointed to by a separate document, <a href="https://www.w3.org/TR/thai-gap/"><cite>Thai Gap Analysis</cite></a>, which describes gaps in support for Thai on the Web, and prioritises and describes the impact of those gaps on the user.</p>
-<p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. The gap reports will typically point back to this document for more information.</p>
-<p>As gaps in support for Thai are captured, the gaps can be brought to the attention of the relevant spec developer or the browser implementator community. The progress of such work is tracked in the <a href="https://github.com/orgs/w3c/projects/95?card_filter_query=label%3Adoc%3Athai">Gap Analysis Pipeline</a>.</p>
-<p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
+<p>This document should be used alongside a separate document, <a href="https://www.w3.org/TR/thai-gap/"><cite>Thai Gap Analysis</cite></a>, which describes gaps in language support for users of the Thai script, and prioritises and describes the impact of those gaps on the user.</p>
+
+<p>Gap reports are brought to the attention of spec and browser implementers, and are tracked via the <a href="https://github.com/orgs/w3c/projects/95" target="_blank">Gap Analysis Pipeline</a>. (<a href="https://github.com/orgs/w3c/projects/95/views/1?filterQuery=label%3A%22s%3Athai%22" target="_blank">Filter for Thai script items</a>)</p>
 </section>
 
 
+
+
+
+
+
 <section id="h_info_requests">
-<h3>Other related resources</h3>
+<h3>Related resources</h3>
 
-<p>To complement any  content authored specifically for this document, the sections in the document also point to related, external information, tests, GitHub discussions, etc.</p>
+<p>The document <a href="https://www.w3.org/TR/typography/"><cite>Language enablement index</cite></a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
 
-<p>The <a href="https://w3c.github.io/typography/"><cite>Language enablement index</cite></a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
-
-<p>The W3C also has a repository with discussion threads related to the Thai script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues in W3C working groups related to Southeast Asian scripts. See a list of <a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion+">unresolved questions</a> for Thai experts. Each section below points to related discussions. See also the <a href="https://w3c.github.io/sealreq/home">repository home page</a>.</p>
+<p>The <abbr title="World Wide Web Consortium">W3C</abbr> also has a repository with discussion threads related to the Thai script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues in <abbr title="World Wide Web Consortium">W3C</abbr> working groups related to the Thai script. See a list of <a target="_blank" href="https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion+">unresolved questions</a> for Thai experts. Each section below points to related discussions. See also the <a href="https://w3c.github.io/sealreq/home">repository home page</a>.</p>
 </section>
 </section>
 
@@ -1076,9 +1089,9 @@
 <dt>Type samples</dt>
 <dd>
 <ul>
-<li><a class="variable empty" target="_blank" href="https://github.com/w3c/type-samples/issues?q=is%3Aissue+is%3Aopen+label%3As%3AXX_SCRIPTTAG+label%3Ai%3Ajustification">W3C type samples</a></li>
+<li><a class="variable empty" target="_blank" href="https://github.com/w3c/type-samples/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Ai%3Ajustification">W3C type samples</a></li>
 
-<li><a class="variable empty" target="_blank" href="https://github.com/r12a/typesamples/issues?q=is%3Aopen+label%3As.XX_SCRIPTTAG+label%3Ah.justification">r12a type samples</a></li>
+<li><a class="variable empty" target="_blank" href="https://github.com/r12a/typesamples/issues?q=is%3Aopen+label%3As.thai+label%3Ah.justification">r12a type samples</a></li>
 </ul>
 </dd>
 
