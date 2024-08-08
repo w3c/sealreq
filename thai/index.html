@@ -251,8 +251,8 @@
 
 
 
-<section>
-<h2 id="h_text_direction">Text direction</h2>
+<section id="h_direction">
+<h2>Text direction</h2>
 
 
 <dl class="reslinks">
@@ -290,7 +290,7 @@
 <h2>Glyph shaping &amp; positioning</h2>
 
 
-<section id="h_writing_styles">
+<section id="fonts">
 <h3>Fonts &amp; font styles</h3>
 
 <aside class="prompts">How are fonts grouped into recognisable writing styles? How is each writing style used? Are OpenType features needed? What other font-related requirements and issue exist?</aside>
@@ -352,7 +352,7 @@
 
 
 
-<section class="h_context">
+<section id="glyphs">
 <h3>Context-based shaping &amp; positioning</h3>
 
 <aside class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances? Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</aside>
@@ -411,7 +411,7 @@
 
 
 
-<!--section class="h_cursive">
+<!--section id="cursive">
 <h3>Cursive text ****NA****</h3>
 
 </section-->
@@ -423,7 +423,7 @@
 
 
 
-<section class="h_fontstyle">
+<section id="letterforms">
 <h3>Letterform slopes, weights, &amp; italics</h3>
 
 <aside class="prompts">Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</aside>
@@ -478,7 +478,7 @@
 
 
 
-<!--section class="h_transforms">
+<!--section id="transforms">
 <h3>Character transforms ****NA****</h3>
 
 </section-->
@@ -494,13 +494,13 @@
 
 
 
-<section class="h_graphemes">
+<section id="h_segmentation">
 <h2>Typographic units</h2>
 
 
 
 
-<section class="h_transforms">
+<section class="encoding">
 <h3>Characters &amp; encoding</h3>
 
 
@@ -559,7 +559,7 @@
 
 
 
-<section class="h_segmentation">
+<section id="segmentation">
 <h3>Grapheme/word segmentation &amp; selection</h3>
 
 <aside class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement &amp; selection, character counts, searching &amp; matching, text insertion, line-breaking, justification, case conversions, sorting? Are words separated by spaces, or other characters? Are there special requirements when double-clicking on the text? Are words hyphenated?</aside>
@@ -623,12 +623,12 @@
 
 
 
-<section id="h_characters_and_phrases">
+<section id="h_inline">
 <h2>Punctuation &amp; inline features</h2>
 
 
 
-<section id="h_phrase">
+<section id="punctuation_etc">
 <h3>Phrase &amp; section boundaries</h3>
 
 
@@ -690,7 +690,7 @@
 
 
 
-<section id="h_quotations">
+<section id="quotations">
 <h3>Quotations &amp; citations</h3>
 
 
@@ -750,7 +750,7 @@
 
 
 
-<section id="h_emphasis">
+<section id="emphasis">
 <h3>Emphasis &amp; highlighting</h3>
 
 
@@ -807,7 +807,7 @@
 
 
 
-<section id="h_abbrev">
+<section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 
 
@@ -864,7 +864,7 @@
 
 
 
-<section id="h_inlinenotes">
+<section id="inline_notes">
 <h3>Inline notes &amp; annotations</h3>
 
 
@@ -921,7 +921,7 @@
 
 
 
-<section id="h_otherinline">
+<section id="text_decoration">
 <h3>Text decoration &amp; other inline features</h3>
 
 
@@ -987,12 +987,12 @@
 
 
 
-<section id="h_lines_and_paragraphs">
+<section id="h_para">
 <h2>Line &amp; paragraph layout</h2>
 
 
 
-<section id="h_line_breaking">
+<section id="line_breaking">
 <h3>Line breaking &amp; hyphenation</h3>
 
 <aside class="prompts">Are there special rules about the way text wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that? Is hyphenation used, or something else? What rules are used? What difficulties exist?</aside>
@@ -1049,7 +1049,7 @@
 
 
 
-<section id="h_alignment">
+<section id="justification">
 <h3>Text alignment &amp; justification</h3>
 
 <aside class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</aside>
@@ -1121,7 +1121,7 @@
 
 
 
-<section id="h_spacing">
+<section id="spacing">
 <h3>Text spacing</h3>
 
 <aside class="prompts">This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word? (For justification related spacing, see Text alignment &amp; justification, above).</aside>
@@ -1174,7 +1174,7 @@
 
 
 
-<section id="h_baselines">
+<section id="baselines">
 <h3>Baselines, line height, etc.</h3>
 
 <aside class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general? Is line height special for this script? Are there other aspects that affect line spacing, or positioning of items vertically within a line?</aside>
@@ -1230,7 +1230,7 @@
 
 
 
-<section id="h_counters">
+<section id="lists">
 <h3>Lists, counters, etc.</h3>
 
 <aside class="prompts">Are there list or other counter styles in use? If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?</aside>
@@ -1292,7 +1292,7 @@
 
 
 
-<section id="h_initials">
+<section id="initials">
 <h3>Styling initials</h3>
 
 <aside class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? Are dropped, sunken, and raised types found? etc.</aside>
