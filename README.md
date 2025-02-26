@@ -98,7 +98,7 @@ W3C staff: [Richard Ishida](mailto:ishida@w3.org)
 
 ### Links to practical information
 - [Mail archive](https://lists.w3.org/Archives/Public/public-i18n-sea/)
-- [Writing i18n tests](https://github.com/w3c/i18n-activity/wiki/Writing-i18n-tests)
+- [Writing i18n tests](https://github.com/w3c/i18n-tests/wiki/Writing-i18n-tests)
 - [Practical tips for task forces](https://www.w3.org/International/i18n-activity/guidelines/process.html) (See also the github and editorial guidelines below)
 - [Charter](https://w3c.github.io/sealreq/charter/)
 - Action tracker (tbd)
