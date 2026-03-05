@@ -23,46 +23,21 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 
-### Resource & requirement docs
-- **Lao Script Resources** • [DNOTE](https://www.w3.org/TR/laoo-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/lao/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/lao/index.html)
-- **Thai Script Resources** • [DNOTE](https://www.w3.org/TR/thai-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/thai/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/thai/index.html)
-- **Javanese Script Resources** • [DNOTE](https://www.w3.org/TR/java-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/javanese/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/javanese/index.html)
-- **Khmer Script Resources** • [DNOTE](https://www.w3.org/TR/khmr-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/khmer/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/khmer/index.html)
-
-
-
-
-### Gap-analysis docs
-- **Lao Gap Analysis** • [DNOTE](https://www.w3.org/TR/laoo-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/laoo-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/laoo-gap.html)
-- **Thai Gap Analysis** • [DNOTE](https://www.w3.org/TR/thai-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/thai-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/thai-gap.html)
-- **Khmer Gap Analysis** • [DNOTE](https://www.w3.org/TR/khmr-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/khmr-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/khmr-gap.html)
-- **Javanese Gap Analysis** • [DNOTE](https://www.w3.org/TR/java-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/java-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/java-gap.html)
-
-
-
-
-### Discussions
-- **Javanese** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Ajava+label%3Aquestion)
-• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Ajava)
-• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Ajava+-label%3Aquestion) 
-• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
-- **Khmer** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion)
-• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Akhmr)
-• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Akhmr+-label%3Aquestion) 
-• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
-- **Lao** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Alaoo+label%3Aquestion)
+### Lao
+- **Script Resources** • [DNOTE](https://www.w3.org/TR/laoo-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/lao/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/lao/index.html)
+- **Gap Analysis** • [DNOTE](https://www.w3.org/TR/laoo-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/laoo-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/laoo-gap.html)
+- **Discussions** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Alaoo+label%3Aquestion)
 • [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Alaoo)
 • [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Alaoo+-label%3Aquestion) 
 • [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
-- **Myanmar** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Amymr+label%3Aquestion)
-• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Amymr)
-• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Amymr+-label%3Aquestion) 
-• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
-- **Sundanese** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Asund+label%3Aquestion)
-• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Asund)
-• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Asund+-label%3Aquestion) 
-• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
-- **Thai** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion)
+
+
+
+
+### Thai
+- **Script Resources** • [DNOTE](https://www.w3.org/TR/thai-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/thai/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/thai/index.html)
+- **Gap Analysis** • [DNOTE](https://www.w3.org/TR/thai-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/thai-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/thai-gap.html)
+- **Discussions** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Athai+label%3Aquestion)
 • [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Athai)
 • [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Athai+-label%3Aquestion) 
 • [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
@@ -70,7 +45,49 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 
-### Related documents
+### Javanese
+- **Script Resources** • [DNOTE](https://www.w3.org/TR/java-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/javanese/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/javanese/index.html)
+- **Gap Analysis** • [DNOTE](https://www.w3.org/TR/java-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/java-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/java-gap.html)
+- **Discussions** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Ajava+label%3Aquestion)
+• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Ajava)
+• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Ajava+-label%3Aquestion) 
+• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
+
+
+
+
+### Khmer
+- **Script Resources** • [DNOTE](https://www.w3.org/TR/khmr-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/khmer/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/khmer/index.html)
+- **Gap Analysis** • [DNOTE](https://www.w3.org/TR/khmr-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/khmr-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/khmr-gap.html)
+- **Discussions** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Akhmr+label%3Aquestion)
+• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Akhmr)
+• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Akhmr+-label%3Aquestion) 
+• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
+
+
+
+
+### Myanmar
+- **Discussions** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Amymr+label%3Aquestion)
+• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Amymr)
+• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Amymr+-label%3Aquestion) 
+• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
+
+
+
+
+### Sundanese
+- **Discussions** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Asund+label%3Aquestion)
+• [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Asund)
+• [*Other*](https://github.com/w3c/sealreq/issues?q=is%3Aopen+label%3As%3Asund+-label%3Aquestion) 
+• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Asealreq+label%3Aspec-type-issue)
+
+
+
+
+
+
+### Other documents
 - [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/)
 
 
