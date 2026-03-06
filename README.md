@@ -22,7 +22,6 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 
-
 ### Lao
 - **Script Resources** • [DNOTE](https://www.w3.org/TR/laoo-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/lao/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/lao/index.html)
 - **Gap Analysis** • [DNOTE](https://www.w3.org/TR/laoo-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/laoo-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/laoo-gap.html)
