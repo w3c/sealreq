@@ -45,7 +45,7 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 ### Javanese
-- **Script Resources** • [DNOTE](https://www.w3.org/TR/java-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/javanese/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/javanese/index.html)
+- **Script Resources** • [DNOTE](https://www.w3.org/TR/java-lreq/) • [*Editor's draft*](https://www.w3.org/International/sealreq/java/) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/java/index.html)
 - **Gap Analysis** • [DNOTE](https://www.w3.org/TR/java-gap) • [*Editor's draft*](https://www.w3.org/International/sealreq/gap-analysis/java-gap) • [*Latest commits*](https://github.com/w3c/sealreq/commits/gh-pages/gap-analysis/java-gap.html)
 - **Discussions** • [*Questions*](https://github.com/w3c/sealreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Ajava+label%3Aquestion)
 • [*Gap reports*](https://github.com/w3c/sealreq/labels/doc%3Ajava)
